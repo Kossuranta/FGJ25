@@ -2,6 +2,8 @@ using Godot;
 
 public partial class GameManager : Node
 {
+	public static GameManager Instance { get; private set; }
+	
 	[Export]
 	private PackedScene m_mainLevelPrefab;
 	
@@ -11,13 +13,15 @@ public partial class GameManager : Node
 	[Export]
 	private PackedScene m_cameraPrefab;
 
-	public Node3D m_mainLevel;
-	public Node3D m_player;
-	public Camera3D m_camera;
+	public static Node3D MainLevel { get; private set; }
+	public static Node3D Player { get; private set; }
+	public static Camera3D Camera { get; private set; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		Instance = this;
+		
 		InitLevel();
 		InitPlayer();
 		InitCamera();
@@ -26,18 +30,16 @@ public partial class GameManager : Node
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double _delta)
 	{
-		Vector3 playerPos = m_player.GlobalPosition;
-		Vector3 offset = new(0, 5, 0.2f);
-		m_camera.GlobalPosition = playerPos + offset;
+		
 	}
 	
 	public void InitLevel()
 	{
 		if (m_mainLevelPrefab != null)
 		{
-			m_mainLevel = (Node3D)m_mainLevelPrefab.Instantiate();
-			m_mainLevel.Position = new Vector3(0, 0, 0);
-			AddChild(m_mainLevel);
+			MainLevel = (Node3D)m_mainLevelPrefab.Instantiate();
+			MainLevel.Position = new Vector3(0, 0, 0);
+			AddChild(MainLevel);
 		}
 		else
 		{
@@ -49,9 +51,9 @@ public partial class GameManager : Node
 	{
 		if (m_playerPrefab != null)
 		{
-			m_player = (Node3D)m_playerPrefab.Instantiate();
-			m_player.Position = new Vector3(5, 0, 5);
-			AddChild(m_player);
+			Player = (Node3D)m_playerPrefab.Instantiate();
+			Player.Position = new Vector3(5, 0, 5);
+			AddChild(Player);
 		}
 		else
 		{
@@ -63,8 +65,8 @@ public partial class GameManager : Node
 	{
 		if (m_cameraPrefab != null)
 		{
-			m_camera = (Camera3D)m_cameraPrefab.Instantiate();
-			AddChild(m_camera);
+			Camera = (Camera3D)m_cameraPrefab.Instantiate();
+			AddChild(Camera);
 		}
 		else
 		{
