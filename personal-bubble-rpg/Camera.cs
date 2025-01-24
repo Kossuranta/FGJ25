@@ -2,6 +2,9 @@ using Godot;
 
 public partial class Camera : Camera3D
 {
+	[Export]
+	private Vector3 m_offset = new(0, 5, 0.2f);
+
 	public override void _Ready()
 	{
 		
@@ -10,7 +13,6 @@ public partial class Camera : Camera3D
 	public override void _Process(double _delta)
 	{
 		Vector3 playerPos = GameManager.Player.GlobalPosition;
-		Vector3 offset = new(0, 5, 0.2f);
-		GlobalPosition = playerPos + offset;
+		GlobalPosition = playerPos + m_offset;
 	}
 }

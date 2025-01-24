@@ -24,7 +24,7 @@ public partial class Player : Node3D
 		if (Input.IsActionPressed("move_forward"))
 			moveDir.Z -= 1;
 
-		if (Input.IsActionPressed("move_backward"))
+		if (Input.IsActionPressed("move_back"))
 			moveDir.Z += 1;
 
 		if (Input.IsActionPressed("turn_left"))
