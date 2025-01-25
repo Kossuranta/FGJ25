@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4bkplhinfj4b"]
+
+[ext_resource type="Texture2D" uid="uid://bgxwschabgmnw" path="res://Art/Characters2D/Feissari.png" id="1_08nvf"]
+
+[node name="Feissari" type="Sprite2D"]
+texture = ExtResource("1_08nvf")

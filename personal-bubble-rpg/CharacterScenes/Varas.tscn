@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwr0uscqwrbkf"]
+
+[ext_resource type="Texture2D" uid="uid://ce1fsl2nimjst" path="res://Art/Characters2D/varas.png" id="1_0qkhi"]
+
+[node name="Varas" type="Sprite2D"]
+texture = ExtResource("1_0qkhi")

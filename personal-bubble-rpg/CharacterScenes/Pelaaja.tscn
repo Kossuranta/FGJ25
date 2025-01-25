@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8cbffoadykjk"]
+
+[ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="1_nx11u"]
+
+[node name="Pelaaja" type="Sprite2D"]
+texture = ExtResource("1_nx11u")
+flip_h = true
