@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ls7q4xqqfrv"]
+
+[ext_resource type="Script" path="res://CharacterScenes3D/NPC.cs" id="1_e0cvr"]
+[ext_resource type="PackedScene" uid="uid://bj08omj0mmphx" path="res://Art/Characters3D/laakari.glb" id="2_ovbqx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_an6i3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bioe3"]
+
+[node name="CharacterBody3D_Laakari" type="CharacterBody3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+motion_mode = 1
+script = ExtResource("1_e0cvr")
+m_type = 8
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_an6i3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(6.325, 0, 0, 0, 6.325, 0, 0, 0, 6.325, 0, 1.33333, 0)
+shape = SubResource("SphereShape3D_bioe3")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="laakari" parent="Node3D" instance=ExtResource("2_ovbqx")]
+
+[connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]
