@@ -10,6 +10,9 @@ public partial class GameManager : Node
 	[Export]
 	private PackedScene m_cameraPrefab;
 
+	[Export]
+	private PackedScene m_hud;
+
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
@@ -19,6 +22,7 @@ public partial class GameManager : Node
 		Instance = this;
 		
 		InitLevel();
+		InitHud();
 		InitCamera();
 	}
 
@@ -28,21 +32,20 @@ public partial class GameManager : Node
 		
 	}
 	
-	public void InitLevel()
+	private void InitLevel()
 	{
-		if (m_mainLevelPrefab != null)
-		{
-			MainLevel = (Node3D)m_mainLevelPrefab.Instantiate();
-			MainLevel.Position = new Vector3(0, 0, 0);
-			AddChild(MainLevel);
-		}
-		else
-		{
-			GD.PrintErr("MainLevel is not assigned in the Inspector");
-		}
+		MainLevel = (Node3D)m_mainLevelPrefab.Instantiate();
+		MainLevel.Position = new Vector3(0, 0, 0);
+		AddChild(MainLevel);
 	}
 
-	public void InitCamera()
+	private void InitHud()
+	{
+		Node node = m_hud.Instantiate();
+		AddChild(node);
+	}
+
+	private void InitCamera()
 	{
 		if (m_cameraPrefab != null)
 		{

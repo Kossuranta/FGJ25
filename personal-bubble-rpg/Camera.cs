@@ -12,6 +12,8 @@ public partial class Camera : Camera3D
 
 	public override void _Process(double _delta)
 	{
+		Player player = Player.Instance;
+		if (player == null) return;
 		Vector3 playerPos = Player.Instance.GlobalPosition;
 		GlobalPosition = playerPos + m_offset;
 	}

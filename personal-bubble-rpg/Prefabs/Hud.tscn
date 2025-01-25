@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3fdwwbmsg8pm"]
+
+[ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
+[ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
+[ext_resource type="Texture2D" uid="uid://d1hngfaiflkiy" path="res://Art/Items/Item_Bone.png" id="2_ogfon"]
+[ext_resource type="Texture2D" uid="uid://dqeb63yihh4pq" path="res://Art/Items/Item_Coin.png" id="3_wyisp"]
+[ext_resource type="Texture2D" uid="uid://d0xo4qboo5c6b" path="res://Art/Items/item_headphones.png" id="3_ybg0t"]
+[ext_resource type="Texture2D" uid="uid://w6xh858y6odf" path="res://Art/Items/item_cola.png" id="4_6ye46"]
+[ext_resource type="Texture2D" uid="uid://dkcyfg0h2a3ih" path="res://Art/Items/item_key.png" id="4_xbmrd"]
+[ext_resource type="Texture2D" uid="uid://4570gg6d0tox" path="res://Art/Items/Item_Spoon.png" id="7_t1mbc"]
+[ext_resource type="Texture2D" uid="uid://cmf2imlb7umvb" path="res://Art/Items/Item_Sword.png" id="8_gtsfg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awshi"]
+texture = ExtResource("1_b0ftl")
+
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_itemSlot1", "m_itemSlot2")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+script = ExtResource("1_dy3jj")
+m_itemSlot1 = NodePath("PanelContainer/VBoxContainer/HBoxContainer/Panel/Sprite2D_Item")
+m_itemSlot2 = NodePath("PanelContainer/VBoxContainer/HBoxContainer2/Panel/Sprite2D_Item")
+m_bone = ExtResource("2_ogfon")
+m_coin = ExtResource("3_wyisp")
+m_cola = ExtResource("4_6ye46")
+m_headphones = ExtResource("3_ybg0t")
+m_key = ExtResource("4_xbmrd")
+m_spoon = ExtResource("7_t1mbc")
+m_sword = ExtResource("8_gtsfg")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_awshi")
+
+[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer/HBoxContainer/Panel"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_ybg0t")
+centered = false
+offset = Vector2(32, 32)
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "E"
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_awshi")
+
+[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer/HBoxContainer2/Panel"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_xbmrd")
+centered = false
+offset = Vector2(32, 32)
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "E"
+vertical_alignment = 1

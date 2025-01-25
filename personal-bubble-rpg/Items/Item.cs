@@ -5,6 +5,9 @@ public partial class Item : Area3D
 {
 	[Export]
 	public ItemType m_type;
+
+	[Export]
+	private bool m_autoPickup;
 	
 	public override void _Ready()
 	{
@@ -14,10 +17,10 @@ public partial class Item : Area3D
 
 	private void OnBodyEntered(Node _body)
 	{
-		if (_body is CharacterBody3D)
+		if (_body is Player player)
 		{
-			// Player entered the collider, remove this object
-			QueueFree();
+			if (m_autoPickup)
+				QueueFree();
 		}
 	}
 }
