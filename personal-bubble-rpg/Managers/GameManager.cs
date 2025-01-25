@@ -8,13 +8,9 @@ public partial class GameManager : Node
 	private PackedScene m_mainLevelPrefab;
 	
 	[Export]
-	private PackedScene m_playerPrefab;
-	
-	[Export]
 	private PackedScene m_cameraPrefab;
 
 	public static Node3D MainLevel { get; private set; }
-	public static CharacterBody3D Player { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
 	// Called when the node enters the scene tree for the first time.
@@ -23,7 +19,6 @@ public partial class GameManager : Node
 		Instance = this;
 		
 		InitLevel();
-		InitPlayer();
 		InitCamera();
 	}
 
@@ -44,20 +39,6 @@ public partial class GameManager : Node
 		else
 		{
 			GD.PrintErr("MainLevel is not assigned in the Inspector");
-		}
-	}
-	
-	public void InitPlayer()
-	{
-		if (m_playerPrefab != null)
-		{
-			Player = (CharacterBody3D)m_playerPrefab.Instantiate();
-			Player.Position = new Vector3(5, 0, 5);
-			AddChild(Player);
-		}
-		else
-		{
-			GD.PrintErr("Player is not assigned in the Inspector");
 		}
 	}
 

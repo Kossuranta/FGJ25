@@ -12,7 +12,7 @@ public partial class Camera : Camera3D
 
 	public override void _Process(double _delta)
 	{
-		Vector3 playerPos = GameManager.Player.GlobalPosition;
+		Vector3 playerPos = Player.Instance.GlobalPosition;
 		GlobalPosition = playerPos + m_offset;
 	}
 }

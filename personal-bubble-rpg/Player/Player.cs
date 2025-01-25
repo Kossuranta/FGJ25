@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Player : CharacterBody3D
+public partial class Player : Character
 {
 	[Export]
 	private float m_moveSpeed = 5f;
