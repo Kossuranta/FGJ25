@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cyern03ktx1ni"]
+[gd_scene load_steps=8 format=3 uid="uid://cyern03ktx1ni"]
 
 [ext_resource type="Script" path="res://Managers/GameManager.cs" id="1_0v5v5"]
 [ext_resource type="PackedScene" uid="uid://ofw2itmhoodl" path="res://KatuLevel.tscn" id="2_cw13t"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d3fdwwbmsg8pm" path="res://Prefabs/Hud.tscn" id="4_h66xl"]
 [ext_resource type="PackedScene" uid="uid://bkve8idmhxbve" path="res://FightScene.tscn" id="5_c5g20"]
 [ext_resource type="PackedScene" uid="uid://bcfjjbo10vcor" path="res://GameOver.tscn" id="6_sghb7"]
+[ext_resource type="PackedScene" uid="uid://da44r60etd57f" path="res://GameWin.tscn" id="7_j3ahs"]
 
 [node name="Node_GameManager" type="Node"]
 script = ExtResource("1_0v5v5")
@@ -14,3 +15,4 @@ m_cameraPrefab = ExtResource("4_bnuvo")
 m_hudPrefab = ExtResource("4_h66xl")
 m_fightScenePrefab = ExtResource("5_c5g20")
 m_gameOverPrefab = ExtResource("6_sghb7")
+m_gameWinPrefab = ExtResource("7_j3ahs")

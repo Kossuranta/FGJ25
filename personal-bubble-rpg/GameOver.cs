@@ -46,6 +46,9 @@ public partial class GameOver : MarginContainer
         float delta = (float) _delta;
         if (m_delayRunning)
         {
+            if (GameManager.Instance.GameWinState)
+                return;
+            
             m_delayCounter -= delta;
 
             if (m_delayCounter < 0)
