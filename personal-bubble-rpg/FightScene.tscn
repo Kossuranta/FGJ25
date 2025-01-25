@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkve8idmhxbve"]
+
+[ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
+[ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_scale = 0.001
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.612479, 0.775082, 0.929434, 1)
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -336.0
+offset_top = -184.0
+offset_right = -209.0
+offset_bottom = -118.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(2.46, 2.46)
+columns = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Attack"
+
+[node name="Button2" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Defend"
+
+[node name="Button3" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Item"
+
+[node name="Button4" type="Button" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Flee"
+
+[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -336.0
+offset_top = 108.0
+offset_right = -24.0
+offset_bottom = 124.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 4
+max_value = 5.0
+value = 5.0
+script = ExtResource("1_ykw32")
+
+[node name="DamageButton" type="Button" parent="CanvasLayer"]
+offset_left = 896.0
+offset_top = 264.0
+offset_right = 1040.0
+offset_bottom = 384.0
+text = "Take Damage"
+script = ExtResource("1_fkvlp")
+
+[connection signal="value_changed" from="CanvasLayer/HSlider" to="CanvasLayer/DamageButton" method="Health_Down"]
+[connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
