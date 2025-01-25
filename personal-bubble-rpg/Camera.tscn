@@ -3,7 +3,8 @@
 [ext_resource type="Script" path="res://Camera.cs" id="1_ftofu"]
 
 [node name="Camera3D" type="Camera3D"]
-transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 5, 0.2)
-fov = 40.0
+transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 0, 0, 0)
+v_offset = -14.8
+fov = 33.1
 script = ExtResource("1_ftofu")
 m_offset = Vector3(0, 32, 4)
