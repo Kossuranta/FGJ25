@@ -19,12 +19,28 @@ public partial class GameManager : Node
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
+	private Hud m_hud;
 	private MarginContainer m_fightScene;
+	
+	public int RunCounter { get; private set; }
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Instance = this;
+	}
+
+	public void GameOver()
+	{
+		StartGame();
+	}
+
+	public void StartGame()
+	{
+		RunCounter++;
+		MainLevel?.QueueFree();
+		m_hud?.QueueFree();
+		Camera?.QueueFree();
 		
 		InitLevel();
 		InitHud();
@@ -52,20 +68,13 @@ public partial class GameManager : Node
 
 	private void InitHud()
 	{
-		Node node = m_hudPrefab.Instantiate();
-		AddChild(node);
+		m_hud = (Hud)m_hudPrefab.Instantiate();
+		AddChild(m_hud);
 	}
 
 	private void InitCamera()
 	{
-		if (m_cameraPrefab != null)
-		{
-			Camera = (Camera3D)m_cameraPrefab.Instantiate();
-			AddChild(Camera);
-		}
-		else
-		{
-			GD.PrintErr("Camera is not assigned in the Inspector");
-		}
+		Camera = (Camera3D)m_cameraPrefab.Instantiate();
+		AddChild(Camera);
 	}
 }

@@ -18,7 +18,14 @@ public partial class Player : Character
 	{
 		Instance = this;
 		m_healthSystem = new HealthSystem(m_maxHealth);
+		m_healthSystem.OnHealthChanged += OnHealthChanged;
 		GD.Print("Player ready");
+	}
+
+	private void OnHealthChanged(int _health)
+	{
+		if (_health <= 0)
+			GameManager.Instance.GameOver();
 	}
 
 	public override void _Process(double _delta)
