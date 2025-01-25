@@ -14,5 +14,6 @@ public partial class NPC : Character
     private void StartCombat()
     {
         GD.Print($"START COMBAT! Enemy: {m_type}");
+        GameManager.Instance.StartFight(m_type);
     }
 }
