@@ -23,16 +23,6 @@ public partial class Player : Character
 
 	public override void _Process(double _delta)
 	{
-		/*float delta = (float) _delta;
-		float rotation = 0;
-
-		if (Input.IsActionPressed("turn_left"))
-			rotation = 1;
-
-		if (Input.IsActionPressed("turn_right"))
-			rotation = -1;
-
-		RotateY(rotation * m_rotateSpeed * delta);*/
 	}
 	
 	public override void _PhysicsProcess(double _delta)
