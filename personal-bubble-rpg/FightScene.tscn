@@ -18,7 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://hfaideobo1vw" path="res://Art/UI/UI_EnemyBubble.png" id="8_re61u"]
 [ext_resource type="Texture2D" uid="uid://b7xggjnbr751i" path="res://Art/UI/UI_PlayerBubble.png" id="9_js5ws"]
 [ext_resource type="Texture2D" uid="uid://hwpvsnf5qyd4" path="res://Art/Characters2D/kakara.png" id="9_pqmge"]
-[ext_resource type="Texture2D" uid="uid://bwicfj1jmb065" path="res://Art/UI/UI_PlayerBubbleSmall.png" id="10_ityrp"]
+[ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="20_c7j45"]
 
 [sub_resource type="Theme" id="Theme_s24to"]
 
@@ -54,7 +54,7 @@ texture = ExtResource("3_he2sv")
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 15
+theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -73,7 +73,7 @@ size_flags_vertical = 4
 columns = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 theme = SubResource("Theme_s24to")
@@ -81,21 +81,21 @@ text = "Attack"
 autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Defend"
 autowrap_mode = 3
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Item"
 autowrap_mode = 3
 
 [node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Flee"
@@ -126,7 +126,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_bgjws")
 
 [node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
-position = Vector2(380, 512)
+position = Vector2(384, 584)
 scale = Vector2(0.5, 0.505296)
 texture = ExtResource("4_vt01t")
 
@@ -157,14 +157,6 @@ position = Vector2(488, 80)
 scale = Vector2(0.453125, 0.436667)
 texture = ExtResource("8_re61u")
 
-[node name="UiPlayerBubble" type="Sprite2D" parent="."]
-position = Vector2(464, 512)
-texture = ExtResource("9_js5ws")
-
-[node name="UiPlayerBubbleSmall" type="Sprite2D" parent="."]
-position = Vector2(464, 408)
-texture = ExtResource("10_ityrp")
-
 [node name="Node" type="Node" parent="."]
 
 [node name="EnemyTextLabel" type="RichTextLabel" parent="Node"]
@@ -174,5 +166,15 @@ offset_top = 32.0
 offset_right = 648.0
 offset_bottom = 128.0
 scroll_active = false
+
+[node name="Pelaaja" type="Sprite2D" parent="."]
+position = Vector2(376, 408)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("20_c7j45")
+flip_h = true
+
+[node name="UiPlayerBubble" type="Sprite2D" parent="."]
+position = Vector2(392, 520)
+texture = ExtResource("9_js5ws")
 
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
