@@ -41,6 +41,12 @@ public partial class Player : Character
 
 	private void Movement(float _delta)
 	{
+		if (!GameManager.Instance.GameRunning)
+		{
+			Velocity = Vector3.Zero;
+			return;
+		}
+		
 		Vector2 inputDir = Input.GetVector("turn_left", "turn_right", "move_forward", "move_back");
 		Vector3 moveDir = new(inputDir.X, 0, inputDir.Y);
 		Velocity = moveDir * m_moveSpeed;
