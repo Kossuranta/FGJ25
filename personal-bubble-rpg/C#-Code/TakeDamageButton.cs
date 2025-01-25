@@ -1,8 +1,6 @@
 using Godot;
-using System;
-using System.Diagnostics.CodeAnalysis;
 
-public partial class Button : Godot.Button
+public partial class TakeDamageButton : Button
 {
 
 	public void OnPressed()

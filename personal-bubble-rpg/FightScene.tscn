@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bkve8idmhxbve"]
 
-[ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
-[ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="4_vfpof"]
+[ext_resource type="Script" path="res://C#-Code/HealthSlider.cs" id="4_kqreq"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
+[ext_resource type="Script" path="res://C#-Code/TakeDamageButton.cs" id="7_rnve6"]
 
 [node name="Control" type="MarginContainer"]
 anchors_preset = 15
@@ -91,9 +91,10 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 max_value = 5.0
-value = 5.0
+value = 1.0
 editable = false
-script = ExtResource("4_vfpof")
+scrollable = false
+script = ExtResource("4_kqreq")
 
 [node name="BackgroundBattleFloor" type="Sprite2D" parent="UiBattery"]
 position = Vector2(600, 416)
@@ -114,6 +115,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 text = "Take Damage"
-script = ExtResource("1_fkvlp")
+script = ExtResource("7_rnve6")
 
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
