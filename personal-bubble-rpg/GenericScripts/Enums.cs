@@ -29,4 +29,5 @@ public enum CharacterType
     TERAPEUTTI = 8,
     KOIRA = 9,
     OVI = 10,
+    LAPSI = 11,
 }
