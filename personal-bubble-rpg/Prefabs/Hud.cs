@@ -6,6 +6,9 @@ public partial class Hud : MarginContainer
 	public static Hud Instance { get; private set; }
 
 	[Export]
+	private PanelContainer m_pickUpPopup;
+
+	[Export]
 	private Sprite2D m_itemSlot1;
 	
 	[Export]
@@ -36,6 +39,17 @@ public partial class Hud : MarginContainer
 	public override void _Ready()
 	{
 		Instance = this;
+		HidePickup();
+	}
+
+	public void ShowPickup(Item _item)
+	{
+		m_pickUpPopup.Visible = true;
+	}
+
+	public void HidePickup()
+	{
+		m_pickUpPopup.Visible = false;
 	}
 
 	public void PickUpItem(int _slot, ItemType _item)

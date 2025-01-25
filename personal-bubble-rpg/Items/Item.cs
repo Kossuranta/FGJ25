@@ -8,19 +8,25 @@ public partial class Item : Area3D
 
 	[Export]
 	private bool m_autoPickup;
-	
-	public override void _Ready()
-	{
-		// Connect the body_entered signal to the OnBodyEntered function
-		Connect("body_entered", new Callable(this, "OnBodyEntered"));
-	}
 
-	private void OnBodyEntered(Node _body)
+	private void OnTriggerEnter(Node _body)
 	{
 		if (_body is Player player)
 		{
+			GD.Print($"OnTriggerEnter {m_type}");
 			if (m_autoPickup)
 				QueueFree();
+			else
+				Hud.Instance.ShowPickup(this);
 		}
+	}
+	
+	private void OnTriggerExit(Node _node)
+	{
+		if (_node is not Player player)
+			return;
+		
+		GD.Print($"OnTriggerExit {m_type}");
+		Hud.Instance.HidePickup();
 	}
 }
