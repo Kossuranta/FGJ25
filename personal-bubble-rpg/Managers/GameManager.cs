@@ -14,7 +14,7 @@ public partial class GameManager : Node
 	private PackedScene m_cameraPrefab;
 
 	public static Node3D MainLevel { get; private set; }
-	public static Node3D Player { get; private set; }
+	public static CharacterBody3D Player { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
 	// Called when the node enters the scene tree for the first time.
@@ -51,7 +51,7 @@ public partial class GameManager : Node
 	{
 		if (m_playerPrefab != null)
 		{
-			Player = (Node3D)m_playerPrefab.Instantiate();
+			Player = (CharacterBody3D)m_playerPrefab.Instantiate();
 			Player.Position = new Vector3(5, 0, 5);
 			AddChild(Player);
 		}
