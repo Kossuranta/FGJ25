@@ -33,7 +33,7 @@ public partial class GameManager : Node
 	public int RunCounter { get; private set; }
 
 	private bool m_gameRunning;
-	public bool GameRunning => m_gameRunning && m_fightScene == null && GameWinState;
+	public bool GameRunning => m_gameRunning && m_fightScene == null && !GameWinState;
 	public bool GameWinState { get; private set; }
 
 	public override void _Ready()
