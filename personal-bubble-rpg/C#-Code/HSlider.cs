@@ -9,6 +9,7 @@ public partial class HSlider : Godot.HSlider
 	{
 		Value = _currentHealth;
 		GD.Print("Value changed: " + _currentHealth);
+		Value -= 1;
 	}
 
 	public override void _Ready()

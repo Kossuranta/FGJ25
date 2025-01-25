@@ -75,7 +75,6 @@ position = Vector2(-1133, -333)
 texture = ExtResource("3_t7dq1")
 
 [node name="VSlider" type="VSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(-2.18, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/center_grabber = 0
@@ -100,7 +99,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vt01t")
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2(1488, 728)
+position = Vector2(1544, 736)
 script = ExtResource("6_lkiu2")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
