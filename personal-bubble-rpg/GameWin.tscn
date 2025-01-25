@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcfjjbo10vcor"]
+[gd_scene load_steps=6 format=3 uid="uid://da44r60etd57f"]
 
-[ext_resource type="LabelSettings" uid="uid://0ov33b1bws2w" path="res://LabelSettings/GameOverLabel.tres" id="1_i13gl"]
-[ext_resource type="Texture2D" uid="uid://khdum5yemwek" path="res://Art/Logo_Death.png" id="1_n00gj"]
-[ext_resource type="Script" path="res://GameOver.cs" id="1_vjhn1"]
+[ext_resource type="Script" path="res://GameOver.cs" id="1_nqcck"]
+[ext_resource type="Texture2D" uid="uid://khdum5yemwek" path="res://Art/Logo_Death.png" id="2_bxcqc"]
+[ext_resource type="LabelSettings" uid="uid://0ov33b1bws2w" path="res://LabelSettings/GameOverLabel.tres" id="3_pa6lu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fscp"]
 bg_color = Color(0, 0, 0, 1)
@@ -10,7 +10,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_ynwap"]
 font_size = 32
 
-[node name="Control_GameOver" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
+[node name="Control_GameWin" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
 z_index = 4096
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,7 +21,7 @@ theme_override_constants/margin_left = -4
 theme_override_constants/margin_top = -4
 theme_override_constants/margin_right = -4
 theme_override_constants/margin_bottom = -4
-script = ExtResource("1_vjhn1")
+script = ExtResource("1_nqcck")
 m_fadeOutCounter = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer2/Label2")
 m_delay = 3.0
 
@@ -48,7 +48,7 @@ layout_mode = 2
 [node name="Sprite2D" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/Panel"]
 position = Vector2(450, 0)
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_n00gj")
+texture = ExtResource("2_bxcqc")
 centered = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
@@ -58,7 +58,7 @@ alignment = 1
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "YOU FAINTED!"
-label_settings = ExtResource("1_i13gl")
+label_settings = ExtResource("3_pa6lu")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2

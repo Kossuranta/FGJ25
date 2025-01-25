@@ -27,8 +27,9 @@ public partial class GameManager : Node
 	private GameOver m_gameOver;
 	
 	public int RunCounter { get; private set; }
-	
-	public bool GameRunning { get; private set; }
+
+	private bool m_gameRunning;
+	public bool GameRunning => m_gameRunning && m_fightScene == null;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -39,7 +40,9 @@ public partial class GameManager : Node
 
 	public void GameOver()
 	{
-		GameRunning = false;
+		m_fightScene?.QueueFree();
+		m_fightScene = null;
+		m_gameRunning = false;
 		m_gameOver.Toggle(true, RunCounter);
 	}
 
@@ -55,7 +58,6 @@ public partial class GameManager : Node
 		MainLevel?.QueueFree();
 		m_hud?.QueueFree();
 		Camera?.QueueFree();
-		m_fightScene?.QueueFree();
 		m_gameOver?.QueueFree();
 		
 		InitLevel();
@@ -77,7 +79,7 @@ public partial class GameManager : Node
 	private void FadeOutCompleted()
 	{
 		GD.Print("Continue");
-		GameRunning = true;
+		m_gameRunning = true;
 	}
 
 	public void StartFight(CharacterType _enemy)
