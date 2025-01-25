@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://d3fdwwbmsg8pm"]
+[gd_scene load_steps=16 format=3 uid="uid://d3fdwwbmsg8pm"]
 
 [ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
 [ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
@@ -9,13 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://dkcyfg0h2a3ih" path="res://Art/Items/item_key.png" id="4_xbmrd"]
 [ext_resource type="Texture2D" uid="uid://4570gg6d0tox" path="res://Art/Items/Item_Spoon.png" id="7_t1mbc"]
 [ext_resource type="Texture2D" uid="uid://cmf2imlb7umvb" path="res://Art/Items/Item_Sword.png" id="8_gtsfg"]
+[ext_resource type="LabelSettings" uid="uid://dxrlqaxhk3x38" path="res://LabelSettings/ItemSlotLetter.tres" id="10_5hw51"]
+[ext_resource type="LabelSettings" uid="uid://ca55t4y10akld" path="res://LabelSettings/ButtonQEPickUpLabel.tres" id="11_h5pem"]
+[ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awshi"]
 texture = ExtResource("1_b0ftl")
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_itemSlot1", "m_itemSlot2")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iviak"]
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.366595, 0.366595, 0.366594, 1)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_itemSlot1")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -26,8 +40,8 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 script = ExtResource("1_dy3jj")
+m_pickUpPopup = NodePath("PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer/HBoxContainer/Panel/Sprite2D_Item")
-m_itemSlot2 = NodePath("PanelContainer/VBoxContainer/HBoxContainer2/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_coin = ExtResource("3_wyisp")
 m_cola = ExtResource("4_6ye46")
@@ -61,10 +75,12 @@ offset = Vector2(32, 32)
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
-text = "E"
+text = "Q"
+label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
@@ -82,4 +98,73 @@ offset = Vector2(32, 32)
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 text = "E"
+label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "Pick up a new item?"
+label_settings = ExtResource("11_kg6fc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yes"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "No"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]

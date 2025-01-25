@@ -3,16 +3,11 @@ using System;
 
 public partial class NPC : Character
 {
-    [Export]
-    private OnTriggerEnter m_onTriggerEnter;
-    
-    public override void _Ready()
+    public void OnTriggerEnter(Node _node)
     {
-        m_onTriggerEnter.m_onTriggerEnter += StartCombat;
-    }
-
-    private void StartCombat()
-    {
+        if (_node is not Player player)
+            return;
+        
         GD.Print($"START COMBAT! Enemy: {m_type}");
         GameManager.Instance.StartFight(m_type);
     }

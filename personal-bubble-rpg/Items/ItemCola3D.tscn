@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://w6xh858y6odf" path="res://Art/Items/item_cola.png" id="2_65ilx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d3qvt"]
-size = Vector3(1, 1, 2.5)
+size = Vector3(1, 2, 2)
 
 [node name="ItemCola" type="Area3D"]
 script = ExtResource("1_vw3pe")
@@ -16,7 +16,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 
 texture = ExtResource("2_65ilx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556641, -0.0103149)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("BoxShape3D_d3qvt")
 
-[connection signal="area_entered" from="." to="." method="OnBodyEntered"]
+[connection signal="body_entered" from="." to="." method="OnTriggerEnter"]
