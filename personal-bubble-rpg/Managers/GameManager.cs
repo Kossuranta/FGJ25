@@ -18,6 +18,9 @@ public partial class GameManager : Node
 
 	[Export]
 	private PackedScene m_gameOverPrefab;
+	
+	[Export]
+	private PackedScene m_gameWinPrefab;
 
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
@@ -25,12 +28,14 @@ public partial class GameManager : Node
 	private Hud m_hud;
 	private FightEncounter m_fightScene;
 	private GameOver m_gameOver;
+	private GameOver m_gameWin;
 	
 	public int RunCounter { get; private set; }
-	
-	public bool GameRunning { get; private set; }
 
-	// Called when the node enters the scene tree for the first time.
+	private bool m_gameRunning;
+	public bool GameRunning => m_gameRunning && m_fightScene == null && GameWinState;
+	public bool GameWinState { get; private set; }
+
 	public override void _Ready()
 	{
 		Instance = this;
@@ -39,7 +44,18 @@ public partial class GameManager : Node
 
 	public void GameOver()
 	{
-		GameRunning = false;
+		m_fightScene?.QueueFree();
+		m_fightScene = null;
+		m_gameRunning = false;
+		m_gameOver.Toggle(true, RunCounter);
+	}
+
+	public void GameWin()
+	{
+		GameWinState = true;
+		m_fightScene?.QueueFree();
+		m_fightScene = null;
+		m_gameRunning = false;
 		m_gameOver.Toggle(true, RunCounter);
 	}
 
@@ -55,7 +71,6 @@ public partial class GameManager : Node
 		MainLevel?.QueueFree();
 		m_hud?.QueueFree();
 		Camera?.QueueFree();
-		m_fightScene?.QueueFree();
 		m_gameOver?.QueueFree();
 		
 		InitLevel();
@@ -77,7 +92,7 @@ public partial class GameManager : Node
 	private void FadeOutCompleted()
 	{
 		GD.Print("Continue");
-		GameRunning = true;
+		m_gameRunning = true;
 	}
 
 	public void StartFight(CharacterType _enemy)

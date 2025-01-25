@@ -10,7 +10,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_ynwap"]
 font_size = 32
 
-[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
+[node name="Control_GameOver" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
 z_index = 4096
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,15 +41,16 @@ grow_vertical = 2
 layout_mode = 2
 alignment = 1
 
-[node name="Panel" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+[node name="Panel" type="CenterContainer" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 140)
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/Panel"]
-position = Vector2(450, 0)
+[node name="Control" type="Control" parent="Panel/MarginContainer/VBoxContainer/Panel"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/Panel/Control"]
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_n00gj")
-centered = false
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckeml50xpma87"]
+
+[ext_resource type="PackedScene" uid="uid://dt6fs2mp8t6u6" path="res://Art/EnviroAssets3D/vendingmachine.glb" id="1_hqy1e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e62uh"]
+size = Vector3(0.965271, 1.99951, 0.737793)
+
+[node name="vendingmachine" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="vendingmachine" parent="StaticBody3D" instance=ExtResource("1_hqy1e")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00387576, 0.993897, 0.0158691)
+shape = SubResource("BoxShape3D_e62uh")

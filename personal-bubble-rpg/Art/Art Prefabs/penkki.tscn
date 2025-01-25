@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cygjnsmt4esdv"]
+
+[ext_resource type="PackedScene" uid="uid://3qmtrb4rt47l" path="res://Art/EnviroAssets3D/penkki.glb" id="1_gofsg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e62uh"]
+size = Vector3(2.24445, 1.06165, 0.790039)
+
+[node name="penkki" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="penkki" parent="StaticBody3D" instance=ExtResource("1_gofsg")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00296023, 0.524964, 0.0375976)
+shape = SubResource("BoxShape3D_e62uh")
