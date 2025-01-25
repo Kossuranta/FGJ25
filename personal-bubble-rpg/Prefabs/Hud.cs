@@ -36,9 +36,6 @@ public partial class Hud : MarginContainer
 	public override void _Ready()
 	{
 		Instance = this;
-		
-		PickUpItem(0, ItemType.COLA);
-		PickUpItem(1, ItemType.LUU);
 	}
 
 	public void PickUpItem(int _slot, ItemType _item)
