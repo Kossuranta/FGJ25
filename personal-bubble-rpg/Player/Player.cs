@@ -3,15 +3,23 @@ using System;
 
 public partial class Player : Node3D
 {
+	public static Player Instance { get; private set; }
 	[Export]
 	private float m_moveSpeed = 5f;
 
 	[Export]
 	private float m_rotateSpeed = 5f;
 
+	[Export]
+	private int m_maxHealth = 3;
+
+	public HealthSystem m_healthSystem;
+
 	public override void _Ready()
 	{
-		
+		Instance = this;
+		m_healthSystem = new HealthSystem(m_maxHealth);
+		GD.Print("Player ready");
 	}
 
 	public override void _Process(double _delta)
