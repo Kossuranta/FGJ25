@@ -128,7 +128,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
-text = "Haluukko nää roskiscolan??"
+text = "Pick up a new item?"
 label_settings = ExtResource("11_kg6fc")
 horizontal_alignment = 1
 vertical_alignment = 1
