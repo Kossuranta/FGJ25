@@ -10,9 +10,6 @@ public partial class Hud : MarginContainer
 
 	[Export]
 	private Sprite2D m_itemSlot1;
-	
-	[Export]
-	private Sprite2D m_itemSlot2;
 
 	[Export]
 	private Texture2D m_bone;
@@ -35,60 +32,82 @@ public partial class Hud : MarginContainer
 	[Export]
 	private Texture2D m_sword;
 
+	private Item m_itemToPickUp;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Instance = this;
 		HidePickup();
+		ClearItem();
 	}
 
 	public void ShowPickup(Item _item)
 	{
+		m_itemToPickUp = _item;
 		m_pickUpPopup.Visible = true;
 	}
 
 	public void HidePickup()
 	{
+		m_itemToPickUp = null;
 		m_pickUpPopup.Visible = false;
 	}
 
-	public void PickUpItem(int _slot, ItemType _item)
+	public void OnPickUpYes()
 	{
-		Sprite2D slot = _slot == 0 ? m_itemSlot1 : m_itemSlot2;
+		PickUpItem(m_itemToPickUp.m_type);
+		Player.Instance.CurrentItem = m_itemToPickUp.m_type;
+		m_itemToPickUp.QueueFree();
+		HidePickup();
+	}
+
+	public void OnPickUpNo()
+	{
+		HidePickup();
+	}
+
+	public void ClearItem()
+	{
+		m_itemSlot1.Texture = null;
+	}
+
+	public void PickUpItem(ItemType _item)
+	{
 		switch (_item)
 		{
 			case ItemType.COLA:
-				slot.Texture = m_cola;
+				m_itemSlot1.Texture = m_cola;
 				break;
 			case ItemType.CANDY:
 				break;
 			case ItemType.ES:
 				break;
 			case ItemType.MIEKKA:
-				slot.Texture = m_sword;
+				m_itemSlot1.Texture = m_sword;
 				break;
 			case ItemType.KOLIKKO:
-				slot.Texture = m_coin;
+				m_itemSlot1.Texture = m_coin;
 				break;
 			case ItemType.KUVA:
 				break;
 			case ItemType.AVAIN:
-				slot.Texture = m_key;
+				m_itemSlot1.Texture = m_key;
 				break;
 			case ItemType.TIIRIKKA:
 				break;
 			case ItemType.LUSIKKA:
-				slot.Texture = m_spoon;
+				m_itemSlot1.Texture = m_spoon;
 				break;
 			case ItemType.PILLERI:
 				break;
 			case ItemType.STEROID:
 				break;
 			case ItemType.KUULOKKEET:
-				slot.Texture = m_headphones;
+				m_itemSlot1.Texture = m_headphones;
 				break;
 			case ItemType.LUU:
-				slot.Texture = m_bone;
+				m_itemSlot1.Texture = m_bone;
 				break;
 			default:
 				throw new ArgumentOutOfRangeException(nameof(_item), _item, null);

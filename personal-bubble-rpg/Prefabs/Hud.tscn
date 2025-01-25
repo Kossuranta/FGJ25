@@ -29,7 +29,7 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_itemSlot1", "m_itemSlot2")]
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_itemSlot1")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -42,7 +42,6 @@ theme_override_constants/margin_bottom = 16
 script = ExtResource("1_dy3jj")
 m_pickUpPopup = NodePath("PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer/HBoxContainer/Panel/Sprite2D_Item")
-m_itemSlot2 = NodePath("PanelContainer/VBoxContainer/HBoxContainer2/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_coin = ExtResource("3_wyisp")
 m_cola = ExtResource("4_6ye46")
@@ -166,3 +165,6 @@ text = "No"
 label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]

@@ -13,6 +13,7 @@ public partial class Player : Character
 	private int m_maxHealth = 3;
 
 	public HealthSystem m_healthSystem;
+	public ItemType CurrentItem { get; set; }
 
 	public override void _Ready()
 	{
