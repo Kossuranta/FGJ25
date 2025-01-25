@@ -59,7 +59,7 @@ public partial class GameManager : Node
 	{
 		m_fightScene = (FightEncounter) m_fightScenePrefab.Instantiate();
 		AddChild(m_fightScene);
-		m_fightScene.StartFight(_enemy);
+		m_fightScene.FightStart(_enemy);
 	}
 	
 	private void InitLevel()
