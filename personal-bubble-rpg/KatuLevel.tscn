@@ -1,7 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=17 format=3 uid="uid://ofw2itmhoodl"]
 
-[ext_resource type="PackedScene" uid="uid://do3qa1t3iqlk3" path="res://Items/ItemCola3D.tscn" id="1_nk81i"]
+[ext_resource type="PackedScene" path="res://Items/ItemCola3D.tscn" id="1_nk81i"]
 [ext_resource type="PackedScene" uid="uid://bakhem0ko0jep" path="res://Player/Player.tscn" id="2_nhnp7"]
+[ext_resource type="PackedScene" uid="uid://kcp8wwsluu6w" path="res://CharacterScenes3D/Feissari.tscn" id="5_daayn"]
+[ext_resource type="PackedScene" uid="uid://bnite5c1td2bx" path="res://CharacterScenes3D/Lapsi.tscn" id="6_lj683"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33dnm"]
 sky_top_color = Color(0.84435, 0.855767, 0.795666, 1)
@@ -1047,3 +1049,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2054, 0, -13.9399)
 
 [node name="CharacterBody3D_Player" parent="." instance=ExtResource("2_nhnp7")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.33978, -0.197419, -1.08438)
+
+[node name="CharacterBody3D_Feissari" parent="." instance=ExtResource("5_daayn")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 17.5898, -0.197418, -14.1876)
+
+[node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.57118, -0.197418, -14.1876)
