@@ -4,10 +4,11 @@ using System;
 public partial class FightEncounter : Node
 {
 
-	public CharacterType characterType = CharacterType.ROSVO;
+	public CharacterType characterType;
 
-	public override void _Ready()
+	public void FightStart(CharacterType _characterType)
 	{
+		characterType = _characterType;
 		if (characterType == CharacterType.NOT_SET)
 		{
 			GD.Print("CharacterType not set");

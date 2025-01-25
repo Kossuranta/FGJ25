@@ -20,7 +20,7 @@ public partial class GameManager : Node
 	public static Camera3D Camera { get; private set; }
 
 	private Hud m_hud;
-	private MarginContainer m_fightScene;
+	private FightEncounter m_fightScene;
 	
 	public int RunCounter { get; private set; }
 
@@ -57,8 +57,9 @@ public partial class GameManager : Node
 
 	public void StartFight(CharacterType _enemy)
 	{
-		m_fightScene = (MarginContainer) m_fightScenePrefab.Instantiate();
+		m_fightScene = (FightEncounter) m_fightScenePrefab.Instantiate();
 		AddChild(m_fightScene);
+		m_fightScene.StartFight(_enemy);
 	}
 	
 	private void InitLevel()
