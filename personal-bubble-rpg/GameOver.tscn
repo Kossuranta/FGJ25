@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcfjjbo10vcor"]
+
+[ext_resource type="LabelSettings" uid="uid://0ov33b1bws2w" path="res://LabelSettings/GameOverLabel.tres" id="1_i13gl"]
+[ext_resource type="Texture2D" uid="uid://khdum5yemwek" path="res://Art/Logo_Death.png" id="1_n00gj"]
+[ext_resource type="Script" path="res://GameOver.cs" id="1_vjhn1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fscp"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ynwap"]
+font_size = 32
+
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
+z_index = 4096
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = -4
+theme_override_constants/margin_top = -4
+theme_override_constants/margin_right = -4
+theme_override_constants/margin_bottom = -4
+script = ExtResource("1_vjhn1")
+m_fadeOutCounter = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer2/Label2")
+m_delay = 3.0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7fscp")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Panel" type="MarginContainer" parent="Panel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/MarginContainer/VBoxContainer/Panel"]
+position = Vector2(450, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_n00gj")
+centered = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "YOU FAINTED!"
+label_settings = ExtResource("1_i13gl")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "Fade out counter: "
+label_settings = SubResource("LabelSettings_ynwap")
+
+[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_ynwap")
