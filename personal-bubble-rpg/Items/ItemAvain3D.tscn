@@ -8,7 +8,7 @@ size = Vector3(2, 2, 2)
 
 [node name="ItemAvain" type="Area3D"]
 script = ExtResource("1_anta8")
-m_type = 12
+m_type = 7
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
