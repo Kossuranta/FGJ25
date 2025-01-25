@@ -1,11 +1,16 @@
-[gd_scene load_steps=14 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=19 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/FightEncounter.cs" id="1_wf4om"]
+[ext_resource type="Texture2D" uid="uid://ce1fsl2nimjst" path="res://Art/Characters2D/varas.png" id="2_hjx6f"]
+[ext_resource type="Texture2D" uid="uid://c0q74bs1pfnhs" path="res://Art/Characters2D/mummo.png" id="3_agbl6"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
 [ext_resource type="Script" path="res://C#-Code/HealthSlider.cs" id="4_kqreq"]
+[ext_resource type="Texture2D" uid="uid://d0dsxs0tbkcm" path="res://Art/Characters2D/ex.png" id="4_rdx67"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
+[ext_resource type="Texture2D" uid="uid://dxi6g3ueoauod" path="res://Art/Characters2D/feissari2.png" id="5_8mius"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
+[ext_resource type="Texture2D" uid="uid://cvaoi6jec2xw6" path="res://Art/Characters2D/joku_kuka_enmuista.png" id="6_dknor"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
 [ext_resource type="Script" path="res://C#-Code/TakeDamageButton.cs" id="7_rnve6"]
 [ext_resource type="Texture2D" uid="uid://hfaideobo1vw" path="res://Art/UI/UI_EnemyBubble.png" id="8_re61u"]
@@ -19,7 +24,7 @@ bg_color = Color(0.929412, 0.509804, 0.478431, 1)
 expand_margin_left = 110.0
 expand_margin_right = 110.0
 
-[node name="Control" type="MarginContainer"]
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_enemySprite")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -27,6 +32,12 @@ offset_bottom = -0.13501
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wf4om")
+m_enemySprite = NodePath("Spawner/Sprite2D")
+m_rosvo = ExtResource("2_hjx6f")
+m_mummo = ExtResource("3_agbl6")
+m_ex = ExtResource("4_rdx67")
+m_feissari = ExtResource("5_8mius")
+m_tuttu = ExtResource("6_dknor")
 
 [node name="BackgroundBackground" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
@@ -116,6 +127,9 @@ texture = ExtResource("4_vt01t")
 [node name="Spawner" type="Node2D" parent="."]
 position = Vector2(896, 392)
 script = ExtResource("6_lkiu2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Spawner"]
+texture = ExtResource("4_rdx67")
 
 [node name="DamageButton" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
