@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=13 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
@@ -7,6 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
 [ext_resource type="Script" path="res://C#-Code/TakeDamageButton.cs" id="7_rnve6"]
+[ext_resource type="Texture2D" uid="uid://hfaideobo1vw" path="res://Art/UI/UI_EnemyBubble.png" id="8_re61u"]
+[ext_resource type="Texture2D" uid="uid://b7xggjnbr751i" path="res://Art/UI/UI_PlayerBubble.png" id="9_js5ws"]
+[ext_resource type="Texture2D" uid="uid://bwicfj1jmb065" path="res://Art/UI/UI_PlayerBubbleSmall.png" id="10_ityrp"]
+
+[sub_resource type="Theme" id="Theme_s24to"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_remcn"]
+bg_color = Color(0.753676, 0.287639, 0.751243, 1)
 
 [node name="Control" type="MarginContainer"]
 anchors_preset = 15
@@ -23,8 +31,8 @@ texture = ExtResource("3_he2sv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_right = 155
-theme_override_constants/margin_bottom = 90
+theme_override_constants/margin_right = 150
+theme_override_constants/margin_bottom = 70
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -46,6 +54,7 @@ columns = 2
 custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 8
+theme = SubResource("Theme_s24to")
 text = "Attack"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
@@ -77,6 +86,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_bgjws")
 
 [node name="VSlider" type="VSlider" parent="UiBattery"]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 anchors_preset = -1
 anchor_left = 0.031
@@ -90,6 +100,7 @@ offset_bottom = -256.128
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_remcn")
 max_value = 5.0
 value = 1.0
 editable = false
@@ -116,5 +127,18 @@ size_flags_horizontal = 8
 size_flags_vertical = 8
 text = "Take Damage"
 script = ExtResource("7_rnve6")
+
+[node name="UiEnemyBubble" type="Sprite2D" parent="."]
+position = Vector2(488, 80)
+scale = Vector2(0.453125, 0.436667)
+texture = ExtResource("8_re61u")
+
+[node name="UiPlayerBubble" type="Sprite2D" parent="."]
+position = Vector2(464, 512)
+texture = ExtResource("9_js5ws")
+
+[node name="UiPlayerBubbleSmall" type="Sprite2D" parent="."]
+position = Vector2(456, 408)
+texture = ExtResource("10_ityrp")
 
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
