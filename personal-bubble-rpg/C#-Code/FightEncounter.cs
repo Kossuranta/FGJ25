@@ -6,7 +6,6 @@ public partial class FightEncounter : Node
 
 	public CharacterType characterType = CharacterType.ROSVO;
 
-	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		if (characterType == CharacterType.NOT_SET)
@@ -53,7 +52,6 @@ public partial class FightEncounter : Node
 		}
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
 	}
