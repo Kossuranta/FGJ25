@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://4bkplhinfj4b"]
 
-[ext_resource type="Texture2D" uid="uid://bgxwschabgmnw" path="res://Art/Characters2D/Feissari.png" id="1_08nvf"]
+[ext_resource type="Texture2D" uid="uid://dxi6g3ueoauod" path="res://Art/Characters2D/feissari2.png" id="1_08nvf"]
 
 [node name="Feissari" type="Sprite2D"]
 scale = Vector2(0.2, 0.2)
