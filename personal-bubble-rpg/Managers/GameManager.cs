@@ -42,6 +42,7 @@ public partial class GameManager : Node
 		MainLevel?.QueueFree();
 		m_hud?.QueueFree();
 		Camera?.QueueFree();
+		m_fightScene?.QueueFree();
 		
 		InitLevel();
 		InitHud();
