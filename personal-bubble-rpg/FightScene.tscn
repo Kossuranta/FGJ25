@@ -26,7 +26,7 @@ texture = ExtResource("3_he2sv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
-theme_override_constants/margin_right = 225
+theme_override_constants/margin_right = 155
 theme_override_constants/margin_bottom = 55
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
@@ -71,10 +71,11 @@ size_flags_horizontal = 8
 text = "Flee"
 
 [node name="UiBatteryBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-position = Vector2(-1147, -393)
+position = Vector2(-1133, -333)
 texture = ExtResource("3_t7dq1")
 
 [node name="VSlider" type="VSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(-2.18, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/center_grabber = 0
@@ -86,15 +87,15 @@ value = 5.0
 editable = false
 
 [node name="UiBattery" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-position = Vector2(-1147, -393)
+position = Vector2(-1133, -333)
 texture = ExtResource("5_bgjws")
 
 [node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
-position = Vector2(600, 960)
+position = Vector2(696, 968)
 texture = ExtResource("4_vt01t")
 
 [node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
-position = Vector2(1488, 636)
+position = Vector2(1544, 632)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vt01t")
 
@@ -106,6 +107,7 @@ script = ExtResource("6_lkiu2")
 position = Vector2(960, 540)
 
 [node name="DamageButton" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
