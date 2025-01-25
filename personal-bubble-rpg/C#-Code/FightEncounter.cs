@@ -24,6 +24,10 @@ public partial class FightEncounter : Node
 	[Export]	
 	private Texture2D m_terapeutti;
 	[Export]
+	private Texture2D m_diileri;
+	[Export]
+	private Texture2D m_kakara;
+	[Export]
 	private Texture2D m_koira;
 	[Export]
 	private Texture2D m_ovi;
@@ -89,6 +93,18 @@ public partial class FightEncounter : Node
 					m_enemyText.Text = "It's time for you to leave the hospital for now. "
 										+ "It's getting late, so I hope you get home safely.";
 					GD.Print("Terapeutti");
+					break;
+				case CharacterType.DIILERI:
+					// spawns a dealer
+					m_enemySprite.Texture = m_diileri;
+					m_enemyText.Text = "Are you looking for something...? You just might've come to the right place...";
+					GD.Print("Diileri");
+					break;
+				case CharacterType.LAPSI:
+					// spawns a brat
+					m_enemySprite.Texture = m_kakara;
+					m_enemyText.Text = "Hey, whatcha starin' at? I'll call the cops.";
+					GD.Print("Kakara");
 					break;
 				case CharacterType.KOIRA:
 					// spawns a dog

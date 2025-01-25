@@ -30,4 +30,5 @@ public enum CharacterType
     KOIRA = 9,
     OVI = 10,
     LAPSI = 11,
+    DIILERI = 12,
 }
