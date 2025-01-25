@@ -28,6 +28,7 @@ expand_margin_left = 110.0
 expand_margin_right = 110.0
 
 [node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_enemyText", "m_enemySprite")]
+z_index = 1000
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -35,7 +36,7 @@ offset_bottom = -0.13501
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wf4om")
-m_enemyText = NodePath("Node/EnemyTextLabel")
+m_enemyText = NodePath("UiEnemyBubble/EnemyTextLabel")
 m_enemySprite = NodePath("Spawner/Sprite2D")
 m_rosvo = ExtResource("2_hjx6f")
 m_mummo = ExtResource("3_agbl6")
@@ -157,14 +158,12 @@ position = Vector2(488, 80)
 scale = Vector2(0.453125, 0.436667)
 texture = ExtResource("8_re61u")
 
-[node name="Node" type="Node" parent="."]
-
-[node name="EnemyTextLabel" type="RichTextLabel" parent="Node"]
+[node name="EnemyTextLabel" type="RichTextLabel" parent="UiEnemyBubble"]
 modulate = Color(0, 0, 0, 1)
-offset_left = 288.0
-offset_top = 32.0
-offset_right = 648.0
-offset_bottom = 128.0
+offset_left = -441.0
+offset_top = -110.0
+offset_right = 353.0
+offset_bottom = 92.0
 scroll_active = false
 
 [node name="Pelaaja" type="Sprite2D" parent="."]
@@ -176,5 +175,12 @@ flip_h = true
 [node name="UiPlayerBubble" type="Sprite2D" parent="."]
 position = Vector2(392, 520)
 texture = ExtResource("9_js5ws")
+
+[node name="PlayerTextLabel" type="RichTextLabel" parent="UiPlayerBubble"]
+offset_left = -224.0
+offset_top = -40.0
+offset_right = 224.0
+offset_bottom = 40.0
+scroll_active = false
 
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
