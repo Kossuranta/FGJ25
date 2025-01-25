@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=7 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
 [ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
+[ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
 
@@ -86,6 +87,10 @@ offset_right = 1128.0
 offset_bottom = 384.0
 text = "Take Damage"
 script = ExtResource("1_fkvlp")
+
+[node name="UiBatteryBackground" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(272, 224)
+texture = ExtResource("3_t7dq1")
 
 [node name="BackgroundBackground" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
