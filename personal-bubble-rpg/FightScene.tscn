@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkve8idmhxbve"]
 
-[ext_resource type="Script" path="res://Button.cs" id="1_fkvlp"]
-[ext_resource type="Script" path="res://HSlider.cs" id="1_ykw32"]
+[ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
+[ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -60,7 +60,7 @@ text = "Flee"
 [node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
 
 [node name="HSlider" type="HSlider" parent="CanvasLayer"]
-anchors_preset = -1
+anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
