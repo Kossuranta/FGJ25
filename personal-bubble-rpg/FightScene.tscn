@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=6 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
 [ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
+[ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
+[ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
+[ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,7 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.612479, 0.775082, 0.929434, 1)
+color = Color(0.611765, 0.776471, 0.929412, 0)
 
 [node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
 anchors_preset = 3
@@ -77,12 +80,32 @@ value = 5.0
 script = ExtResource("1_ykw32")
 
 [node name="DamageButton" type="Button" parent="CanvasLayer"]
-offset_left = 896.0
+offset_left = 984.0
 offset_top = 264.0
-offset_right = 1040.0
+offset_right = 1128.0
 offset_bottom = 384.0
 text = "Take Damage"
 script = ExtResource("1_fkvlp")
+
+[node name="BackgroundBackground" type="Sprite2D" parent="."]
+position = Vector2(576, 320)
+scale = Vector2(0.6, 0.592593)
+texture = ExtResource("3_he2sv")
+
+[node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
+position = Vector2(288, 528)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_vt01t")
+
+[node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
+position = Vector2(808, 328)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_vt01t")
+
+[node name="UiBattery" type="Sprite2D" parent="."]
+position = Vector2(72, 248)
+scale = Vector2(0.46, 0.46)
+texture = ExtResource("5_bgjws")
 
 [connection signal="value_changed" from="CanvasLayer/HSlider" to="CanvasLayer/DamageButton" method="Health_Down"]
 [connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
