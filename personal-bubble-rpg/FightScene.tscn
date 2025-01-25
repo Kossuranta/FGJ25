@@ -13,8 +13,10 @@
 
 [sub_resource type="Theme" id="Theme_s24to"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_remcn"]
-bg_color = Color(0.753676, 0.287639, 0.751243, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ukwic"]
+bg_color = Color(0.929412, 0.509804, 0.478431, 1)
+expand_margin_left = 110.0
+expand_margin_right = 110.0
 
 [node name="Control" type="MarginContainer"]
 anchors_preset = 15
@@ -76,39 +78,32 @@ size_flags_horizontal = 8
 text = "Flee"
 
 [node name="UiBatteryBackground" type="Sprite2D" parent="."]
-position = Vector2(84, 304)
+position = Vector2(96, 304)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_t7dq1")
 
-[node name="UiBattery" type="Sprite2D" parent="."]
-position = Vector2(84, 304)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_bgjws")
-
-[node name="VSlider" type="VSlider" parent="UiBattery"]
-visible = false
+[node name="VSlider" type="VSlider" parent="UiBatteryBackground"]
 custom_minimum_size = Vector2(100, 0)
-anchors_preset = -1
-anchor_left = 0.031
-anchor_top = 0.094
-anchor_right = 0.969
-anchor_bottom = 0.969
-offset_left = -127.936
-offset_top = -256.128
-offset_right = -128.064
-offset_bottom = -256.128
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -160.0
+offset_top = -224.0
+offset_right = 176.0
+offset_bottom = 240.0
 size_flags_vertical = 4
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_remcn")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ukwic")
 max_value = 5.0
-value = 1.0
+value = 5.0
 editable = false
 scrollable = false
 script = ExtResource("4_kqreq")
 
-[node name="BackgroundBattleFloor" type="Sprite2D" parent="UiBattery"]
-position = Vector2(600, 416)
+[node name="UiBattery" type="Sprite2D" parent="."]
+position = Vector2(96, 304)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_bgjws")
+
+[node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
+position = Vector2(380, 512)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vt01t")
 
 [node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
@@ -138,7 +133,7 @@ position = Vector2(464, 512)
 texture = ExtResource("9_js5ws")
 
 [node name="UiPlayerBubbleSmall" type="Sprite2D" parent="."]
-position = Vector2(456, 408)
+position = Vector2(464, 408)
 texture = ExtResource("10_ityrp")
 
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
