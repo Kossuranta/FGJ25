@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=15 format=3 uid="uid://ofw2itmhoodl"]
 
-[ext_resource type="PackedScene" uid="uid://do3qa1t3iqlk3" path="res://Items/ItemCola.tscn" id="1_nk81i"]
+[ext_resource type="PackedScene" uid="uid://do3qa1t3iqlk3" path="res://Items/ItemCola3D.tscn" id="1_nk81i"]
+[ext_resource type="PackedScene" uid="uid://bakhem0ko0jep" path="res://Player/Player.tscn" id="2_nhnp7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33dnm"]
 sky_top_color = Color(0.84435, 0.855767, 0.795666, 1)
@@ -1043,3 +1044,6 @@ shape = SubResource("BoxShape3D_vfi8k")
 
 [node name="ItemCola" parent="." instance=ExtResource("1_nk81i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2054, 0, -13.9399)
+
+[node name="CharacterBody3D_Player" parent="." instance=ExtResource("2_nhnp7")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.33978, -0.197419, -1.08438)
