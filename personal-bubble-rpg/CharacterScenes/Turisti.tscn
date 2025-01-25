@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdk48am3cu1vw"]
+
+[ext_resource type="Texture2D" uid="uid://bls52ry77yovi" path="res://Art/Characters2D/turisti.png" id="1_ee2gd"]
+
+[node name="Turisti" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ee2gd")
+offset = Vector2(0, -900)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bausto6mvqnju"]
+
+[ext_resource type="Texture2D" uid="uid://0te4m6brrc0i" path="res://Art/Characters2D/koira_tiny.png" id="1_peise"]
+
+[node name="Koira" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_peise")
+offset = Vector2(0, -900)
