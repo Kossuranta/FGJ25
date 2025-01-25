@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bkdgcu4kpdu1e"]
+
+[ext_resource type="Texture2D" uid="uid://hwpvsnf5qyd4" path="res://Art/Characters2D/kakara.png" id="1_y0b6q"]
+
+[node name="Lapsi" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_y0b6q")
+offset = Vector2(0, -900)

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2sf6hgmqvs2t"]
+
+[ext_resource type="Texture2D" uid="uid://u2y0fe800bha" path="res://Art/Characters2D/tohtori.png" id="1_df8wv"]
+
+[node name="Laakari" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_df8wv")
+offset = Vector2(0, -900)
