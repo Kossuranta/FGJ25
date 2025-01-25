@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgshcm7ug4fmf"]
+
+[ext_resource type="Script" path="res://Art/Art Prefabs/Home.cs" id="1_21rq8"]
+[ext_resource type="PackedScene" uid="uid://xrrs81g84kt5" path="res://Art/EnviroAssets3D/Home.glb" id="1_li67q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e62uh"]
+size = Vector3(2.61705, 2.05688, 2.25388)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_vlhai"]
+
+[node name="home" type="Node3D"]
+script = ExtResource("1_21rq8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Home2" parent="StaticBody3D" instance=ExtResource("1_li67q")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00339502, 1.02258, -0.0215302)
+shape = SubResource("BoxShape3D_e62uh")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, -1)
+shape = SubResource("SphereShape3D_vlhai")
