@@ -89,8 +89,23 @@ text = "Take Damage"
 script = ExtResource("1_fkvlp")
 
 [node name="UiBatteryBackground" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(272, 224)
+position = Vector2(72, 248)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_t7dq1")
+
+[node name="VSlider" type="VSlider" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 144.0
+offset_right = 128.0
+offset_bottom = 368.0
+size_flags_horizontal = 1
+max_value = 5.0
+value = 5.0
+
+[node name="UiBattery" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(72, 248)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_bgjws")
 
 [node name="BackgroundBackground" type="Sprite2D" parent="."]
 position = Vector2(576, 320)
@@ -106,11 +121,6 @@ texture = ExtResource("4_vt01t")
 position = Vector2(808, 328)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_vt01t")
-
-[node name="UiBattery" type="Sprite2D" parent="."]
-position = Vector2(72, 248)
-scale = Vector2(0.46, 0.46)
-texture = ExtResource("5_bgjws")
 
 [connection signal="value_changed" from="CanvasLayer/HSlider" to="CanvasLayer/DamageButton" method="Health_Down"]
 [connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
