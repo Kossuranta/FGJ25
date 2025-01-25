@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnkvtfe4stxhh"]
+
+[ext_resource type="Texture2D" uid="uid://c0q74bs1pfnhs" path="res://Art/Characters2D/mummo.png" id="1_ud5qe"]
+
+[node name="Mummo" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ud5qe")
+offset = Vector2(0, -900)

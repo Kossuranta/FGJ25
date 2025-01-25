@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyern03ktx1ni"]
+[gd_scene load_steps=4 format=3 uid="uid://cyern03ktx1ni"]
 
 [ext_resource type="Script" path="res://Managers/GameManager.cs" id="1_0v5v5"]
 [ext_resource type="PackedScene" uid="uid://dts406g2hnvt8" path="res://MainLevel.tscn" id="2_yj7m2"]
