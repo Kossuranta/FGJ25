@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://ofw2itmhoodl"]
 
-[ext_resource type="Texture2D" uid="uid://hkt6c7rfexb4" path="res://Assetit/taso1.png" id="1_k6d7j"]
+[ext_resource type="PackedScene" uid="uid://do3qa1t3iqlk3" path="res://Items/ItemCola.tscn" id="1_nk81i"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33dnm"]
 sky_top_color = Color(0.84435, 0.855767, 0.795666, 1)
@@ -27,7 +27,7 @@ glow_enabled = true
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4r28o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7a7h"]
-albedo_texture = ExtResource("1_k6d7j")
+albedo_color = Color(4.33177e-07, 0.631687, 0.463359, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn5s1"]
 albedo_color = Color(0.525101, 0.525101, 0.525101, 1)
@@ -94,7 +94,7 @@ material = SubResource("StandardMaterial3D_v7fg5")
 shape = SubResource("BoxShape3D_2x1im")
 
 [node name="Kuutio8" type="StaticBody3D" parent="Ground"]
-transform = Transform3D(-1.13645e-06, 0, -9.64227, 0, 6, 0, 25.999, 0, -4.21477e-07, -39.4861, 0, -29.0036)
+transform = Transform3D(-1.13645e-06, 0, -9.64227, 0, 6, 0, 25.999, 0, -4.21477e-07, -44.6945, 0, 42.205)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Ground/Kuutio8"]
 transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0.789108, 0, 2.16864)
@@ -644,3 +644,402 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio46"]
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio47" type="StaticBody3D" parent="."]
+transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, -28.2628, 0, -66.6872)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio47"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio47"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio48" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 32.0215, 0, -72.7736)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio48"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio48"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio49" type="StaticBody3D" parent="."]
+transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, 13.0814, 0, -64.0217)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio49"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio49"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio50" type="StaticBody3D" parent="."]
+transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, 20.0119, 0, -63.8103)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio50"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio50"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio51" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 59.4871, 0, -80.5822)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio51"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio51"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio52" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 44.9151, 0, -79.8177)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio52"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio52"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio53" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 31.8969, 0, -79.5492)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio53"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio53"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio54" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 50.7881, 0, -61.3687)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio54"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio54"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio55" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 50.8779, 0, -54.6265)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio55"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio55"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio56" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 50.5166, 0, -48.5913)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio56"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio56"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio57" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, 27.4254, 0, -67.1864)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio57"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio57"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio58" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, 33.1591, 0, -67.2918)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio58"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio58"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio59" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, -35.7476, 0, -69.2049)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio59"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio59"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio60" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, -42.36, 0, -69.0687)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio60"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio60"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio61" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, -42.3919, 0, -81.7917)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio61"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0.0151939, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio61"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio62" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.344522, 0, 9.64064, 0, 6, 0, -18.744, 0, -0.177198, -35.228, 0, -81.8649)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio62"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio62"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio63" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.720587, 0, 30.1008, 0, 6, 0, -39.2042, 0, -0.553263, -46.1565, 0, -116.273)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio63"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio63"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio64" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.660413, 0, 25.8793, 0, 6, 0, -35.9304, 0, -0.475669, 0.744185, 0, -95.5955)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio64"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio64"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio65" type="StaticBody3D" parent="."]
+transform = Transform3D(-51.2015, 0, -0.0378642, 0, 6, 0, 0.201065, 0, -9.6422, -44.6082, 0, -164.672)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio65"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio65"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio66" type="StaticBody3D" parent="."]
+transform = Transform3D(-51.2015, 0, -0.0378642, 0, 6, 0, 0.201065, 0, -9.6422, -5.2971, 0, -164.827)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio66"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio66"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio67" type="StaticBody3D" parent="."]
+transform = Transform3D(-51.2015, 0, -0.0378642, 0, 6, 0, 0.201065, 0, -9.6422, 32.194, 0, -164.974)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio67"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio67"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio68" type="StaticBody3D" parent="."]
+transform = Transform3D(-51.2015, 0, -0.0378642, 0, 6, 0, 0.201065, 0, -9.6422, 54.872, 0, -165.063)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio68"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio68"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio69" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.319022, 0, 9.64209, 0, 6, 0, -51.2009, 0, -0.0600777, -60.8903, 0, -145.013)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio69"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio69"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio70" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.319022, 0, 9.64209, 0, 6, 0, -51.2009, 0, -0.0600777, 69.9012, 0, -145.828)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio70"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio70"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio71" type="StaticBody3D" parent="."]
+transform = Transform3D(35.9328, 0, 0.368616, 0, 6, 0, -0.511782, 0, 25.881, 53.768, 0, -121.337)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio71"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio71"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio72" type="StaticBody3D" parent="."]
+transform = Transform3D(35.9328, 0, 0.368616, 0, 6, 0, -0.511782, 0, 25.881, 33.268, 0, -121.045)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio72"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio72"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio73" type="StaticBody3D" parent="."]
+transform = Transform3D(35.9328, 0, 0.368616, 0, 6, 0, -0.511782, 0, 25.881, 41.9245, 0, -132.042)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio73"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio73"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio74" type="StaticBody3D" parent="."]
+transform = Transform3D(-51.2015, 0, -0.0378642, 0, 6, 0, 0.201065, 0, -9.6422, -7.89792, 0, -158.377)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio74"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio74"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio75" type="StaticBody3D" parent="."]
+transform = Transform3D(35.9328, 0, 0.368616, 0, 6, 0, -0.511782, 0, 25.881, 14.2695, 0, -130.189)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio75"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio75"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio76" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.660413, 0, 25.8793, 0, 6, 0, -35.9304, 0, -0.475669, 39.2777, 0, -159.908)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio76"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio76"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio77" type="StaticBody3D" parent="."]
+transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 56.6075, 0, -73.5148)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio77"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio77"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio78" type="StaticBody3D" parent="."]
+transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, 66.7701, 0, -98.0877)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio78"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio78"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="Kuutio79" type="StaticBody3D" parent="."]
+transform = Transform3D(-0.481983, 0, 25.8964, 0, 6.00396, 0, -26.2228, 0, -0.475984, -0.058538, 0, -130.733)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio79"]
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+mesh = SubResource("BoxMesh_r53o2")
+surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio79"]
+transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
+shape = SubResource("BoxShape3D_vfi8k")
+
+[node name="ItemCola" parent="." instance=ExtResource("1_nk81i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.2054, 0, -13.9399)
