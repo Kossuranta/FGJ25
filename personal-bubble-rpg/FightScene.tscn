@@ -1,33 +1,30 @@
-[gd_scene load_steps=9 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=8 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
+[ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="4_vfpof"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
-
-[sub_resource type="Texture2DRD" id="Texture2DRD_2vrla"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx3im"]
-bg_color = Color(0.870588, 0.403922, 0.6, 1)
 
 [node name="Control" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -0.13501
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_vertical = 8
 
 [node name="BackgroundBackground" type="Sprite2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_he2sv")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
 theme_override_constants/margin_right = 155
-theme_override_constants/margin_bottom = 55
+theme_override_constants/margin_bottom = 90
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
@@ -40,70 +37,76 @@ size_flags_vertical = 4
 alignment = 2
 
 [node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 2
 
 [node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Attack"
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Defend"
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Item"
 
 [node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(200, 100)
+custom_minimum_size = Vector2(100, 50)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Flee"
 
-[node name="UiBatteryBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-position = Vector2(-1133, -333)
+[node name="UiBatteryBackground" type="Sprite2D" parent="."]
+position = Vector2(84, 304)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_t7dq1")
 
-[node name="VSlider" type="VSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/center_grabber = 0
-theme_override_constants/grabber_offset = 0
-theme_override_icons/tick = SubResource("Texture2DRD_2vrla")
-theme_override_styles/grabber_area = SubResource("StyleBoxFlat_vx3im")
+[node name="UiBattery" type="Sprite2D" parent="."]
+position = Vector2(84, 304)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_bgjws")
+
+[node name="VSlider" type="VSlider" parent="UiBattery"]
+custom_minimum_size = Vector2(100, 0)
+anchors_preset = -1
+anchor_left = 0.031
+anchor_top = 0.094
+anchor_right = 0.969
+anchor_bottom = 0.969
+offset_left = -127.936
+offset_top = -256.128
+offset_right = -128.064
+offset_bottom = -256.128
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
 max_value = 5.0
 value = 5.0
 editable = false
+script = ExtResource("4_vfpof")
 
-[node name="UiBattery" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-position = Vector2(-1133, -333)
-texture = ExtResource("5_bgjws")
-
-[node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
-position = Vector2(696, 968)
+[node name="BackgroundBattleFloor" type="Sprite2D" parent="UiBattery"]
+position = Vector2(600, 416)
 texture = ExtResource("4_vt01t")
 
 [node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
-position = Vector2(1544, 632)
-scale = Vector2(0.5, 0.5)
+position = Vector2(896, 344)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("4_vt01t")
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2(1544, 736)
+position = Vector2(896, 392)
 script = ExtResource("6_lkiu2")
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-position = Vector2(960, 540)
 
 [node name="DamageButton" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)

@@ -2,14 +2,13 @@ using Godot;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-public partial class HSlider : Godot.HSlider
+public partial class VSlider : Godot.VSlider
 {
 
 	public void Health_Down(float _currentHealth)
 	{
 		Value = _currentHealth;
 		GD.Print("Value changed: " + _currentHealth);
-		Value -= 1;
 	}
 
 	public override void _Ready()
