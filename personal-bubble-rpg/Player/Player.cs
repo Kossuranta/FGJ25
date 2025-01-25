@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Player : Node3D
+public partial class Player : CharacterBody3D
 {
 	[Export]
 	private float m_moveSpeed = 5f;
@@ -16,29 +16,30 @@ public partial class Player : Node3D
 
 	public override void _Process(double _delta)
 	{
-		float delta = (float) _delta;
-		Vector3 moveDir = new();
+		/*float delta = (float) _delta;
 		float rotation = 0;
-
-		// Check for input and set direction accordingly
-		if (Input.IsActionPressed("move_forward"))
-			moveDir.Z -= 1;
-
-		if (Input.IsActionPressed("move_back"))
-			moveDir.Z += 1;
 
 		if (Input.IsActionPressed("turn_left"))
 			rotation = 1;
 
 		if (Input.IsActionPressed("turn_right"))
 			rotation = -1;
-		
-		/*if (moveDir.Length() > 0)
-		{
-			moveDir = moveDir.Normalized();
-		}*/
 
-		Translate(moveDir * m_moveSpeed *  delta);
-		RotateY(rotation * m_rotateSpeed * delta);
+		RotateY(rotation * m_rotateSpeed * delta);*/
+	}
+	
+	public override void _PhysicsProcess(double _delta)
+	{
+		float delta = (float) _delta;
+		Movement(delta);
+	}
+
+	private void Movement(float _delta)
+	{
+		Vector2 inputDir = Input.GetVector("turn_left", "turn_right", "move_forward", "move_back");
+		Vector3 moveDir = new(inputDir.X, 0, inputDir.Y);
+		Velocity = moveDir * m_moveSpeed;
+		MoveAndCollide(Velocity * _delta);
+		MoveAndSlide();
 	}
 }
