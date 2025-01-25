@@ -1,9 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=20 format=3 uid="uid://ofw2itmhoodl"]
 
+[ext_resource type="PackedScene" uid="uid://b8ba2hsfwb363" path="res://Art/Art Prefabs/talo_1.tscn" id="1_1gx34"]
 [ext_resource type="PackedScene" path="res://Items/ItemCola3D.tscn" id="1_nk81i"]
 [ext_resource type="PackedScene" uid="uid://bakhem0ko0jep" path="res://Player/Player.tscn" id="2_nhnp7"]
 [ext_resource type="PackedScene" uid="uid://kcp8wwsluu6w" path="res://CharacterScenes3D/Feissari.tscn" id="5_daayn"]
+[ext_resource type="PackedScene" uid="uid://u36sbhfyx7j7" path="res://Art/Art Prefabs/talo_2.tscn" id="6_l5jqd"]
 [ext_resource type="PackedScene" uid="uid://bnite5c1td2bx" path="res://CharacterScenes3D/Lapsi.tscn" id="6_lj683"]
+[ext_resource type="PackedScene" uid="uid://bh5agbt21ss88" path="res://Art/Art Prefabs/katupala.tscn" id="7_raq2q"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33dnm"]
 sky_top_color = Color(0.84435, 0.855767, 0.795666, 1)
@@ -30,7 +33,7 @@ glow_enabled = true
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_4r28o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t7a7h"]
-albedo_color = Color(4.33177e-07, 0.631687, 0.463359, 1)
+albedo_color = Color(0.616131, 0.609279, 0.590674, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn5s1"]
 albedo_color = Color(0.525101, 0.525101, 0.525101, 1)
@@ -108,18 +111,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
 
-[node name="Kuutio" type="StaticBody3D" parent="."]
-transform = Transform3D(16.5841, 0, 0, 0, 6, 0, 0, 0, 9.64227, -22.5995, 0, -26.1126)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
 [node name="Kuutio2" type="StaticBody3D" parent="."]
 transform = Transform3D(15.4962, 0, 0, 0, 6, 0, 0, 0, 9.64227, 67.259, 0.305439, -25.7601)
 
@@ -144,59 +135,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
 
-[node name="Kuutio4" type="StaticBody3D" parent="."]
-transform = Transform3D(15.4962, 0, 0, 0, 6, 0, 0, 0, 9.64227, 30.0497, 0, -26.0996)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio4"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio4"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio5" type="StaticBody3D" parent="."]
-transform = Transform3D(15.4962, 0, 0, 0, 6, 0, 0, 0, 9.64227, 17.8881, 0, -25.9298)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio5"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio5"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio6" type="StaticBody3D" parent="."]
-transform = Transform3D(19.9516, 0, 0, 0, 6, 0, 0, 0, 9.64227, 3.89762, 0, -25.9911)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio6"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio6"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio7" type="StaticBody3D" parent="."]
-transform = Transform3D(15.4962, 0, 0, 0, 6, 0, 0, 0, 9.64227, -10.0436, 0, -26.0476)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio7"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio7"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
 [node name="Kuutio9" type="StaticBody3D" parent="."]
-transform = Transform3D(7.1446, 0, 0, 0, 6, 0, 0, 0, 9.64227, 25.3054, -0.431465, -14.7581)
+transform = Transform3D(7.1446, 0, 0, 0, 6, 0, 0, 0, 9.64227, -9.8771, -0.431465, -9.1007)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio9"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
+transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, -0.110075)
 mesh = SubResource("BoxMesh_r53o2")
 surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 
@@ -204,65 +147,20 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
 
-[node name="Kuutio10" type="StaticBody3D" parent="."]
-transform = Transform3D(-25.9988, 0, -0.0355008, 0, 6, 0, 0.102096, 0, -9.04035, -10.9453, 0.667782, -2.37353)
+[node name="Talo1" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, -1.70347, -0.197418, -1.72048)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio10"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
+[node name="Talo6" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, -1.70347, -0.197418, 4.9704)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio10"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
+[node name="Talo4" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, 15.2209, -0.197418, -1.72048)
 
-[node name="Kuutio11" type="StaticBody3D" parent="."]
-transform = Transform3D(-25.9988, 0, -0.0378642, 0, 6, 0, 0.102096, 0, -9.6422, -30.9999, 0, -2.326)
+[node name="Talo7" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, 15.2209, -0.197418, 5.04459)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio11"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio11"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio12" type="StaticBody3D" parent="."]
-transform = Transform3D(-25.9988, 0, -0.0378642, 0, 6, 0, 0.102096, 0, -9.6422, -74.5197, 0, -10.4373)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio12"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, -0.895118, 0, -0.859345)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio12"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio13" type="StaticBody3D" parent="."]
-transform = Transform3D(-25.9988, 0, -0.0378642, 0, 6, 0, 0.102096, 0, -9.6422, 40.0806, 0, -2.28316)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio13"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio13"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio14" type="StaticBody3D" parent="."]
-transform = Transform3D(-25.9988, 0, -0.0378642, 0, 6, 0, 0.102096, 0, -9.6422, 20.6755, 0, -2.33761)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio14"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio14"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
+[node name="Talo2" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, -18.7609, -0.197418, -1.53632)
 
 [node name="Kuutio15" type="StaticBody3D" parent="."]
 transform = Transform3D(-25.9988, 0, -0.0378642, 0, 6, 0, 0.102096, 0, -9.6422, 59.7797, 0, -2.49705)
@@ -456,18 +354,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
 
-[node name="Kuutio31" type="StaticBody3D" parent="."]
-transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, -25.2061, 0, -15.8851)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio31"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio31"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
 [node name="Kuutio32" type="StaticBody3D" parent="."]
 transform = Transform3D(0.202377, 0, -9.64198, 0, 6, 0, 25.9983, 0, 0.0750556, -60.3611, 0, -15.6115)
 
@@ -501,30 +387,6 @@ mesh = SubResource("BoxMesh_r53o2")
 surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio34"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio35" type="StaticBody3D" parent="."]
-transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, -8.252, 0, -14.1821)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio35"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio35"]
-transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
-shape = SubResource("BoxShape3D_vfi8k")
-
-[node name="Kuutio36" type="StaticBody3D" parent="."]
-transform = Transform3D(-18.744, 0, -0.177199, 0, 6, 0, 0.344522, 0, -9.64064, 35.6355, 0, -14.9888)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Kuutio36"]
-transform = Transform3D(0.776591, 0, 0, 0, 1, 0, 0, 0, 0.776591, 0, 0, 0)
-mesh = SubResource("BoxMesh_r53o2")
-surface_material_override/0 = SubResource("StandardMaterial3D_tyv5x")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Kuutio36"]
 transform = Transform3D(0.776591, 0, 0, 0, 1.00002, 0, 0, 0, 0.776603, 0, 0, 0)
 shape = SubResource("BoxShape3D_vfi8k")
 
@@ -1054,4 +916,43 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.33978, -0.197419, -1.
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 17.5898, -0.197418, -14.1876)
 
 [node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 4.57118, -0.197418, -14.1876)
+transform = Transform3D(-1.49518, 0, -0.120168, 0, 1.5, 0, 0.120168, 0, -1.49518, 4.57118, -0.197418, -14.1876)
+
+[node name="Node3D2" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.4389, -0.394836, -0.576065)
+
+[node name="Node3D3" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -20.8341, -0.394836, -9.99648)
+
+[node name="Node3D8" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.15668, -0.394836, -18.8844)
+
+[node name="Node3D9" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5944, -0.394836, -18.8844)
+
+[node name="Node3D6" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33232, -0.394836, -18.7304)
+
+[node name="Node3D5" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.9679, -0.394836, -18.7514)
+
+[node name="Node3D" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2325, -0.197418, -0.667839)
+
+[node name="Node3D7" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.6503, -0.197418, -0.667839)
+
+[node name="Node3D7" parent="Node3D7" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.59, 0, 0.072)
+
+[node name="Talo3" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, -17.9811, -0.197418, -18.7937)
+
+[node name="Talo5" parent="." instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 0.807504, 30.143, -0.197418, -19.291)
+
+[node name="Node3D4" parent="." instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -58.4785, -0.394836, -9.99648)
+
+[node name="Katupala" parent="." instance=ExtResource("7_raq2q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -33.1866, 0.126007, -9.36472)
