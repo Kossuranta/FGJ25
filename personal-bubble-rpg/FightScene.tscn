@@ -155,7 +155,7 @@ position = Vector2(896, 392)
 script = ExtResource("6_lkiu2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spawner"]
-position = Vector2(-16, -177.846)
+position = Vector2(8, -184)
 texture = ExtResource("19_ff6pd")
 
 [node name="DamageButton" type="Button" parent="."]
