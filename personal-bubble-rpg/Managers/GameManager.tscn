@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cyern03ktx1ni"]
+[gd_scene load_steps=4 format=3 uid="uid://cyern03ktx1ni"]
 
 [ext_resource type="Script" path="res://Managers/GameManager.cs" id="1_0v5v5"]
 [ext_resource type="PackedScene" uid="uid://dts406g2hnvt8" path="res://MainLevel.tscn" id="2_yj7m2"]
-[ext_resource type="PackedScene" uid="uid://bakhem0ko0jep" path="res://Player/Player.tscn" id="3_boyrk"]
 [ext_resource type="PackedScene" uid="uid://dlolipli4nr5b" path="res://Camera.tscn" id="4_bnuvo"]
 
 [node name="Node_GameManager" type="Node"]
 script = ExtResource("1_0v5v5")
 m_mainLevelPrefab = ExtResource("2_yj7m2")
-m_playerPrefab = ExtResource("3_boyrk")
 m_cameraPrefab = ExtResource("4_bnuvo")

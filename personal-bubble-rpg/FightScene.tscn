@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=9 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
 [ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
@@ -6,6 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_2vrla"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx3im"]
+bg_color = Color(0.870588, 0.403922, 0.6, 1)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -95,12 +100,17 @@ texture = ExtResource("3_t7dq1")
 
 [node name="VSlider" type="VSlider" parent="CanvasLayer"]
 offset_left = 16.0
-offset_top = 144.0
+offset_top = 136.0
 offset_right = 128.0
 offset_bottom = 368.0
-size_flags_horizontal = 1
+size_flags_horizontal = 4
+theme_override_constants/center_grabber = 0
+theme_override_constants/grabber_offset = 0
+theme_override_icons/tick = SubResource("Texture2DRD_2vrla")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_vx3im")
 max_value = 5.0
 value = 5.0
+editable = false
 
 [node name="UiBattery" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(72, 248)
@@ -122,5 +132,5 @@ position = Vector2(808, 328)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_vt01t")
 
-[connection signal="value_changed" from="CanvasLayer/HSlider" to="CanvasLayer/DamageButton" method="Health_Down"]
 [connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
+[connection signal="value_changed" from="CanvasLayer/VSlider" to="CanvasLayer/HSlider" method="Health_Down"]
