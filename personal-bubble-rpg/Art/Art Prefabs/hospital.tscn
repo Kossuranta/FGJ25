@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://i7bfkxropiec"]
+
+[ext_resource type="PackedScene" uid="uid://bnabd3ta4up0u" path="res://Art/EnviroAssets3D/Hospital.glb" id="1_nttay"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oan8m"]
+size = Vector3(12.1261, 3.25024, 5.02588)
+
+[node name="Hospital" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.29565, 0, -0.62573)
+
+[node name="Hospital3" parent="StaticBody3D" instance=ExtResource("1_nttay")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00105858, 1.62537, -0.503906)
+shape = SubResource("BoxShape3D_oan8m")
