@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8ba2hsfwb363"]
+
+[ext_resource type="PackedScene" uid="uid://cf02o8txud5y3" path="res://Art/EnviroAssets3D/Building1.glb" id="1_bpeap"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_u132f"]
+size = Vector3(1.36072, 4.38412, 4.38263)
+
+[node name="Talo1" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -1.99904, 0, 0.287999)
+
+[node name="Building12" parent="StaticBody3D" instance=ExtResource("1_bpeap")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(3.07521, 0, 0, 0, 1, 0, 0, 0, 0.960625, -0.00735366, 2.209, -0.00161776)
+shape = SubResource("BoxShape3D_u132f")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh5agbt21ss88"]
+
+[ext_resource type="PackedScene" uid="uid://brtmbpoqmx40g" path="res://Art/EnviroAssets3D/StreetPieces.glb" id="1_eh61t"]
+
+[node name="Katupala" type="Node3D"]
+
+[node name="StreetPieces" parent="." instance=ExtResource("1_eh61t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.93016, 0, 1.30306)
