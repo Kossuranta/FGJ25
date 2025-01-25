@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://do3qa1t3iqlk3"]
+
+[ext_resource type="Texture2D" uid="uid://w6xh858y6odf" path="res://Art/Items/item_cola.png" id="1_3gta4"]
+[ext_resource type="Script" path="res://Items/Item.cs" id="1_amue6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d3qvt"]
+size = Vector3(1, 1, 2.5)
+
+[node name="ItemCola" type="Area3D"]
+script = ExtResource("1_amue6")
+
+[node name="Sprite2D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+texture = ExtResource("1_3gta4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.556641, -0.0103149)
+shape = SubResource("BoxShape3D_d3qvt")
+
+[connection signal="area_entered" from="." to="." method="OnBodyEntered"]

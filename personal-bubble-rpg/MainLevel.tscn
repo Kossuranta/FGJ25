@@ -1,4 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dts406g2hnvt8"]
+[gd_scene load_steps=6 format=3 uid="uid://dts406g2hnvt8"]
+
+[ext_resource type="PackedScene" uid="uid://do3qa1t3iqlk3" path="res://Items/ItemCola.tscn" id="1_hxbu7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q10g4"]
 albedo_color = Color(0.525101, 0.525101, 0.525101, 1)
@@ -39,3 +41,6 @@ material = SubResource("StandardMaterial3D_umimi")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGBox3D2/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0354004, 0)
 shape = SubResource("BoxShape3D_gool4")
+
+[node name="ItemCola" parent="." instance=ExtResource("1_hxbu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29899, 0.0273643, -5.95071)
