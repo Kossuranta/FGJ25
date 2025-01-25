@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bftprtohdm8f4"]
+
+[ext_resource type="PackedScene" uid="uid://ckap3anvrkjah" path="res://Art/EnviroAssets3D/lyhtypylvas.glb" id="1_pgcpw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uhp7f"]
+size = Vector3(0.274109, 2.27878, 0.272217)
+
+[node name="lamppu" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.034729, 0, 0.0330811)
+
+[node name="lyhtypylvas" parent="StaticBody3D" instance=ExtResource("1_pgcpw")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00271606, 1.13744, 0.000854492)
+shape = SubResource("BoxShape3D_uhp7f")

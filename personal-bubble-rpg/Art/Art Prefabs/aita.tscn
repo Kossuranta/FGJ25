@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyuq16fw3560h"]
+
+[ext_resource type="PackedScene" uid="uid://rsny25ap2uiu" path="res://Art/EnviroAssets3D/metalaita.glb" id="1_ofs5m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fidaw"]
+size = Vector3(1.86133, 0.952118, 0.13916)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="metalaita" parent="StaticBody3D" instance=ExtResource("1_ofs5m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83298, -0.000395656, -0.00802732)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0332031, 0.498428, -0.000732422)
+shape = SubResource("BoxShape3D_fidaw")

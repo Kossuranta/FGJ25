@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxlqoy6p77cr8"]
+
+[ext_resource type="PackedScene" uid="uid://cil623n4536vp" path="res://Art/EnviroAssets3D/roskis.glb" id="1_fc1lx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dosb4"]
+size = Vector3(0.640625, 1.05731, 0.530273)
+
+[node name="roskis" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0782471, 0, 0.112793)
+
+[node name="roskis" parent="StaticBody3D" instance=ExtResource("1_fc1lx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0126953, 0.526215, -0.00634766)
+shape = SubResource("BoxShape3D_dosb4")

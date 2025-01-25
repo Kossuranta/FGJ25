@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://wdbuaghb4gol"]
+
+[ext_resource type="PackedScene" uid="uid://btcot8n3ilsds" path="res://Art/EnviroAssets3D/ruukku.glb" id="1_rbloc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_deiet"]
+size = Vector3(1, 1.45532, 1)
+
+[node name="ruukku" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="ruukku" parent="StaticBody3D" instance=ExtResource("1_rbloc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00549316, 0, 0.0202637)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00549316, 0.734741, 0.0202637)
+shape = SubResource("BoxShape3D_deiet")

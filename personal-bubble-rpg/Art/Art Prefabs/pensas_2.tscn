@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cycmdre3vd1ap"]
+
+[ext_resource type="PackedScene" uid="uid://c1kjmseaomh8u" path="res://Art/EnviroAssets3D/pensas2.glb" id="1_hdbib"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dk50u"]
+size = Vector3(1.05347, 1.02222, 1.08496)
+
+[node name="pensas_2" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.076416, 0, -0.0793457)
+
+[node name="pensas2" parent="StaticBody3D" instance=ExtResource("1_hdbib")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0057373, 0.475708, -0.0229492)
+shape = SubResource("BoxShape3D_dk50u")

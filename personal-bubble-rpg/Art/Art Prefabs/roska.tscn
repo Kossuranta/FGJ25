@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://rkebyv3o3p0t"]
+
+[ext_resource type="PackedScene" uid="uid://dtu3kgfo3rwt" path="res://Art/EnviroAssets3D/roskapussi.glb" id="1_joaf7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6ldeu"]
+size = Vector3(0.495056, 0.611816, 0.495361)
+
+[node name="roska" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="roskapussi" parent="StaticBody3D" instance=ExtResource("1_joaf7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0602417, 0, 0.019043)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0365295, 0.293213, 0.0252686)
+shape = SubResource("BoxShape3D_6ldeu")
