@@ -1,18 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxb5p4brdllfq"]
+[gd_scene load_steps=4 format=3 uid="uid://7s1kw6ab37u6"]
 
-[ext_resource type="Script" path="res://Items/Item.cs" id="1_fwdai"]
-[ext_resource type="Texture2D" uid="uid://dqeb63yihh4pq" path="res://Art/Items/Item_Coin.png" id="2_6q5ri"]
+[ext_resource type="Script" path="res://Items/Item.cs" id="1_v01ts"]
+[ext_resource type="Texture2D" uid="uid://cmf2imlb7umvb" path="res://Art/Items/Item_Sword.png" id="2_hmnm0"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_d3qvt"]
 size = Vector3(2, 2, 2)
 
-[node name="ItemCoin" type="Area3D"]
-script = ExtResource("1_fwdai")
-m_type = 5
+[node name="ItemMiekka" type="Area3D"]
+script = ExtResource("1_v01ts")
+m_type = 4
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
-texture = ExtResource("2_6q5ri")
+texture = ExtResource("2_hmnm0")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

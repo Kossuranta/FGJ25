@@ -1173,3 +1173,5 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 12.941
 
 [node name="PavementEdge10" parent="." instance=ExtResource("14_qrg5l")]
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 18.8233, 0, -7.26799)
+
+[connection signal="area_entered" from="ItemCola" to="ItemCola" method="OnBodyEntered"]
