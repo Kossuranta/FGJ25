@@ -5,9 +5,6 @@ public partial class RotateTowardsMovementDir : Node3D
 	[Export]
 	private CharacterBody3D m_characterBody;
 
-	[Export]
-	private float m_rotationSpeed = 5f;
-
 	public override void _Process(double _delta)
 	{
 		float delta = (float) _delta;
