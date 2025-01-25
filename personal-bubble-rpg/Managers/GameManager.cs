@@ -11,10 +11,15 @@ public partial class GameManager : Node
 	private PackedScene m_cameraPrefab;
 
 	[Export]
-	private PackedScene m_hud;
+	private PackedScene m_hudPrefab;
+
+	[Export]
+	private PackedScene m_fightScenePrefab;
 
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
+
+	private MarginContainer m_fightScene;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -31,6 +36,12 @@ public partial class GameManager : Node
 	{
 		
 	}
+
+	public void StartFight(CharacterType _enemy)
+	{
+		m_fightScene = (MarginContainer) m_fightScenePrefab.Instantiate();
+		AddChild(m_fightScene);
+	}
 	
 	private void InitLevel()
 	{
@@ -41,7 +52,7 @@ public partial class GameManager : Node
 
 	private void InitHud()
 	{
-		Node node = m_hud.Instantiate();
+		Node node = m_hudPrefab.Instantiate();
 		AddChild(node);
 	}
 
