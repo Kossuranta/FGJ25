@@ -1,108 +1,81 @@
 [gd_scene load_steps=9 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/Button.cs" id="1_fkvlp"]
-[ext_resource type="Script" path="res://C#-Code/HSlider.cs" id="1_ykw32"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
+[ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
 
 [sub_resource type="Texture2DRD" id="Texture2DRD_2vrla"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx3im"]
 bg_color = Color(0.870588, 0.403922, 0.6, 1)
 
-[node name="Control" type="Control"]
-layout_mode = 3
+[node name="Control" type="MarginContainer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_vertical = 8
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-follow_viewport_scale = 0.001
+[node name="BackgroundBackground" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("3_he2sv")
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.611765, 0.776471, 0.929412, 0)
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_right = 225
+theme_override_constants/margin_bottom = 55
 
-[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -336.0
-offset_top = -184.0
-offset_right = -209.0
-offset_bottom = -118.0
-grow_horizontal = 0
-grow_vertical = 0
-scale = Vector2(2.46, 2.46)
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+alignment = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 columns = 2
 
-[node name="Button" type="Button" parent="CanvasLayer/GridContainer"]
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Attack"
 
-[node name="Button2" type="Button" parent="CanvasLayer/GridContainer"]
+[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Defend"
 
-[node name="Button3" type="Button" parent="CanvasLayer/GridContainer"]
+[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Item"
 
-[node name="Button4" type="Button" parent="CanvasLayer/GridContainer"]
+[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 text = "Flee"
 
-[node name="CanvasModulate" type="CanvasModulate" parent="CanvasLayer"]
-
-[node name="HSlider" type="HSlider" parent="CanvasLayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -336.0
-offset_top = 108.0
-offset_right = -24.0
-offset_bottom = 124.0
-grow_horizontal = 0
-grow_vertical = 2
-size_flags_vertical = 4
-max_value = 5.0
-value = 5.0
-script = ExtResource("1_ykw32")
-
-[node name="DamageButton" type="Button" parent="CanvasLayer"]
-offset_left = 984.0
-offset_top = 264.0
-offset_right = 1128.0
-offset_bottom = 384.0
-text = "Take Damage"
-script = ExtResource("1_fkvlp")
-
-[node name="UiBatteryBackground" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(72, 248)
-scale = Vector2(0.5, 0.5)
+[node name="UiBatteryBackground" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+position = Vector2(-1147, -393)
 texture = ExtResource("3_t7dq1")
 
-[node name="VSlider" type="VSlider" parent="CanvasLayer"]
-offset_left = 16.0
-offset_top = 136.0
-offset_right = 128.0
-offset_bottom = 368.0
+[node name="VSlider" type="VSlider" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
 size_flags_horizontal = 4
 theme_override_constants/center_grabber = 0
 theme_override_constants/grabber_offset = 0
@@ -112,28 +85,31 @@ max_value = 5.0
 value = 5.0
 editable = false
 
-[node name="UiBattery" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(72, 248)
-scale = Vector2(0.5, 0.5)
+[node name="UiBattery" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+position = Vector2(-1147, -393)
 texture = ExtResource("5_bgjws")
 
-[node name="BackgroundBackground" type="Sprite2D" parent="."]
-position = Vector2(576, 320)
-scale = Vector2(0.6, 0.592593)
-texture = ExtResource("3_he2sv")
-
 [node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
-position = Vector2(288, 528)
-scale = Vector2(0.4, 0.4)
+position = Vector2(600, 960)
 texture = ExtResource("4_vt01t")
 
 [node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
-position = Vector2(808, 328)
-scale = Vector2(0.2, 0.2)
+position = Vector2(1488, 636)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_vt01t")
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2(808, 384)
+position = Vector2(1488, 728)
+script = ExtResource("6_lkiu2")
 
-[connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
-[connection signal="value_changed" from="CanvasLayer/VSlider" to="CanvasLayer/HSlider" method="Health_Down"]
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+position = Vector2(960, 540)
+
+[node name="DamageButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Take Damage"
+script = ExtResource("1_fkvlp")
+
+[connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
