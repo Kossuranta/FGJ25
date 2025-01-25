@@ -1,17 +1,23 @@
-[gd_scene load_steps=16 format=3 uid="uid://d3fdwwbmsg8pm"]
+[gd_scene load_steps=22 format=3 uid="uid://d3fdwwbmsg8pm"]
 
 [ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
 [ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
 [ext_resource type="Texture2D" uid="uid://d1hngfaiflkiy" path="res://Art/Items/Item_Bone.png" id="2_ogfon"]
+[ext_resource type="Texture2D" uid="uid://y8hjigtn86dl" path="res://Art/Items/Item_Candy.png" id="3_ctbrg"]
 [ext_resource type="Texture2D" uid="uid://dqeb63yihh4pq" path="res://Art/Items/Item_Coin.png" id="3_wyisp"]
 [ext_resource type="Texture2D" uid="uid://d0xo4qboo5c6b" path="res://Art/Items/item_headphones.png" id="3_ybg0t"]
 [ext_resource type="Texture2D" uid="uid://w6xh858y6odf" path="res://Art/Items/item_cola.png" id="4_6ye46"]
 [ext_resource type="Texture2D" uid="uid://dkcyfg0h2a3ih" path="res://Art/Items/item_key.png" id="4_xbmrd"]
+[ext_resource type="Texture2D" uid="uid://cepn5dti74spx" path="res://Art/Items/Item_Drugs.png" id="6_f850a"]
+[ext_resource type="Texture2D" uid="uid://c37leeow0t422" path="res://Art/Items/Item_EnergyDrink.png" id="7_qjnj2"]
 [ext_resource type="Texture2D" uid="uid://4570gg6d0tox" path="res://Art/Items/Item_Spoon.png" id="7_t1mbc"]
 [ext_resource type="Texture2D" uid="uid://cmf2imlb7umvb" path="res://Art/Items/Item_Sword.png" id="8_gtsfg"]
 [ext_resource type="LabelSettings" uid="uid://dxrlqaxhk3x38" path="res://LabelSettings/ItemSlotLetter.tres" id="10_5hw51"]
+[ext_resource type="Texture2D" uid="uid://dwkhg8jtfb00i" path="res://Art/Items/Item_Lockpick.png" id="10_5idkl"]
+[ext_resource type="Texture2D" uid="uid://c8smttvqpx01o" path="res://Art/Items/Item_Meds.png" id="11_2y7ss"]
 [ext_resource type="LabelSettings" uid="uid://ca55t4y10akld" path="res://LabelSettings/ButtonQEPickUpLabel.tres" id="11_h5pem"]
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
+[ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
@@ -43,10 +49,16 @@ script = ExtResource("1_dy3jj")
 m_pickUpPopup = NodePath("PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer/HBoxContainer/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
+m_candy = ExtResource("3_ctbrg")
 m_coin = ExtResource("3_wyisp")
 m_cola = ExtResource("4_6ye46")
+m_drugs = ExtResource("6_f850a")
+m_es = ExtResource("7_qjnj2")
 m_headphones = ExtResource("3_ybg0t")
 m_key = ExtResource("4_xbmrd")
+m_lockpick = ExtResource("10_5idkl")
+m_meds = ExtResource("11_2y7ss")
+m_photo = ExtResource("12_q0lt1")
 m_spoon = ExtResource("7_t1mbc")
 m_sword = ExtResource("8_gtsfg")
 

@@ -15,16 +15,34 @@ public partial class Hud : MarginContainer
 	private Texture2D m_bone;
 	
 	[Export]
+	private Texture2D m_candy;
+	
+	[Export]
 	private Texture2D m_coin;
 
 	[Export]
 	private Texture2D m_cola;
+	
+	[Export]
+	private Texture2D m_drugs;
+	
+	[Export]
+	private Texture2D m_es;
 
 	[Export]
 	private Texture2D m_headphones;
 
 	[Export]
 	private Texture2D m_key;
+	
+	[Export]
+	private Texture2D m_lockpick;
+	
+	[Export]
+	private Texture2D m_meds;
+	
+	[Export]
+	private Texture2D m_photo;
 
 	[Export]
 	private Texture2D m_spoon;
@@ -80,8 +98,10 @@ public partial class Hud : MarginContainer
 				m_itemSlot1.Texture = m_cola;
 				break;
 			case ItemType.CANDY:
+				m_itemSlot1.Texture = m_candy;
 				break;
 			case ItemType.ES:
+				m_itemSlot1.Texture = m_es;
 				break;
 			case ItemType.MIEKKA:
 				m_itemSlot1.Texture = m_sword;
@@ -90,18 +110,22 @@ public partial class Hud : MarginContainer
 				m_itemSlot1.Texture = m_coin;
 				break;
 			case ItemType.KUVA:
+				m_itemSlot1.Texture = m_photo;
 				break;
 			case ItemType.AVAIN:
 				m_itemSlot1.Texture = m_key;
 				break;
 			case ItemType.TIIRIKKA:
+				m_itemSlot1.Texture = m_lockpick;
 				break;
 			case ItemType.LUSIKKA:
 				m_itemSlot1.Texture = m_spoon;
 				break;
 			case ItemType.PILLERI:
+				m_itemSlot1.Texture = m_meds;
 				break;
 			case ItemType.STEROID:
+				m_itemSlot1.Texture = m_drugs;
 				break;
 			case ItemType.KUULOKKEET:
 				m_itemSlot1.Texture = m_headphones;
@@ -110,7 +134,8 @@ public partial class Hud : MarginContainer
 				m_itemSlot1.Texture = m_bone;
 				break;
 			default:
-				throw new ArgumentOutOfRangeException(nameof(_item), _item, null);
+				m_itemSlot1.Texture = null;
+				break;
 		}
 	}
 }
