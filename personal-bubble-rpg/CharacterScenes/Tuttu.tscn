@@ -3,4 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://cvaoi6jec2xw6" path="res://Art/Characters2D/joku_kuka_enmuista.png" id="1_sg24b"]
 
 [node name="JokuKukaEnmuista" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_sg24b")
+offset = Vector2(0, -900)

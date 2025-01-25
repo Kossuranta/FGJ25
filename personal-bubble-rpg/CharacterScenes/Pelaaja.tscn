@@ -3,5 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="1_nx11u"]
 
 [node name="Pelaaja" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_nx11u")
+offset = Vector2(0, -900)
 flip_h = true

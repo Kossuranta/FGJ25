@@ -132,5 +132,8 @@ position = Vector2(808, 328)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_vt01t")
 
+[node name="Spawner" type="Node2D" parent="."]
+position = Vector2(808, 384)
+
 [connection signal="pressed" from="CanvasLayer/DamageButton" to="CanvasLayer/DamageButton" method="OnPressed"]
 [connection signal="value_changed" from="CanvasLayer/VSlider" to="CanvasLayer/HSlider" method="Health_Down"]

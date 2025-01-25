@@ -3,4 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bgxwschabgmnw" path="res://Art/Characters2D/Feissari.png" id="1_08nvf"]
 
 [node name="Feissari" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_08nvf")
+offset = Vector2(0, -900)
