@@ -71,7 +71,6 @@ public partial class GameManager : Node
 		MainLevel?.QueueFree();
 		m_hud?.QueueFree();
 		Camera?.QueueFree();
-		m_gameOver?.QueueFree();
 		
 		InitLevel();
 		InitHud();
@@ -123,6 +122,9 @@ public partial class GameManager : Node
 
 	private void InitGameOver()
 	{
+		if (m_gameOver != null)
+			return;
+		
 		m_gameOver = (GameOver)m_gameOverPrefab.Instantiate();
 		AddChild(m_gameOver);
 	}

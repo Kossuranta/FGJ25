@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Threading;
 
-public partial class FightEncounter : Node
+public partial class FightEncounter : MarginContainer
 {
 	public CharacterType characterType;
 
@@ -34,6 +34,9 @@ public partial class FightEncounter : Node
 	private Texture2D m_koira;
 	[Export]
 	private Texture2D m_ovi;
+
+	private bool m_fading;
+	private float m_fadeProgress;
 
 	public void FightStart(CharacterType _characterType)
 	{
@@ -140,8 +143,38 @@ public partial class FightEncounter : Node
 			}
 		}
 	}
-
-	public override void _Process(double delta)
+	
+	public override void _Ready()
 	{
+		Color color = Modulate;
+		color.A = 0;
+		Modulate = color;
+
+		m_fading = true;
+		m_fadeProgress = 0;
+	}
+
+	public override void _Process(double _delta)
+	{
+		float delta = (float) _delta;
+		FadeIn(delta);
+	}
+
+	private void FadeIn(float _delta)
+	{
+		if (!m_fading)
+			return;
+
+		m_fadeProgress += _delta;
+
+		if (m_fadeProgress >= 1f) // fade completed
+		{
+			m_fading = false;
+		}
+
+		m_fadeProgress = Mathf.Clamp(m_fadeProgress, 0, 1f);
+		Color color = Modulate;
+		color.A = m_fadeProgress; // Set alpha
+		Modulate = color;
 	}
 }
