@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=23 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/FightEncounter.cs" id="1_wf4om"]
 [ext_resource type="Texture2D" uid="uid://ce1fsl2nimjst" path="res://Art/Characters2D/varas.png" id="2_hjx6f"]
@@ -19,6 +19,9 @@
 [ext_resource type="Texture2D" uid="uid://b7xggjnbr751i" path="res://Art/UI/UI_PlayerBubble.png" id="9_js5ws"]
 [ext_resource type="Texture2D" uid="uid://hwpvsnf5qyd4" path="res://Art/Characters2D/kakara.png" id="9_pqmge"]
 [ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="20_c7j45"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf4dc"]
+texture = ExtResource("3_he2sv")
 
 [sub_resource type="Theme" id="Theme_s24to"]
 
@@ -48,10 +51,9 @@ m_turisti = ExtResource("7_ldv6n")
 m_terapeutti = ExtResource("8_eocod")
 m_kakara = ExtResource("9_pqmge")
 
-[node name="BackgroundBackground" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(0.6, 0.6)
-texture = ExtResource("3_he2sv")
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qf4dc")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
