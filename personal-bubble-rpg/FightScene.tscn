@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=27 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/FightEncounter.cs" id="1_wf4om"]
 [ext_resource type="Texture2D" uid="uid://cqk1u818d7ynk" path="res://Art/Characters2D/varas_tiny.png" id="2_fb05a"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bmrqeg64v21vo" path="res://Art/Characters2D/joku_kuka_enmuista_tiny.png" id="6_aewa0"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
 [ext_resource type="Texture2D" uid="uid://dh0lv4q4fcmyj" path="res://Art/Characters2D/turisti_tiny.png" id="7_1e6rb"]
-[ext_resource type="Script" path="res://C#-Code/TakeDamageButton.cs" id="7_rnve6"]
 [ext_resource type="Texture2D" uid="uid://hfaideobo1vw" path="res://Art/UI/UI_EnemyBubble.png" id="8_re61u"]
 [ext_resource type="Texture2D" uid="uid://bsgrb26v3gfje" path="res://Art/Characters2D/tohtori_tiny.png" id="8_s7w4q"]
 [ext_resource type="Texture2D" uid="uid://b7xggjnbr751i" path="res://Art/UI/UI_PlayerBubble.png" id="9_js5ws"]
@@ -123,6 +122,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_t7dq1")
 
 [node name="VSlider" type="VSlider" parent="UiBatteryBackground"]
+visible = false
 custom_minimum_size = Vector2(100, 0)
 offset_left = -160.0
 offset_top = -224.0
@@ -159,14 +159,6 @@ script = ExtResource("6_lkiu2")
 position = Vector2(-8, -146)
 scale = Vector2(1.18077, 1.18077)
 texture = ExtResource("19_ff6pd")
-
-[node name="DamageButton" type="Button" parent="."]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-text = "Take Damage"
-script = ExtResource("7_rnve6")
 
 [node name="UiEnemyBubble" type="Sprite2D" parent="."]
 position = Vector2(488, 80)
@@ -231,4 +223,3 @@ threaded = true
 [connection signal="pressed" from="Panel/ContinueButton" to="." method="Button3"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1" to="." method="Button1"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2" to="." method="Button2"]
-[connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]
