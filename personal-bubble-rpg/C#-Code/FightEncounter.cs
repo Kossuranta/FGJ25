@@ -146,7 +146,7 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ It¨s a tourist... I was never good at languages... ]";
 					m_enemyText.Text = "ヤッホー！私の社品をとれるの？";
 					GD.Print("Turisti");
-					m_talkOpt1.Text = "Me no English.";
+					m_talkOpt1.Text = "...";
 					m_talkOpt2.Text = "Scream.";
 					break;
 				case CharacterType.TERAPEUTTI:
@@ -245,7 +245,7 @@ public partial class FightEncounter : MarginContainer
 					break;
 				case CharacterType.TURISTI:
 					m_fightAftermath = true;
-					m_enemyText.Text = "You've succesfully fled the scene.";
+					m_enemyText.Text = "...";
 					m_playerText.Text = null;
 					break;
 				case CharacterType.TERAPEUTTI:
