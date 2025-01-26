@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=28 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/FightEncounter.cs" id="1_wf4om"]
 [ext_resource type="Texture2D" uid="uid://cqk1u818d7ynk" path="res://Art/Characters2D/varas_tiny.png" id="2_fb05a"]
@@ -21,6 +21,7 @@
 [ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="11_4raht"]
 [ext_resource type="Texture2D" uid="uid://0te4m6brrc0i" path="res://Art/Characters2D/koira_tiny.png" id="11_502h6"]
 [ext_resource type="Texture2D" uid="uid://gq07epnckwqb" path="res://Art/Characters2D/ovi_tiny.png" id="12_0fu6m"]
+[ext_resource type="AudioStream" uid="uid://b8ih2sc2xgtfy" path="res://Sounds/Sound_Button1.mp3" id="15_17s5j"]
 [ext_resource type="Texture2D" uid="uid://cfmk5ephtou83" path="res://Art/Characters2D/ex_tiny.png" id="19_ff6pd"]
 [ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="20_c7j45"]
 
@@ -34,7 +35,7 @@ bg_color = Color(0.929412, 0.509804, 0.478431, 1)
 expand_margin_left = 110.0
 expand_margin_right = 110.0
 
-[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite", "m_talkOpt1", "m_talkOpt2", "m_continueButton")]
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite")]
 z_index = 1000
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,9 +47,6 @@ script = ExtResource("1_wf4om")
 m_playerText = NodePath("UiPlayerBubble/PlayerTextLabel")
 m_enemyText = NodePath("UiEnemyBubble/EnemyTextLabel")
 m_enemySprite = NodePath("Spawner/Sprite2D")
-m_talkOpt1 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1")
-m_talkOpt2 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2")
-m_continueButton = NodePath("Panel/ContinueButton")
 m_rosvo = ExtResource("2_fb05a")
 m_mummo = ExtResource("3_5oltd")
 m_ex = ExtResource("19_ff6pd")
@@ -104,6 +102,9 @@ theme = SubResource("Theme_s24to")
 theme_override_fonts/font = ExtResource("11_4raht")
 text = "Talk Opt.1"
 autowrap_mode = 3
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1"]
+stream = ExtResource("15_17s5j")
 
 [node name="TalkOption2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
