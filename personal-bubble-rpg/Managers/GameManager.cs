@@ -140,7 +140,6 @@ public partial class GameManager : Node
 	{
 		FightEnded();
 		CombatEnded?.Invoke(false);
-		Player.Instance.m_healthSystem.ApplyDamage(1);
 	}
 
 	public void EndFightPlayerWin(CharacterType _enemy)
