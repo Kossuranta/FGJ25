@@ -113,10 +113,10 @@ transform = Transform3D(0.627474, 0, -0.778638, 0, 1, 0, 0.778638, 0, 0.627474, 
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 26.3168, 0.412409, -144.943)
 
 [node name="home" parent="Homeyerd" instance=ExtResource("18_xy5a1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.07709, 0, -16.7293)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.09554, 0, -23.7112)
 
 [node name="GrassPiece22" parent="Homeyerd" instance=ExtResource("11_qsblj")]
-transform = Transform3D(-4, 0, 6.03982e-07, 0, 4, 0, -6.03982e-07, 0, -4, 5.03217, -0.0563622, -21.3323)
+transform = Transform3D(-4, 0, 6.03982e-07, 0, 4, 0, -6.03982e-07, 0, -4, 8.06188, -0.0563622, -27.355)
 
 [node name="CharacterBody3D_Player" parent="." instance=ExtResource("2_nhnp7")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.15241, -0.197419, 10.8655)
@@ -132,28 +132,28 @@ transform = Transform3D(1.49904, 0, 0.0537619, 0, 1.5, 0, -0.0537619, 0, 1.49904
 transform = Transform3D(0.803191, -0.0702382, -1.26489, -0.00767757, 1.4974, -0.0880233, 1.26681, 0.053608, 0.801437, 53.8298, 0.67051, -64.68)
 
 [node name="CharacterBody3D_Ex" parent="." instance=ExtResource("19_tysnc")]
-transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 70.5012, 0, -144.882)
+transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 53.72, 0, -105.755)
 
 [node name="CharacterBody3D_Laakari" parent="." instance=ExtResource("20_sdf3q")]
-transform = Transform3D(1.15557, 0, 0.956378, 0, 1.5, 0, -0.956378, 0, 1.15557, -51.4424, 0, -151.038)
+transform = Transform3D(1.29981, 0, -0.748662, 0, 1.5, 0, 0.748662, 0, 1.29981, -28.6072, 0, -102.017)
 
 [node name="CharacterBody3D_Laakari2" parent="." instance=ExtResource("21_k8ug2")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.017, 0, -15.5384)
 
 [node name="CharacterBody3D_Mummo" parent="." instance=ExtResource("22_q4bi2")]
-transform = Transform3D(0.151767, 0, 1.4923, 0, 1.5, 0, -1.4923, 0, 0.151767, -17.5965, 0, -57.7304)
+transform = Transform3D(1.40411, 0, -0.527713, 0, 1.5, 0, 0.527713, 0, 1.40411, 7.93687, 0, -77.166)
 
 [node name="CharacterBody3D_Turisti" parent="." instance=ExtResource("23_f2fai")]
-transform = Transform3D(-0.52938, 0, 1.40348, 0, 1.5, 0, -1.40348, 0, -0.52938, 49.1719, 0, -28.7959)
+transform = Transform3D(-0.52938, 0, 1.40348, 0, 1.5, 0, -1.40348, 0, -0.52938, 50.8565, 0, -23.1361)
 
 [node name="CharacterBody3D_Tuttu" parent="." instance=ExtResource("24_e2r8d")]
 transform = Transform3D(0.977314, 0, 1.13792, 0, 1.5, 0, -1.13792, 0, 0.977314, 24.3248, 0, -29.0104)
 
 [node name="CharacterBody3D_Varas" parent="." instance=ExtResource("25_fjdqx")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.717, 0, -56.286)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -46.181, 0, -60.0138)
 
 [node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
-transform = Transform3D(-0.967486, 0, -1.14629, 0, 1.5, 0, 1.14629, 0, -0.967486, -27.4744, 0, -38.2911)
+transform = Transform3D(1.33192, 0, -0.689927, 0, 1.5, 0, 0.689927, 0, 1.33192, 1.63194, -0.41424, -52.76)
 
 [node name="Talot" type="Node3D" parent="."]
 
@@ -194,169 +194,142 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 1, -10.685, -0.197418,
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.8062, -0.197418, -160.495)
 
 [node name="Node3D96" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 0, 34.2607)
 
 [node name="Node3D97" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 34.2607)
 
 [node name="Node3D98" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29.2607)
 
 [node name="Node3D99" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 29.2607)
 
 [node name="Node3D100" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 34.2607)
 
 [node name="Node3D101" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 34.2607)
 
 [node name="Node3D102" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 29.2607)
 
 [node name="Node3D103" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 29.2607)
 
 [node name="Node3D104" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 34.2607)
 
 [node name="Node3D108" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 0, 7)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.2598, 0, 59.3487)
 
 [node name="Node3D109" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 6, 7)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -66.7162, 6.00001, 31.2986)
 
 [node name="Node3D110" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 12, 7)
+transform = Transform3D(-0.0478387, 0, -0.998855, 0, 1, 0, 0.998855, 0, -0.0478387, -86.5785, -0.517365, 37.353)
 
 [node name="Node3D114" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 0, 17)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -23.916, 0, 49.4871)
 
 [node name="Node3D115" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 6, 17)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.2598, 6, 58.2408)
 
 [node name="Node3D116" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 12, 17)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -65.5294, 12, 31.1178)
 
 [node name="Node3D111" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 0, -3)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -27.2598, 0, 50.098)
 
 [node name="Node3D112" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 6, -3)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -86.7245, 6, 37.0661)
 
 [node name="Node3D113" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.00088, 12, -3)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -87.0957, 12, 36.7076)
 
 [node name="Node3D105" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 34.2607)
 
 [node name="Node3D106" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 29.2607)
 
 [node name="Node3D107" parent="Talot/kerrostalo" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 29.2607)
 
 [node name="kerrostalo3" type="Node3D" parent="Talot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.7385, -0.197418, -160.495)
 
 [node name="Node3D96" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 0, 34.2607)
 
 [node name="Node3D97" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 34.2607)
 
 [node name="Node3D98" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 29.2607)
 
 [node name="Node3D99" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 0, 29.2607)
 
 [node name="Node3D100" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 34.2607)
 
 [node name="Node3D101" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 34.2607)
 
 [node name="Node3D102" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 6, 29.2607)
 
 [node name="Node3D103" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 6, 29.2607)
 
 [node name="Node3D104" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 0)
-
-[node name="Node3D120" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 0, 4.0128)
-
-[node name="Node3D121" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 6, 4.0128)
-
-[node name="Node3D122" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 12, 4.0128)
-
-[node name="Node3D123" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 0, 14.0128)
-
-[node name="Node3D124" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 6, 14.0128)
-
-[node name="Node3D125" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 12, 14.0128)
-
-[node name="Node3D126" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 0, 24.0128)
-
-[node name="Node3D127" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 6, 24.0128)
-
-[node name="Node3D128" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -4.605, 12, 24.0128)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 34.2607)
 
 [node name="Node3D105" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 34.2607)
 
 [node name="Node3D106" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00087738, 12, 29.2607)
 
 [node name="Node3D107" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.1038, 12, 29.2607)
 
 [node name="Node3D108" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 0, 34.2607)
 
 [node name="Node3D109" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 0, 34.2607)
 
 [node name="Node3D110" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 29.2607)
 
 [node name="Node3D111" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 0, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 0, 29.2607)
 
 [node name="Node3D112" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 6, 34.2607)
 
 [node name="Node3D113" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 6, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 6, 34.2607)
 
 [node name="Node3D114" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 6, 29.2607)
 
 [node name="Node3D115" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 6, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 6, 29.2607)
 
 [node name="Node3D116" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 12, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 12, 34.2607)
 
 [node name="Node3D117" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 12, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 12, 34.2607)
 
 [node name="Node3D118" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9991, 12, 29.2607)
 
 [node name="Node3D119" parent="Talot/kerrostalo3" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 12, -5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.1038, 12, 29.2607)
 
 [node name="Talo3" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.727626, 0, 0, 0, 1, 0, 3.38827e-10, 0, 1.33877, -28.8048, -0.197418, -16.213)
@@ -369,6 +342,9 @@ transform = Transform3D(0.0536953, 0, -1.33512, 0, 1, 0, 0.725642, 0, 0.0987949,
 
 [node name="Talo21" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.727626, 0, 0, 0, 1, 0, 3.38827e-10, 0, 1.33877, 41.337, 0.15544, 18.6723)
+
+[node name="Talo43" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(0.00581633, 0, 1.33873, 0, 1, 0, -0.727603, 0, 0.0107016, 70.5643, 0.679194, -59.6883)
 
 [node name="Talo22" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.727626, 0, 0, 0, 1, 0, 3.38827e-10, 0, 1.33877, 41.4089, 0.15544, 9.54368)
@@ -387,6 +363,12 @@ transform = Transform3D(-3.14667e-08, 0, 1.33877, 0, 1, 0, -0.727626, 0, -5.8519
 
 [node name="Talo65" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.00814016, 0, 1.33869, 0, 1, 0, -0.72758, 0, 0.0149772, 36.508, 0.15544, -59.3405)
+
+[node name="Talo70" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(-0.727626, 0, -1.17039e-07, 0, 1, 0, 6.36111e-08, 0, -1.33877, 42.3225, 0.15544, -59.115)
+
+[node name="Talo71" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(-0.727626, 0, -1.17039e-07, 0, 1, 0, 6.36111e-08, 0, -1.33877, 42.3225, 6.97416, -59.115)
 
 [node name="Talo67" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.00814016, 0, 1.33869, 0, 1, 0, -0.72758, 0, 0.0149772, 36.5551, 6.51397, -59.34)
@@ -547,28 +529,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6887, 0, -5.59386)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, 0, -5.59386)
 
 [node name="Talo124" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17.8459)
 
 [node name="Talo125" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.28948, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.28948, 17.8459)
 
 [node name="Talo127" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, 0, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, 0, 17.8459)
 
 [node name="Talo128" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, 6.28948, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, 6.28948, 17.8459)
 
 [node name="Talo129" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, -6.53238, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, -6.53238, 17.8459)
 
 [node name="Talo130" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, 0, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, 0, 17.8459)
 
 [node name="Talo131" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, 6.28948, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.8727, 6.28948, 17.8459)
 
 [node name="Talo136" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, 0, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, 0, 17.8459)
 
 [node name="Talo53" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.53238, 0)
@@ -604,19 +586,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6887, -6.53238, -5.59386)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, -6.53238, -5.59386)
 
 [node name="Talo123" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.53238, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.53238, 17.8459)
 
 [node name="Talo126" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, -6.53238, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, -6.53238, 17.8459)
 
 [node name="Talo132" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6887, -6.53238, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6364, -6.53238, 24.3089)
 
 [node name="Talo133" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6887, 0, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4709, 0, 24.7326)
+
+[node name="Talo134" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6364, -6.53238, 31.2537)
+
+[node name="Talo137" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.4709, 0, 31.6774)
 
 [node name="Talo135" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, -6.53238, -11.7858)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81608, -6.53238, 17.8459)
 
 [node name="Talo58" parent="Talot/kerrostalo4" instance=ExtResource("1_1gx34")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, -6.53238, 11.6775)
@@ -625,69 +613,55 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.87266, -6.53238, 11.6775)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 0.807504, -11.5933, -0.197418, -161.822)
 
 [node name="Talo138" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99636, 0, 64.8535)
 
 [node name="Talo139" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.53238, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99636, 6.53238, 64.8535)
 
 [node name="Talo140" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.8219, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99636, 12.8219, 64.8535)
 
 [node name="Talo141" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00364, 0, 64.8535)
 
 [node name="Talo142" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 6.53238, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00364, 6.53238, 64.8535)
 
 [node name="Talo143" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 12.8219, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00364, 12.8219, 64.8535)
 
 [node name="Talo144" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00364, 0, 64.8535)
 
 [node name="Talo145" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 6.53238, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00364, 6.53238, 64.8535)
 
 [node name="Talo146" parent="Talot/kerrostalo2" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 12.8219, 0)
-
-[node name="Talo30" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 0.807504, 46.3568, -0.197418, -42.9374)
-
-[node name="Talo31" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 4.65661e-10, 0, 0.807504, 42.8737, -0.197418, -42.9374)
-
-[node name="Talo35" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, -0.197418, -64.4062)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00364, 12.8219, 64.8535)
 
 [node name="Talo61" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, 6.2031, -64.4062)
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.4033, 5.57301, -52.6048)
 
-[node name="Talo36" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -36.4013, -0.197418, -64.4062)
-
-[node name="Talo37" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, -0.197418, -69.588)
+[node name="Talo72" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.4033, 0.466484, -52.6048)
 
 [node name="Talo62" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, 5.80691, -69.588)
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.4033, 8.04515, -58.1293)
 
-[node name="Talo38" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -36.4013, -0.197418, -69.588)
+[node name="Talo73" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.4033, 2.86013, -58.1293)
 
-[node name="Talo39" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, -0.197418, -74.63)
+[node name="Talo74" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.4033, -3.17314, -58.1293)
 
 [node name="Talo63" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -30.629, 6.17217, -74.63)
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.3315, 11.198, -63.2673)
 
-[node name="Talo40" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -36.4013, -0.197418, -74.63)
+[node name="Talo75" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.3315, 5.5471, -63.2673)
 
-[node name="Talo43" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, -6.54404, -0.197418, -77.5985)
-
-[node name="Talo44" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, -6.54404, -0.197418, -83.3708)
+[node name="Talo76" parent="Talot" instance=ExtResource("1_1gx34")]
+transform = Transform3D(1, 0, -3.76023e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -18.3315, -0.38641, -63.2673)
 
 [node name="Talo93" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -109.547)
@@ -702,126 +676,75 @@ transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0
 transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -114.547)
 
 [node name="Talo97" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -119.547)
+transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -104.662)
 
 [node name="Talo98" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -119.547)
-
-[node name="Talo105" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -124.45)
+transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -104.164)
 
 [node name="Talo106" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -124.45)
-
-[node name="Talo107" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -129.45)
-
-[node name="Talo108" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -129.45)
-
-[node name="Talo109" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, 0.629854, -0.197418, -134.45)
-
-[node name="Talo110" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -134.45)
+transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -5.14244, -0.197418, -99.5528)
 
 [node name="Talo99" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 4.74371, -0.197418, -112.661)
-
-[node name="Talo100" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 4.7437, -0.197418, -118.433)
+transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 4.74371, -0.197418, -102.345)
 
 [node name="Talo101" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 9.7437, -0.197418, -112.661)
-
-[node name="Talo102" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 9.7437, -0.197418, -118.433)
-
-[node name="Talo103" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 14.7437, -0.197418, -112.661)
-
-[node name="Talo104" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 14.7437, -0.197418, -118.433)
-
-[node name="Talo45" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, -1.3622, -0.197418, -77.5985)
-
-[node name="Talo46" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, -1.3622, -0.197418, -83.3708)
-
-[node name="Talo47" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, 3.67979, -0.197418, -77.5985)
-
-[node name="Talo48" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(-4.4177e-08, 0, -0.807504, 0, 1, 0, 1, 0, -3.56731e-08, 3.67979, -0.197418, -83.3708)
+transform = Transform3D(2.98023e-08, 0, -0.807504, 0, 1, 0, 1, 0, 2.98023e-08, 9.7437, -0.197418, -102.547)
 
 [node name="kerrostalo5" type="Node3D" parent="Talot"]
 
-[node name="Building48" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.1499, -0.197418, -100.664)
-
-[node name="Building49" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -61.1071, -0.197418, -127.427)
-
-[node name="Building50" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, -0.197418, -109.53)
-
-[node name="Building51" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -118.515)
-
-[node name="Building52" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -100.53)
-
-[node name="Building53" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, 5.80258, -109.515)
-
-[node name="Building54" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -118.53)
-
 [node name="Building58" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, -0.197418, -145.53)
+transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, -0.197418, -113.679)
 
 [node name="Building59" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -154.515)
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -123.131)
 
 [node name="Building60" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, 5.80258, -145.515)
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, 5.80258, -114.043)
 
 [node name="Building61" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -154.53)
+transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -123.064)
 
 [node name="Building64" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(1.96701e-07, 0, 1.5, 0, 1.5, 0, -1.5, 0, 1.96701e-07, -51.2178, -0.197418, -163.178)
+transform = Transform3D(1.96701e-07, 0, 1.5, 0, 1.5, 0, -1.5, 0, 1.96701e-07, -51.2178, -0.197418, -130.915)
 
 [node name="Building65" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -42.2326, -0.197418, -163.196)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -42.2326, -0.197418, -130.933)
 
 [node name="Building66" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -51.2326, 5.80258, -163.196)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -51.2326, 5.80258, -130.933)
 
 [node name="Building67" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(1.96701e-07, 0, 1.5, 0, 1.5, 0, -1.5, 0, 1.96701e-07, -42.2178, 5.80258, -163.178)
+transform = Transform3D(1.96701e-07, 0, 1.5, 0, 1.5, 0, -1.5, 0, 1.96701e-07, -42.2178, 5.80258, -130.915)
 
 [node name="Building62" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, -57.5922, -0.197418, -159.168)
+transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, -58.5475, -0.197418, -129.262)
 
 [node name="Building63" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, -57.5689, 5.80258, -159.166)
+transform = Transform3D(-1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, -1.06066, -58.5032, 5.80258, -129.285)
 
 [node name="Building56" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -136.515)
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -104.764)
 
 [node name="Building57" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -136.53)
+transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -104.742)
 
-[node name="Building55" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, 5.80258, -127.515)
+[node name="Building70" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -94.8353)
+
+[node name="Building72" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, -61.1681, -0.197418, -85.5633)
+
+[node name="Building71" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
+transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -94.6993)
+
+[node name="Building73" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
+transform = Transform3D(-1.5, 0, 1.31134e-07, 0, 1.5, 0, -1.31134e-07, 0, -1.5, -61.1499, 5.80258, -84.8732)
 
 [node name="Building68" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, -33.5778, -0.197418, -163.441)
+transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, -33.5778, -0.197418, -131.616)
 
 [node name="Building69" parent="Talot/kerrostalo5" instance=ExtResource("19_tmubb")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -33.4798, 5.80381, -163.503)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -33.4798, 5.80381, -131.24)
 
 [node name="kerrostalo6" type="Node3D" parent="Talot"]
 
@@ -870,38 +793,50 @@ transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -
 [node name="talo3" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 16.5933, -0.197418, -44.2577)
 
-[node name="talo16" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 22.1218, -0.197418, -65.4224)
+[node name="talo15" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 47.1972, -0.197418, -38.3064)
 
-[node name="talo22" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 22.1218, 6.42426, -65.4224)
-
-[node name="talo12" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.39087, 0, 1.5, 0, -1.5, 0, -6.0797e-08, 31.0069, -0.197418, -65.6019)
+[node name="talo20" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 56.5432, -0.197418, -38.3688)
 
 [node name="talo21" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.39087, 0, 1.5, 0, -1.5, 0, -6.0797e-08, 31.0069, 6.48334, -65.6019)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 47.1972, 6.15581, -38.0189)
+
+[node name="talo22" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 56.5432, 6.15581, -38.078)
+
+[node name="talo16" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -51.2557, -0.197418, -65.4224)
+
+[node name="talo12" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.39087, 0, 1.5, 0, -1.5, 0, -6.0797e-08, -41.6804, -0.197418, -65.6019)
 
 [node name="talo4" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 6.48868, -0.197418, -44.2577)
 
-[node name="talo13" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.00569, 0, 1.5, 0, -1.5, 0, -4.396e-08, 39.6849, -0.197418, -79.3763)
-
 [node name="talo17" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.00569, 0, 1.5, 0, -1.5, 0, -4.396e-08, 17.9398, -0.197418, -51.464)
+transform = Transform3D(-6.55671e-08, 0, 1.00569, 0, 1.5, 0, -1.5, 0, -4.396e-08, 17.9398, 1.22035, -51.464)
+
+[node name="talo28" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-6.55671e-08, 0, 1.00569, 0, 1.5, 0, -1.5, 0, -4.396e-08, -5.04571, 1.22035, -51.464)
 
 [node name="talo18" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.00569, 0, 1.5, 0, -1.5, 0, -4.396e-08, 32.6032, -0.197418, -79.1417)
+transform = Transform3D(-8.74228e-08, 0, 1.341, 0, 2, 0, -2, 0, -5.8617e-08, 1.22955, -0.197418, -91.2211)
 
-[node name="talo15" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.93349, 0, 1.5, 0, -1.5, 0, -8.45157e-08, 44.1439, -0.197418, -93.3194)
+[node name="talo27" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-8.74228e-08, 0, 1.341, 0, 2, 0, -2, 0, -5.8617e-08, -7.48719, -0.197418, -91.2211)
+
+[node name="talo25" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-8.74228e-08, 0, 1.341, 0, 2, 0, -2, 0, -5.8617e-08, 30.8304, -0.197418, -91.7926)
+
+[node name="talo26" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-8.74228e-08, 0, 1.341, 0, 2, 0, -2, 0, -5.8617e-08, 39.7123, -0.197418, -91.7926)
 
 [node name="talo5" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -3.6952, -0.197418, -44.2577)
 
 [node name="talo7" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.1235, -0.197418, -44.4716)
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.1235, -0.197418, -44.39)
 
 [node name="talo24" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -22.1235, 6.40564, -44.4716)
@@ -909,23 +844,23 @@ transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 
 [node name="talo19" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -32.0796, 6.12667, -44.4716)
 
-[node name="talo23" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -41.637, 6.12667, -44.4716)
-
 [node name="talo8" parent="Talot" instance=ExtResource("35_pott6")]
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -32.2281, -0.197418, -44.4716)
 
-[node name="talo9" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -42.412, -0.197418, -44.4716)
-
 [node name="talo6" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -5.15542, -0.197418, -53.0404)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 40.6533, 1.21772, -16.8606)
+
+[node name="talo10" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 40.6533, 6.80898, -26.732)
+
+[node name="talo14" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(-1.5, 0, -1.31134e-07, 0, 1.5, 0, 1.31134e-07, 0, -1.5, 40.6533, 0.888452, -26.8394)
 
 [node name="talo11" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 39.8331, -0.197418, -66.7086)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 40.6533, 6.298, -36.881)
 
-[node name="talo20" parent="Talot" instance=ExtResource("35_pott6")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 39.544, 5.82516, -66.7086)
+[node name="talo13" parent="Talot" instance=ExtResource("35_pott6")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 40.6533, 0.632641, -36.881)
 
 [node name="Node3D2" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7001, -0.394836, 2.90245)
@@ -936,26 +871,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.9172, -0.394836, 12.8602)
 [node name="Node3D4" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6653, -0.394836, 21.4576)
 
-[node name="Node3D16" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-0.00525346, 0, -0.888339, 0, 1, 0, 0.999986, 0, -0.00466692, 40.0405, -0.394836, -24.5)
-
-[node name="Node3D37" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-0.00525346, 0, -0.888339, 0, 1, 0, 0.999986, 0, -0.00466692, 40.0004, -0.394836, -34.7785)
-
-[node name="Node3D14" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -0.888351, 0, 1, 0, 1, 0, -3.88311e-08, 40.1202, -0.394836, -14.4551)
-
 [node name="Node3D17" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1274, -1.77707, 32.0483)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.1274, -1.24913, 32.0483)
 
 [node name="Node3D18" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4559, -1.75646, 32.0968)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4559, -1.22852, 32.0968)
 
 [node name="Node3D20" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117564, -1.75646, 32.0758)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.117564, -1.22852, 32.0758)
 
 [node name="Node3D19" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7952, -1.83335, 32.0513)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7952, -1.30541, 32.0513)
 
 [node name="Node3D9" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.35427, -0.394836, -23.8536)
@@ -964,43 +890,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.35427, -0.394836, -23.8536)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.006, -0.394836, -23.8536)
 
 [node name="Node3D15" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -40.5023, 0.0162917, -27.6005)
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -40.5023, -0.572113, -27.6005)
 
 [node name="Node3D40" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -49.5712, 0.0530533, -32.7653)
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -49.5712, -0.379552, -32.7653)
+
+[node name="Node3D45" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -58.4614, -0.379552, -37.8284)
 
 [node name="Node3D100" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -31.6962, -0.163914, -22.5852)
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -31.6962, -0.593209, -22.5852)
 
 [node name="Node3D31" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -61.0884, -0.394836, -9.94888)
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -48.6932, -0.394836, -18.4611)
 
 [node name="Node3D101" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -52.7015, -1.16081, -5.17243)
-
-[node name="Node3D34" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -47.1824, -0.394836, 6.36065)
-
-[node name="Node3D102" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -38.7955, -0.777444, 11.1371)
+transform = Transform3D(0.86896, 0, -0.494883, 0, 1, 0, 0.494883, 0, 0.86896, -40.3063, -1.16081, -13.6846)
 
 [node name="Node3D6" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.40339, -0.394836, -23.8133)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -3.72634, -0.394836, -24.4233)
 
 [node name="Node3D5" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6441, -0.394836, -23.873)
 
-[node name="Node3D68" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -44.3198, -0.394836, -35.9755)
-
-[node name="Node3D80" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -61.532, -0.394836, -31.0804)
-
 [node name="Node3D77" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -56.658, -0.394836, -85.0233)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.4505, -0.175788, -74.1513)
 
 [node name="Node3D81" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -61.5166, -0.394836, -85.0233)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.4429, 0.0649858, -85.0233)
+
+[node name="Node3D103" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.4429, 0.0649858, -94.756)
 
 [node name="Node3D11" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.67472, -0.197418, -5.19311)
@@ -1014,8 +934,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.5009, -0.197418, -0.124668
 [node name="Node3D58" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.1115, -0.197418, -5.71121)
 
+[node name="Node3D102" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.1115, -0.197418, -2.56189)
+
 [node name="Node3D59" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.1115, 6.22441, -5.58191)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.1115, 6.22441, -4.10507)
 
 [node name="Node3D60" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70.0167, -0.197418, -13.7081)
@@ -1030,43 +953,37 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.405
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.0105, 6.22441, 7.62997)
 
 [node name="Node3D98" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70.0167, -0.197418, -2.22593)
+transform = Transform3D(0.999953, 0, -0.00966903, 0, 1, 0, 0.00966903, 0, 0.999953, 57.4291, -0.197416, 15.9412)
 
 [node name="Node3D99" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 70.0167, 6.22441, -3.23954)
+transform = Transform3D(0.999985, 0, 0.00541041, 0, 1, 0, -0.00541041, 0, 0.999985, 57.5753, 6.22441, 15.5965)
 
-[node name="Node3D66" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -44.8306)
-
-[node name="Node3D78" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -33.188, -0.197418, -54.7645)
+[node name="Node3D114" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.9274, -0.197418, -72.1396)
 
 [node name="Node3D67" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -49.6308, -0.304955, -40.112)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.1688, 0.0081749, -44.5314)
 
 [node name="Node3D70" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -34.8926)
-
-[node name="Node3D71" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, 6.22441, -33.4416)
-
-[node name="Node3D69" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32.9631, 6.22441, -55.2744)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -55.9784)
 
 [node name="Node3D73" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -64.73)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -66.893)
 
 [node name="Node3D74" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, 6.22441, -73.083)
-
-[node name="Node3D75" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, -0.197418, -74.7742)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -62.5146, 6.22441, -66.2794)
 
 [node name="Node3D76" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, 6.22441, -83.0834)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -62.5146, 6.22441, -77.1955)
+
+[node name="Node3D75" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.9838, -1.09233, -77.5685)
 
 [node name="Node3D72" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -59.6822, 6.22441, -63.1922)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -62.4469, 6.22441, -55.2846)
+
+[node name="Node3D86" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -62.4469, 6.22441, -44.5822)
 
 [node name="Node3D62" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.1193, -0.197418, -45.0601)
@@ -1074,20 +991,32 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.119
 [node name="Node3D64" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 62.8196, -0.197418, -42.5133)
 
-[node name="Node3D65" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.7149, -0.197418, -42.5133)
-
 [node name="Node3D87" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0823, -0.197418, -113.773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7919, -0.197418, -98.3831)
 
 [node name="Node3D89" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9776, -0.197418, -113.773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.73194, -0.197418, -98.5536)
 
-[node name="Node3D94" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.0823, -0.197418, -118.773)
+[node name="Node3D107" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7919, 6.25246, -98.3831)
 
-[node name="Node3D95" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.9776, -0.197418, -118.773)
+[node name="Node3D110" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7294, -0.197418, -98.3831)
+
+[node name="Node3D111" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.7294, 6.25246, -98.3831)
+
+[node name="Node3D109" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7919, 6.25246, -98.3831)
+
+[node name="Node3D108" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.73194, 6.25246, -98.5536)
+
+[node name="Node3D112" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08914, -0.197418, -98.5536)
+
+[node name="Node3D113" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08914, 6.25246, -98.5536)
 
 [node name="Node3D63" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.9021, 6.22441, -45.0601)
@@ -1098,14 +1027,11 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.929
 [node name="Node3D83" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.9405, 6.22441, -54.9695)
 
-[node name="Node3D86" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 57.9168, -0.197418, -72.3525)
-
 [node name="Node3D105" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 48.0567, -0.197418, -72.3525)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 48.2603, -0.197418, -77.4822)
 
 [node name="Node3D88" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 57.9168, -0.197418, -77.3048)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 58.5056, -0.197418, -77.3048)
 
 [node name="Node3D90" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.8586, -0.197418, -72.4271)
@@ -1113,11 +1039,8 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.858
 [node name="Node3D91" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.8586, 6.22441, -72.4271)
 
-[node name="Node3D103" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 57.8255, 6.22441, -72.4271)
-
 [node name="Node3D106" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 47.5223, 6.22441, -72.4271)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.6527, 12.0348, -77.4361)
 
 [node name="Node3D92" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.8586, -0.197418, -77.2183)
@@ -1126,7 +1049,7 @@ transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.858
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 67.8586, 6.22441, -77.2183)
 
 [node name="Node3D104" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 58.1461, 6.22441, -77.2183)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 59.098, 6.22441, -77.2183)
 
 [node name="Node3D84" parent="Talot" instance=ExtResource("6_l5jqd")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.7581, -0.197418, -65.205)
@@ -1135,7 +1058,19 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 60.758
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 61.9157, 6.22441, -65.205)
 
 [node name="Node3D57" parent="Talot" instance=ExtResource("6_l5jqd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6008, -0.197418, 19.8324)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6008, -0.197418, 21.9184)
+
+[node name="Node3D71" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6008, -0.197418, 25.7365)
+
+[node name="Node3D80" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.6008, 6.22098, 25.7365)
+
+[node name="Node3D94" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1555, -0.197418, 25.7365)
+
+[node name="Node3D95" parent="Talot" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42.1555, 6.22098, 25.7365)
 
 [node name="Hospital" parent="Talot" instance=ExtResource("8_6j3rs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.60132, -0.197418, 21.7384)
@@ -1171,10 +1106,10 @@ transform = Transform3D(1.27655, 0, 0.787673, 0, 1.5, 0, -0.787673, 0, 1.27655, 
 transform = Transform3D(0.729643, 0, 1.31058, 0, 1.5, 0, -1.31058, 0, 0.729643, 23.9253, 0.616934, -52.0267)
 
 [node name="Node3D38" parent="Talot" instance=ExtResource("8_g7gqb")]
-transform = Transform3D(1.27655, 0, 0.787673, 0, 1.5, 0, -0.787673, 0, 1.27655, 55.459, 0.0557804, -35.4567)
+transform = Transform3D(1.27655, 0.00367056, 0.787664, -2.32831e-10, 1.49998, -0.00699003, -0.787673, 0.00594873, 1.27654, 55.2261, 0.0479517, -29.5248)
 
 [node name="Node3D39" parent="Talot" instance=ExtResource("8_g7gqb")]
-transform = Transform3D(1.4424, 0, 0.411669, 0, 1.5, 0, -0.411669, 0, 1.4424, 52.1834, -0.916611, -36.4305)
+transform = Transform3D(1.4424, 0.00191839, 0.411664, 0, 1.49998, -0.00699, -0.411669, 0.00672162, 1.44238, 50.3493, -0.92444, -30.7845)
 
 [node name="Node3D47" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(0.642854, 0, 0.765988, 0, 1, 0, -0.765988, 0, 0.642854, -6.08636, -1.84704, 3.41942)
@@ -1359,13 +1294,58 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -2.88221, 0, -44.8384)
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 6.17613, 0, -44.8666)
 
 [node name="GrassPiece36" parent="Stuff" instance=ExtResource("11_qsblj")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.5291, 0, -37.287)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9.92211, 0, -37.287)
+
+[node name="GrassPiece45" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -25.7363, 0, -37.287)
+
+[node name="GrassPiece48" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -25.7363, 0, -46.8942)
+
+[node name="GrassPiece49" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -25.7363, 0, -56.251)
+
+[node name="GrassPiece50" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -25.7363, 0, -64.6297)
+
+[node name="GrassPiece51" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -25.7363, 0, -72.7427)
+
+[node name="GrassPiece46" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -35.5474, 0, -37.287)
+
+[node name="Node3D68" parent="Stuff/GrassPiece46" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -56.6736, -0.848966, -40.0809)
+
+[node name="GrassPiece47" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -40.2764, 0, -37.287)
+
+[node name="Node3D68" parent="Stuff/GrassPiece47" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -56.6736, -0.848966, -40.0809)
+
+[node name="GrassPiece52" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -61.1715, 0, -75.812)
+
+[node name="Node3D68" parent="Stuff/GrassPiece52" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -56.6736, -0.848966, -40.0809)
+
+[node name="GrassPiece53" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -61.1715, 0, -94.1329)
+
+[node name="Node3D68" parent="Stuff/GrassPiece53" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -56.6736, -0.848966, -40.0809)
+
+[node name="GrassPiece54" parent="Stuff" instance=ExtResource("11_qsblj")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -61.1715, 0, -112.763)
+
+[node name="Node3D68" parent="Stuff/GrassPiece54" instance=ExtResource("6_l5jqd")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -56.6736, -0.848966, -40.0809)
 
 [node name="GrassPiece37" parent="Stuff" instance=ExtResource("11_qsblj")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.5291, 0, -53.0957)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -9.98392, 0, -53.0957)
 
 [node name="GrassPiece38" parent="Stuff" instance=ExtResource("11_qsblj")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -11.5291, 0, -46.9433)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -10.0672, 0, -46.9433)
 
 [node name="GrassPiece33" parent="Stuff" instance=ExtResource("11_qsblj")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 11.2082, 0, -37.287)
@@ -1440,7 +1420,7 @@ transform = Transform3D(17.4368, 0, -9.79587, 0, 20, 0, 9.79587, 0, 17.4368, -84
 transform = Transform3D(17.4368, 0, -9.79587, 0, 20, 0, 9.79587, 0, 17.4368, -83.129, 0, -4.75995)
 
 [node name="GrassPiece23" parent="Stuff" instance=ExtResource("11_qsblj")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 39.3086, 0, 35.8292)
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 37.8009, 0, 35.8292)
 
 [node name="GrassPiece24" parent="Stuff" instance=ExtResource("11_qsblj")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 37.9037, 0, -3.7109)

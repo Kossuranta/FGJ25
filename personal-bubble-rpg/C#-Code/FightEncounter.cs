@@ -42,6 +42,8 @@ public partial class FightEncounter : MarginContainer
 	[Export]
 	private Texture2D m_ovi;
 
+	private bool m_fightAftermath;
+
 	private bool m_fading;
 	private float m_fadeProgress;
 
@@ -52,6 +54,8 @@ public partial class FightEncounter : MarginContainer
 
 	public void FightStart()
 	{
+		m_continueButton.Visible = false;
+
 		if (characterType == CharacterType.NOT_SET)
 		{
 			GD.Print("CharacterType not set");
@@ -173,28 +177,43 @@ public partial class FightEncounter : MarginContainer
 
 	public void Button1()
 	{
+		m_talkOpt1.Visible = false;
+		m_talkOpt2.Visible = false;
+		m_continueButton.Visible = true;
 		switch (characterType)
 			{
 				case CharacterType.ROSVO:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Woah, you're a tough one! I'll let you go this time.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.MUMMO:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Oh, great, but now that you're here, could you look at my phone? It has been a bit slow lately... [You close 1753 tabs from her browser] ";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.EX:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Fine I'll give you the key. [She hands you the key] ";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.FEISSARI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Oh, you're not interested? That's fine, have a nice day!";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TUTTU:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Same old, same old. The kids are growing up so fast.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TURISTI:
 					GameManager.Instance.EndFightPlayerWin(characterType);
 					break;
 				case CharacterType.TERAPEUTTI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "I'm your Doctor. I take care of you whenever you collapse from intense social stress.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.DIILERI:
 					GameManager.Instance.EndFightPlayerWin(characterType);
@@ -216,6 +235,9 @@ public partial class FightEncounter : MarginContainer
 
 	public void Button2()
 	{
+		m_talkOpt1.Visible = false;
+		m_talkOpt2.Visible = false;
+		m_continueButton.Visible = true;
 		switch (characterType)
 			{
 				case CharacterType.ROSVO:
@@ -237,7 +259,9 @@ public partial class FightEncounter : MarginContainer
 					GameManager.Instance.EndFightPlayerLose(characterType);
 					break;
 				case CharacterType.TERAPEUTTI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "Oh okay... Be careful.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.DIILERI:
 					GameManager.Instance.EndFightPlayerLose(characterType);
@@ -255,5 +279,16 @@ public partial class FightEncounter : MarginContainer
 					GD.Print("Default");
 					break;
 			}
+	}
+	public void Button3()
+	{
+		if (m_fightAftermath)
+		{
+			GameManager.Instance.EndFightPlayerWin(characterType);
+		}
+		else
+		{
+			GameManager.Instance.EndFightPlayerLose(characterType);
+		}
 	}
 }
