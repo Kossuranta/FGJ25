@@ -34,7 +34,7 @@ bg_color = Color(0.929412, 0.509804, 0.478431, 1)
 expand_margin_left = 110.0
 expand_margin_right = 110.0
 
-[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite", "m_talkOpt1", "m_talkOpt2")]
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite", "m_talkOpt1", "m_talkOpt2", "m_continueButton")]
 z_index = 1000
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,6 +46,9 @@ script = ExtResource("1_wf4om")
 m_playerText = NodePath("UiPlayerBubble/PlayerTextLabel")
 m_enemyText = NodePath("UiEnemyBubble/EnemyTextLabel")
 m_enemySprite = NodePath("Spawner/Sprite2D")
+m_talkOpt1 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1")
+m_talkOpt2 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2")
+m_continueButton = NodePath("Panel/ContinueButton")
 m_rosvo = ExtResource("2_fb05a")
 m_mummo = ExtResource("3_5oltd")
 m_ex = ExtResource("19_ff6pd")
@@ -57,12 +60,19 @@ m_diileri = ExtResource("9_wv17r")
 m_kakara = ExtResource("10_vpbaj")
 m_koira = ExtResource("11_502h6")
 m_ovi = ExtResource("12_0fu6m")
-m_talkOpt1 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1")
-m_talkOpt2 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qf4dc")
+
+[node name="ContinueButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 520.0
+offset_right = 1136.0
+offset_bottom = 632.0
+disabled = true
+text = "Continue"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 2
@@ -214,6 +224,6 @@ text = "reerererere"
 scroll_active = false
 threaded = true
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1" to="." method="OnTalkOpt1Pressed"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2" to="." method="OnTalkOption2Pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1" to="." method="Button1"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2" to="." method="Button2"]
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]

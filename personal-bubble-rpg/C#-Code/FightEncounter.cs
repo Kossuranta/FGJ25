@@ -14,6 +14,12 @@ public partial class FightEncounter : MarginContainer
 	[Export]
 	private Sprite2D m_enemySprite;
 	[Export]
+	private Button m_talkOpt1;
+	[Export]
+	private Button m_talkOpt2;
+	[Export]
+	private Button m_continueButton;
+	[Export]
 	private Texture2D m_rosvo;
 	[Export]
 	private Texture2D m_mummo;
@@ -35,11 +41,6 @@ public partial class FightEncounter : MarginContainer
 	private Texture2D m_koira;
 	[Export]
 	private Texture2D m_ovi;
-
-	[Export]
-	private Button m_talkOpt1;
-	[Export]
-	private Button m_talkOpt2;
 
 	private bool m_fading;
 	private float m_fadeProgress;
@@ -140,7 +141,6 @@ public partial class FightEncounter : MarginContainer
 					GD.Print("Diileri");
 					m_talkOpt1.Text = "Who are you?";
 					m_talkOpt2.Text = "Buy drugs.";
-					Button1();
 					break;
 				case CharacterType.LAPSI:
 					// spawns a brat
@@ -148,6 +148,7 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ Why are kids always staring? Oh no, our eyes met... ]";
 					m_enemyText.Text = "Hey, whatcha starin' at? I'll call the cops.";
 					GD.Print("Kakara");
+					m_talkOpt1.Text = "I'm sorry.";
 					break;
 				case CharacterType.KOIRA:
 					// spawns a dog
@@ -172,7 +173,45 @@ public partial class FightEncounter : MarginContainer
 
 	public void Button1()
 	{
-
+		switch (characterType)
+			{
+				case CharacterType.ROSVO:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.MUMMO:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.EX:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.FEISSARI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.TUTTU:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.TURISTI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.TERAPEUTTI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.DIILERI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.LAPSI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.KOIRA:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				case CharacterType.OVI:
+					GameManager.Instance.EndFightPlayerWin(characterType);
+					break;
+				default:
+					GD.Print("Default");
+					break;
+			}
 	}
 
 	public void Button2()
