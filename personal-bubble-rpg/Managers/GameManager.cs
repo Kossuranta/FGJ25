@@ -22,6 +22,12 @@ public partial class GameManager : Node
 	[Export]
 	private PackedScene m_gameWinPrefab;
 
+	[Export]
+	private PackedScene m_playerSeenPrefab;
+
+	[Export]
+	private PackedScene m_cloudAnimPrefab;
+
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
@@ -29,12 +35,14 @@ public partial class GameManager : Node
 	private FightEncounter m_fightScene;
 	private GameOver m_gameOver;
 	private GameOver m_gameWin;
+	private CloudAnimScene m_cloudAnimScene;
 	
 	public int RunCounter { get; private set; }
 
 	private bool m_gameRunning;
-	public bool GameRunning => m_gameRunning && m_fightScene == null && !GameWinState;
+	public bool GameRunning => m_gameRunning && !GameWinState && !InFightScene;
 	public bool GameWinState { get; private set; }
+	public bool InFightScene { get; private set; }
 
 	public override void _Ready()
 	{
@@ -56,7 +64,7 @@ public partial class GameManager : Node
 		m_fightScene?.QueueFree();
 		m_fightScene = null;
 		m_gameRunning = false;
-		m_gameOver.Toggle(true, RunCounter);
+		m_gameWin.Toggle(true, RunCounter);
 	}
 
 	public void RestartGame()
@@ -66,6 +74,7 @@ public partial class GameManager : Node
 	
 	private void StartGame(bool _instant)
 	{
+		InFightScene = false;
 		GD.Print("StartGame");
 		RunCounter++;
 		MainLevel?.QueueFree();
@@ -76,6 +85,7 @@ public partial class GameManager : Node
 		InitHud();
 		InitCamera();
 		InitGameOver();
+		InitFightScene();
 
 		if (_instant)
 		{
@@ -96,9 +106,47 @@ public partial class GameManager : Node
 
 	public void StartFight(CharacterType _enemy)
 	{
+		m_cloudAnimScene.Visible = true;
+		m_cloudAnimScene.FadeIn();
+		m_cloudAnimScene.FadeInCompleted += CloudFadeInCompleted;
+		
+		InFightScene = true;
+		m_fightScene.SetEnemy(_enemy);
+	}
+
+	private void CloudFadeInCompleted()
+	{
+		m_fightScene.Visible = true;
+		m_fightScene.FightStart();
+		m_cloudAnimScene.FadeOut();
+		m_cloudAnimScene.FadeOutCompleted += CloudFadeOutCompleted;
+	}
+
+	private void CloudFadeOutCompleted()
+	{
+		m_cloudAnimScene.Visible = false;
+	}
+
+	public void EndFight(CharacterType _enemy)
+	{
+		InFightScene = false;
+		m_fightScene.Visible = false;
+		
+		// Spawn reward
+	}
+
+	private void InitFightScene()
+	{
 		m_fightScene = (FightEncounter) m_fightScenePrefab.Instantiate();
 		AddChild(m_fightScene);
-		m_fightScene.FightStart(_enemy);
+		m_fightScene.Visible = false;
+
+		if (m_cloudAnimScene == null)
+		{
+			m_cloudAnimScene = (CloudAnimScene) m_cloudAnimPrefab.Instantiate();
+			AddChild(m_cloudAnimScene);
+		}
+		m_cloudAnimScene.Visible = false;
 	}
 	
 	private void InitLevel()
@@ -122,10 +170,16 @@ public partial class GameManager : Node
 
 	private void InitGameOver()
 	{
-		if (m_gameOver != null)
-			return;
+		if (m_gameOver == null)
+		{
+			m_gameOver = (GameOver) m_gameOverPrefab.Instantiate();
+			AddChild(m_gameOver);
+		}
 		
-		m_gameOver = (GameOver)m_gameOverPrefab.Instantiate();
-		AddChild(m_gameOver);
+		if (m_gameWin == null)
+		{
+			m_gameWin = (GameOver) m_gameOverPrefab.Instantiate();
+			AddChild(m_gameWin);
+		}
 	}
 }

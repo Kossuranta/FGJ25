@@ -6,7 +6,10 @@ public partial class Hud : MarginContainer
 	public static Hud Instance { get; private set; }
 
 	[Export]
-	private PanelContainer m_pickUpPopup;
+	private VBoxContainer m_pickUpPopup;
+	
+	[Export]
+	private VBoxContainer m_fightDoorPopup;
 
 	[Export]
 	private Sprite2D m_itemSlot1;
@@ -57,6 +60,7 @@ public partial class Hud : MarginContainer
 	{
 		Instance = this;
 		HidePickup();
+		HideFightDoor();
 		ClearItem();
 	}
 
@@ -72,6 +76,11 @@ public partial class Hud : MarginContainer
 		m_pickUpPopup.Visible = false;
 	}
 
+	public void HideFightDoor()
+	{
+		m_fightDoorPopup.Visible = false;
+	}
+
 	public void OnPickUpYes()
 	{
 		PickUpItem(m_itemToPickUp.m_type);
@@ -83,6 +92,23 @@ public partial class Hud : MarginContainer
 	public void OnPickUpNo()
 	{
 		HidePickup();
+	}
+
+	public void ShowFightDoor()
+	{
+		m_fightDoorPopup.Visible = true;
+	}
+	
+	public void OnFightDoorYes()
+	{
+		GD.Print($"START COMBAT! Enemy: {CharacterType.OVI}");
+		GameManager.Instance.StartFight(CharacterType.OVI);
+		HideFightDoor();
+	}
+
+	public void OnFightDoorNo()
+	{
+		HideFightDoor();
 	}
 
 	public void ClearItem()

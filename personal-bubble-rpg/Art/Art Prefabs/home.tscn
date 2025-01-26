@@ -24,3 +24,6 @@ shape = SubResource("BoxShape3D_e62uh")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1, -1)
 shape = SubResource("SphereShape3D_vlhai")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]
+[connection signal="body_exited" from="Area3D" to="." method="OnTriggerExit"]

@@ -7,4 +7,4 @@ transform = Transform3D(1, 0, 0, 0, 0.573576, 0.819152, 0, -0.819152, 0.573576, 
 v_offset = -14.8
 fov = 33.1
 script = ExtResource("1_ftofu")
-m_offset = Vector3(0, 32, 4)
+m_offset = Vector3(0, 34, 2)

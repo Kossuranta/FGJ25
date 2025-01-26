@@ -25,15 +25,15 @@ public partial class GameOver : MarginContainer
         Color color = Modulate;
         color.A = 0;
         Modulate = color;
-        GD.PrintErr($"GameOver ready");
+        Visible = false;
     }
 
     public void Toggle(bool _state, int _fadeOutCount)
     {
-        GD.PrintErr($"GameOver Toggle({_state}, {_fadeOutCount})");
+        Visible = true;
         m_fading = true;
         m_targetState = _state;
-        if (_state)
+        if (_state && m_fadeOutCounter != null)
             m_fadeOutCounter.Text = _fadeOutCount.ToString();
 
         m_current = _state ? 0f : 1f;
@@ -79,6 +79,7 @@ public partial class GameOver : MarginContainer
                 if (m_current <= 0f)
                 {
                     m_fading = false;
+                    Visible = false;
                     GD.Print("FadeOutCompleted");
                     FadeOutCompleted?.Invoke();
                 }

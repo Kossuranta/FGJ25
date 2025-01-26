@@ -72,6 +72,7 @@ layout_mode = 2
 alignment = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+z_index = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
@@ -141,13 +142,13 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_bgjws")
 
 [node name="BackgroundBattleFloor" type="Sprite2D" parent="."]
-position = Vector2(384, 584)
-scale = Vector2(0.5, 0.505296)
+position = Vector2(351, 604)
+scale = Vector2(0.532874, 0.518273)
 texture = ExtResource("4_vt01t")
 
 [node name="BackgroundBattleFloor2" type="Sprite2D" parent="."]
-position = Vector2(896, 344)
-scale = Vector2(0.3, 0.3)
+position = Vector2(892.6, 425)
+scale = Vector2(0.428906, 0.341016)
 texture = ExtResource("4_vt01t")
 
 [node name="Spawner" type="Node2D" parent="."]
@@ -155,7 +156,8 @@ position = Vector2(896, 392)
 script = ExtResource("6_lkiu2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spawner"]
-position = Vector2(-16, -177.846)
+position = Vector2(-8, -146)
+scale = Vector2(1.18077, 1.18077)
 texture = ExtResource("19_ff6pd")
 
 [node name="DamageButton" type="Button" parent="."]
@@ -196,8 +198,8 @@ scroll_active = false
 threaded = true
 
 [node name="Pelaaja" type="Sprite2D" parent="."]
-position = Vector2(332, 390)
-scale = Vector2(0.295, 0.295)
+position = Vector2(334.5, 386.538)
+scale = Vector2(0.319231, 0.319231)
 texture = ExtResource("20_c7j45")
 flip_h = true
 

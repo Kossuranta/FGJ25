@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6qc4n2tqp2ty"]
+
+[ext_resource type="SpriteFrames" uid="uid://2gnyir5hxm5a" path="res://Art/CloudAnim/CloudAnim.tres" id="1_m4fl2"]
+[ext_resource type="Script" path="res://Art/CloudAnim/CloudAnimScene.cs" id="1_t0uul"]
+
+[node name="Control" type="Control" node_paths=PackedStringArray("m_animatedSprite")]
+z_index = 1001
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_t0uul")
+m_animatedSprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+sprite_frames = ExtResource("1_m4fl2")
+animation = &"FadeOut"
+frame = 15
+frame_progress = 0.13818
+centered = false
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="OnAnimationFinished"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="." method="OnAnimationLooped"]
