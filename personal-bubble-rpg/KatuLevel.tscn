@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=54 format=3 uid="uid://ofw2itmhoodl"]
 
 [ext_resource type="PackedScene" uid="uid://b8ba2hsfwb363" path="res://Art/Art Prefabs/talo_1.tscn" id="1_1gx34"]
 [ext_resource type="Texture2D" uid="uid://cla5wvfxsjw5h" path="res://Art/EnviroAssets3D/StreetCrossing3_StreetTrim.png" id="1_7sasx"]
@@ -44,6 +44,8 @@
 [ext_resource type="PackedScene" uid="uid://biny78jsy2j4s" path="res://Art/Art Prefabs/laatikkokasa.tscn" id="40_bq36t"]
 [ext_resource type="PackedScene" uid="uid://grtbltp8nbw0" path="res://Art/Art Prefabs/isoroskiskiinni.tscn" id="42_1nkb0"]
 [ext_resource type="PackedScene" path="res://Art/Art Prefabs/rekka.tscn" id="44_sgynu"]
+[ext_resource type="PackedScene" uid="uid://ci4qxugbvxyeq" path="res://Art/EnviroAssets3D/HospitalSign.glb" id="45_8awse"]
+[ext_resource type="PackedScene" path="res://Art/Art Prefabs/kukkapensas.tscn" id="46_2jew3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_33dnm"]
 sky_top_color = Color(0.84435, 0.855767, 0.795666, 1)
@@ -208,6 +210,12 @@ transform = Transform3D(0.999997, 0, -0.0025133, 0, 1, 0, 0.0025133, 0, 0.999997
 [node name="isoroskisauki3" parent="Homeyerd" instance=ExtResource("6_igg28")]
 transform = Transform3D(0.799998, 0, -0.00201064, 0, 0.8, 0, 0.00201064, 0, 0.799998, 20.8702, -0.13783, -54.1314)
 
+[node name="roska" parent="Homeyerd" instance=ExtResource("32_663vu")]
+transform = Transform3D(-0.895171, 0, 0.799168, 0, 1.2, 0, -0.799168, 0, -0.895171, 24.8779, -0.243931, -33.2257)
+
+[node name="roska2" parent="Homeyerd" instance=ExtResource("32_663vu")]
+transform = Transform3D(-1.17426, 0, -0.247219, 0, 1.2, 0, 0.247219, 0, -1.17426, 23.9449, -0.243931, -33.2441)
+
 [node name="CharacterBody3D_Player" parent="." instance=ExtResource("2_nhnp7")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.15241, -0.197419, 10.8655)
 
@@ -225,10 +233,10 @@ transform = Transform3D(0.915167, -0.0702382, -1.18639, 0.000379646, 1.4974, -0.
 transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 63.1349, 0, -95.1263)
 
 [node name="CharacterBody3D_Laakari" parent="." instance=ExtResource("20_sdf3q")]
-transform = Transform3D(1.29981, 0, -0.748662, 0, 1.5, 0, 0.748662, 0, 1.29981, -30.7245, 0, -93.853)
+transform = Transform3D(1.29926, 0, 0.749615, 0, 1.5, 0, -0.749615, 0, 1.29926, -30.7245, 0, -93.853)
 
 [node name="CharacterBody3D_Laakari2" parent="." instance=ExtResource("21_k8ug2")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.017, 0, -15.5384)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.017, 0, -8.96677)
 
 [node name="CharacterBody3D_Turisti" parent="." instance=ExtResource("23_f2fai")]
 transform = Transform3D(1.38777, 0, -0.569281, 0, 1.5, 0, 0.569281, 0, 1.38777, 50.8565, 0, -23.1361)
@@ -1164,6 +1172,21 @@ transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -19.
 transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -22.4171, 0.111561, -67.6167)
 
 [node name="Node3D86" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(0.880637, 0, -1.21428, 0, 1.5, 0, 1.21428, 0, 0.880637, 4.3379, 0, -83.2637)
+
+[node name="Node3D125" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(0.880637, 0, -1.21428, 0, 1.5, 0, 1.21428, 0, 0.880637, -35.336, 0, -95.2111)
+
+[node name="Node3D122" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(0.267484, 0, -1.98203, 0, 2, 0, 1.98203, 0, 0.267484, -12.9451, 0.111561, -87.3329)
+
+[node name="Node3D121" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -33.0882, 0.111561, -88.2153)
+
+[node name="Node3D124" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, 13.7381, 0.111561, -62.1944)
+
+[node name="Node3D123" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -34.4691, 0.111561, -98.7887)
 
 [node name="Node3D78" parent="Talot" instance=ExtResource("8_g7gqb")]
@@ -1175,14 +1198,17 @@ transform = Transform3D(0.593978, 0, -1.90976, 0, 2, 0, 1.90976, 0, 0.593978, 33
 [node name="Node3D116" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(0.742474, 0, -2.3872, 0, 2.5, 0, 2.3872, 0, 0.742474, 12.8222, 0.111561, -51.7157)
 
+[node name="Node3D126" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(0.742474, 0, -2.3872, 0, 2.5, 0, 2.3872, 0, 0.742474, 33.1419, 0.111561, -83.548)
+
 [node name="Node3D119" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(0.742474, 0, -2.3872, 0, 2.5, 0, 2.3872, 0, 0.742474, 37.2818, 0.111561, -63.3982)
 
 [node name="Node3D118" parent="Talot" instance=ExtResource("8_g7gqb")]
-transform = Transform3D(2.33155, 0, 0.902144, 0, 2.5, 0, -0.902144, 0, 2.33155, 0.805908, -0.395586, -52.3143)
+transform = Transform3D(2.33155, 0, 0.902144, 0, 2.5, 0, -0.902144, 0, 2.33155, 1.22042, -0.395586, -51.243)
 
 [node name="Node3D117" parent="Talot" instance=ExtResource("8_g7gqb")]
-transform = Transform3D(-0.80666, 0, -2.36628, 0, 2.5, 0, 2.36628, 0, -0.80666, 9.30201, -1.24197, -51.6187)
+transform = Transform3D(-0.80666, 0, -2.36628, 0, 2.5, 0, 2.36628, 0, -0.80666, 8.84575, -1.24197, -50.2803)
 
 [node name="Node3D37" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(0.711971, 0, -1.86898, 0, 2, 0, 1.86898, 0, 0.711971, 9.50927, 0.111561, -91.504)
@@ -1332,6 +1358,12 @@ transform = Transform3D(-1.4996, 0, 0.0348162, 0, 1.5, 0, -0.0348162, 0, -1.4996
 
 [node name="lamppu10" parent="Stuff" instance=ExtResource("30_amgqv")]
 transform = Transform3D(-1.4996, 0, 0.0348162, 0, 1.5, 0, -0.0348162, 0, -1.4996, -16.1824, 0.321091, -36.8069)
+
+[node name="lamppu14" parent="Stuff" instance=ExtResource("30_amgqv")]
+transform = Transform3D(-1.22501, 0, -0.865654, 0, 1.5, 0, 0.865654, 0, -1.22501, -30.1108, 0.321091, -82.9081)
+
+[node name="lamppu15" parent="Stuff" instance=ExtResource("30_amgqv")]
+transform = Transform3D(-0.931783, 0, -1.17549, 0, 1.5, 0, 1.17549, 0, -0.931783, -45.5917, 0.321091, -57.4821)
 
 [node name="lamppu11" parent="Stuff" instance=ExtResource("30_amgqv")]
 transform = Transform3D(-1.4996, 0, 0.0348162, 0, 1.5, 0, -0.0348162, 0, -1.4996, -38.3859, 0.321091, -36.6254)
@@ -1933,6 +1965,24 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -34.5336, 0, -29.7918)
 [node name="aita16" parent="Stuff" instance=ExtResource("34_kq84n")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -29.8299, 0, -29.7918)
 
+[node name="aita29" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0793, 0, -56.4514)
+
+[node name="aita34" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0793, 0, -61.3086)
+
+[node name="aita33" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0956, 0, -51.5958)
+
+[node name="aita32" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0793, 0, -46.906)
+
+[node name="aita31" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0793, 0, -42.462)
+
+[node name="aita30" parent="Stuff" instance=ExtResource("34_kq84n")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, -47.0793, 0, -38.1683)
+
 [node name="aita17" parent="Stuff" instance=ExtResource("34_kq84n")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -25.1305, 0, -29.7918)
 
@@ -1977,6 +2027,9 @@ transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 46.8685, 0.0816068, -30
 
 [node name="ItemCoin2" parent="Stuff" instance=ExtResource("39_jkktb")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -16.4948, 0.0816068, -59.6875)
+
+[node name="ItemCoin4" parent="Stuff" instance=ExtResource("39_jkktb")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 32.3, 0.0816068, -22.1395)
 
 [node name="ItemCoin3" parent="Stuff" instance=ExtResource("39_jkktb")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 48.1678, 0.0816068, -106.399)
@@ -2077,8 +2130,29 @@ transform = Transform3D(-1.31134e-07, 0, -3, 0, 3, 0, 3, 0, -1.31134e-07, -46.20
 [node name="pensas_1" parent="." instance=ExtResource("30_5omp0")]
 transform = Transform3D(0.67206, 0, -1.34102, 0, 1.5, 0, 1.34102, 0, 0.67206, 38.5315, -0.197418, -43.4847)
 
+[node name="pensas_2" parent="." instance=ExtResource("30_5omp0")]
+transform = Transform3D(-1.54458, 0, -1.27054, 0, 2, 0, 1.27054, 0, -1.54458, -37.0161, -0.197418, -40.6646)
+
 [node name="CharacterBody3D_Mummo" parent="." instance=ExtResource("22_q4bi2")]
 transform = Transform3D(0.910544, 0, -1.19202, 0, 1.5, 0, 1.19202, 0, 0.910544, 4.39762, -0.197418, -78.3104)
+
+[node name="HospitalSign3" parent="." instance=ExtResource("45_8awse")]
+transform = Transform3D(-1.14189, 0, 1.64198, 0, 2, 0, -1.64198, 0, -1.14189, -1.43173, 5.52205, 19.0273)
+
+[node name="kukkapensas" parent="." instance=ExtResource("46_2jew3")]
+transform = Transform3D(1.27613, 0, 0.788341, 0, 1.5, 0, -0.788341, 0, 1.27613, 30.4015, 0, -77.3677)
+
+[node name="kukkapensas2" parent="." instance=ExtResource("46_2jew3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.52617, 1.16044, -76.7416)
+
+[node name="kukkapensas3" parent="." instance=ExtResource("46_2jew3")]
+transform = Transform3D(1.92407, 0, -0.545837, 0, 2, 0, 0.545837, 0, 1.92407, -38.2576, 0.508779, -49.6571)
+
+[node name="kukkapensas4" parent="." instance=ExtResource("46_2jew3")]
+transform = Transform3D(2.16687, 0, 1.24686, 0, 2.5, 0, -1.24686, 0, 2.16687, -29.3853, 1.16044, -103.109)
+
+[node name="kukkapensas5" parent="." instance=ExtResource("46_2jew3")]
+transform = Transform3D(2.5, 0, 0, 0, 2.5, 0, 0, 0, 2.5, -32.0425, 1.16044, -101.639)
 
 [connection signal="area_entered" from="ItemCola" to="ItemCola" method="OnBodyEntered"]
 [connection signal="area_entered" from="ItemCola2" to="ItemCola2" method="OnBodyEntered"]
