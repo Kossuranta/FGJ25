@@ -64,7 +64,7 @@ public partial class GameManager : Node
 		m_fightScene?.QueueFree();
 		m_fightScene = null;
 		m_gameRunning = false;
-		m_gameOver.Toggle(true, RunCounter);
+		m_gameWin.Toggle(true, RunCounter);
 	}
 
 	public void RestartGame()
@@ -170,10 +170,16 @@ public partial class GameManager : Node
 
 	private void InitGameOver()
 	{
-		if (m_gameOver != null)
-			return;
+		if (m_gameOver == null)
+		{
+			m_gameOver = (GameOver) m_gameOverPrefab.Instantiate();
+			AddChild(m_gameOver);
+		}
 		
-		m_gameOver = (GameOver)m_gameOverPrefab.Instantiate();
-		AddChild(m_gameOver);
+		if (m_gameWin == null)
+		{
+			m_gameWin = (GameOver) m_gameOverPrefab.Instantiate();
+			AddChild(m_gameWin);
+		}
 	}
 }

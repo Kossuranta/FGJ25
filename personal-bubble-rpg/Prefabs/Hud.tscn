@@ -35,7 +35,8 @@ corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_itemSlot1")]
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_itemSlot1")]
+z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -46,8 +47,9 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 script = ExtResource("1_dy3jj")
-m_pickUpPopup = NodePath("PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup")
-m_itemSlot1 = NodePath("PanelContainer/VBoxContainer/HBoxContainer/Panel/Sprite2D_Item")
+m_pickUpPopup = NodePath("PanelContainer/VBoxContainer_PickUp")
+m_fightDoorPopup = NodePath("PanelContainer/VBoxContainer_FightDoor")
+m_itemSlot1 = NodePath("PanelContainer/VBoxContainer_ItemSlot/HBoxContainer/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_candy = ExtResource("3_ctbrg")
 m_coin = ExtResource("3_wyisp")
@@ -66,77 +68,77 @@ m_sword = ExtResource("8_gtsfg")
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer_ItemSlot" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 alignment = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_ItemSlot"]
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_awshi")
 
-[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer/HBoxContainer/Panel"]
+[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer/Panel"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_ybg0t")
 centered = false
 offset = Vector2(32, 32)
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 text = "Q"
 label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/VBoxContainer_ItemSlot"]
 visible = false
 layout_mode = 2
 
-[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer2"]
 custom_minimum_size = Vector2(96, 96)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_awshi")
 
-[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer/HBoxContainer2/Panel"]
+[node name="Sprite2D_Item" type="Sprite2D" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer2/Panel"]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_xbmrd")
 centered = false
 offset = Vector2(32, 32)
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer2"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 text = "E"
 label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer_PickUp" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_PickUp"]
 layout_mode = 2
 alignment = 1
 
-[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer"]
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer"]
 custom_minimum_size = Vector2(300, 200)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup"]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup"]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 32
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
 text = "Pick up a new item?"
@@ -145,16 +147,16 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Button" type="Button" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(96, 64)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
 custom_minimum_size = Vector2(96, 64)
 layout_mode = 0
 offset_right = 40.0
@@ -164,11 +166,11 @@ label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(96, 64)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
 custom_minimum_size = Vector2(96, 64)
 layout_mode = 0
 offset_right = 40.0
@@ -178,5 +180,72 @@ label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
-[connection signal="pressed" from="PanelContainer/VBoxContainer2/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]
+[node name="VBoxContainer_FightDoor" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_FightDoor"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "Try to open the door?"
+label_settings = ExtResource("11_kg6fc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yes"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "No"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnFightDoorYes"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnFightDoorNo"]
