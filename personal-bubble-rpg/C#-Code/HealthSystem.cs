@@ -16,7 +16,9 @@ public class HealthSystem
 
     public void ApplyDamage(int _damage)
 	{
+        
 		Health -= _damage;
+        Health = Mathf.Clamp(Health, 0, MaxHealth);
 		GD.Print(Health);
         OnHealthChanged?.Invoke(Health);
 	}
