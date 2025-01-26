@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://da44r60etd57f"]
+[gd_scene load_steps=7 format=3 uid="uid://da44r60etd57f"]
 
 [ext_resource type="Script" path="res://GameOver.cs" id="1_nqcck"]
 [ext_resource type="Texture2D" uid="uid://jq20bkl4p6ak" path="res://Art/Logo_Home.png" id="2_qjc2n"]
-[ext_resource type="LabelSettings" uid="uid://0ov33b1bws2w" path="res://LabelSettings/GameOverLabel.tres" id="3_pa6lu"]
+[ext_resource type="LabelSettings" path="res://LabelSettings/GameOverLabel.tres" id="3_pa6lu"]
+[ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="3_uccfb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7fscp"]
 bg_color = Color(0, 0, 0, 1)
@@ -10,7 +11,7 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_a0ieu"]
 font_size = 32
 
-[node name="Control_GameWin" type="MarginContainer" node_paths=PackedStringArray("m_fadeOutCounter")]
+[node name="Control_GameWin" type="MarginContainer"]
 z_index = 4096
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +23,6 @@ theme_override_constants/margin_top = -4
 theme_override_constants/margin_right = -4
 theme_override_constants/margin_bottom = -4
 script = ExtResource("1_nqcck")
-m_fadeOutCounter = NodePath("")
 m_delay = 3.0
 
 [node name="Panel" type="Panel" parent="."]
@@ -59,6 +59,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "YOU MADE IT HOME!"
 label_settings = ExtResource("3_pa6lu")
 
@@ -78,6 +79,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Credits:"
 label_settings = SubResource("LabelSettings_a0ieu")
 
@@ -88,36 +90,43 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Venla"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label2" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Anssi"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label3" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Essi"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label4" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Ilmari"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label5" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Ida"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label6" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Kaisa"
 label_settings = SubResource("LabelSettings_a0ieu")
 
 [node name="Label7" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Reetta"
 label_settings = SubResource("LabelSettings_a0ieu")
 
@@ -133,6 +142,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer3"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Special Thanks"
 label_settings = SubResource("LabelSettings_a0ieu")
 
@@ -142,5 +152,6 @@ alignment = 1
 
 [node name="Label" type="Label" parent="Panel/MarginContainer2/VBoxContainer/HBoxContainer4"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uccfb")
 text = "Pekka"
 label_settings = SubResource("LabelSettings_a0ieu")

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://be2qp4y2v5okl"]
+
+[ext_resource type="Texture2D" uid="uid://b8k20413yfwar" path="res://Art/Characters2D/diileri_tiny.png" id="1_tcrvp"]
+
+[node name="Diileri" type="Sprite2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_tcrvp")
+offset = Vector2(0, -900)

@@ -1,23 +1,27 @@
-[gd_scene load_steps=23 format=3 uid="uid://bkve8idmhxbve"]
+[gd_scene load_steps=27 format=3 uid="uid://bkve8idmhxbve"]
 
 [ext_resource type="Script" path="res://C#-Code/FightEncounter.cs" id="1_wf4om"]
-[ext_resource type="Texture2D" uid="uid://ce1fsl2nimjst" path="res://Art/Characters2D/varas.png" id="2_hjx6f"]
-[ext_resource type="Texture2D" uid="uid://c0q74bs1pfnhs" path="res://Art/Characters2D/mummo.png" id="3_agbl6"]
+[ext_resource type="Texture2D" uid="uid://cqk1u818d7ynk" path="res://Art/Characters2D/varas_tiny.png" id="2_fb05a"]
+[ext_resource type="Texture2D" uid="uid://dqlrix1cav2vo" path="res://Art/Characters2D/mummo_tiny.png" id="3_5oltd"]
 [ext_resource type="Texture2D" uid="uid://c0sh5fiar4eyb" path="res://Art/Background/Background_Background.png" id="3_he2sv"]
 [ext_resource type="Texture2D" uid="uid://cwnlq6p7frf8i" path="res://Art/UI/UI_BatteryBackground.png" id="3_t7dq1"]
 [ext_resource type="Script" path="res://C#-Code/HealthSlider.cs" id="4_kqreq"]
-[ext_resource type="Texture2D" uid="uid://d0dsxs0tbkcm" path="res://Art/Characters2D/ex.png" id="4_rdx67"]
 [ext_resource type="Texture2D" uid="uid://cuprdwps8dtt7" path="res://Art/Background/Background_Battle_Floor.png" id="4_vt01t"]
-[ext_resource type="Texture2D" uid="uid://dxi6g3ueoauod" path="res://Art/Characters2D/feissari2.png" id="5_8mius"]
 [ext_resource type="Texture2D" uid="uid://75hoerm6ei04" path="res://Art/UI/UI_Battery.png" id="5_bgjws"]
-[ext_resource type="Texture2D" uid="uid://cvaoi6jec2xw6" path="res://Art/Characters2D/joku_kuka_enmuista.png" id="6_dknor"]
+[ext_resource type="Texture2D" uid="uid://dwjt0o4p6kt5h" path="res://Art/Characters2D/feissari_tiny.png" id="5_d061q"]
+[ext_resource type="Texture2D" uid="uid://bmrqeg64v21vo" path="res://Art/Characters2D/joku_kuka_enmuista_tiny.png" id="6_aewa0"]
 [ext_resource type="Script" path="res://Spawner.cs" id="6_lkiu2"]
-[ext_resource type="Texture2D" uid="uid://bls52ry77yovi" path="res://Art/Characters2D/turisti.png" id="7_ldv6n"]
+[ext_resource type="Texture2D" uid="uid://dh0lv4q4fcmyj" path="res://Art/Characters2D/turisti_tiny.png" id="7_1e6rb"]
 [ext_resource type="Script" path="res://C#-Code/TakeDamageButton.cs" id="7_rnve6"]
-[ext_resource type="Texture2D" uid="uid://u2y0fe800bha" path="res://Art/Characters2D/tohtori.png" id="8_eocod"]
 [ext_resource type="Texture2D" uid="uid://hfaideobo1vw" path="res://Art/UI/UI_EnemyBubble.png" id="8_re61u"]
+[ext_resource type="Texture2D" uid="uid://bsgrb26v3gfje" path="res://Art/Characters2D/tohtori_tiny.png" id="8_s7w4q"]
 [ext_resource type="Texture2D" uid="uid://b7xggjnbr751i" path="res://Art/UI/UI_PlayerBubble.png" id="9_js5ws"]
-[ext_resource type="Texture2D" uid="uid://hwpvsnf5qyd4" path="res://Art/Characters2D/kakara.png" id="9_pqmge"]
+[ext_resource type="Texture2D" uid="uid://b8k20413yfwar" path="res://Art/Characters2D/diileri_tiny.png" id="9_wv17r"]
+[ext_resource type="Texture2D" uid="uid://bphmhchp0cisx" path="res://Art/Characters2D/kakara_tiny.png" id="10_vpbaj"]
+[ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="11_4raht"]
+[ext_resource type="Texture2D" uid="uid://0te4m6brrc0i" path="res://Art/Characters2D/koira_tiny.png" id="11_502h6"]
+[ext_resource type="Texture2D" uid="uid://gq07epnckwqb" path="res://Art/Characters2D/ovi_tiny.png" id="12_0fu6m"]
+[ext_resource type="Texture2D" uid="uid://cfmk5ephtou83" path="res://Art/Characters2D/ex_tiny.png" id="19_ff6pd"]
 [ext_resource type="Texture2D" uid="uid://pdpud48056rb" path="res://Art/Characters2D/pelaaja.png" id="20_c7j45"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qf4dc"]
@@ -42,14 +46,17 @@ script = ExtResource("1_wf4om")
 m_playerText = NodePath("UiPlayerBubble/PlayerTextLabel")
 m_enemyText = NodePath("UiEnemyBubble/EnemyTextLabel")
 m_enemySprite = NodePath("Spawner/Sprite2D")
-m_rosvo = ExtResource("2_hjx6f")
-m_mummo = ExtResource("3_agbl6")
-m_ex = ExtResource("4_rdx67")
-m_feissari = ExtResource("5_8mius")
-m_tuttu = ExtResource("6_dknor")
-m_turisti = ExtResource("7_ldv6n")
-m_terapeutti = ExtResource("8_eocod")
-m_kakara = ExtResource("9_pqmge")
+m_rosvo = ExtResource("2_fb05a")
+m_mummo = ExtResource("3_5oltd")
+m_ex = ExtResource("19_ff6pd")
+m_feissari = ExtResource("5_d061q")
+m_tuttu = ExtResource("6_aewa0")
+m_turisti = ExtResource("7_1e6rb")
+m_terapeutti = ExtResource("8_s7w4q")
+m_diileri = ExtResource("9_wv17r")
+m_kakara = ExtResource("10_vpbaj")
+m_koira = ExtResource("11_502h6")
+m_ovi = ExtResource("12_0fu6m")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -81,28 +88,32 @@ custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 theme = SubResource("Theme_s24to")
-text = "Attack"
+theme_override_fonts/font = ExtResource("11_4raht")
+text = "Talk Opt.1"
 autowrap_mode = 3
 
 [node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
-text = "Defend"
+theme_override_fonts/font = ExtResource("11_4raht")
+text = "Item Opt 1."
 autowrap_mode = 3
 
 [node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
-text = "Item"
+theme_override_fonts/font = ExtResource("11_4raht")
+text = "Item Opt. 2"
 autowrap_mode = 3
 
 [node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
-text = "Flee"
+theme_override_fonts/font = ExtResource("11_4raht")
+text = "Flee!"
 autowrap_mode = 3
 
 [node name="UiBatteryBackground" type="Sprite2D" parent="."]
@@ -144,9 +155,8 @@ position = Vector2(896, 392)
 script = ExtResource("6_lkiu2")
 
 [node name="Sprite2D" type="Sprite2D" parent="Spawner"]
-position = Vector2(0, -200)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_rdx67")
+position = Vector2(8, -184)
+texture = ExtResource("19_ff6pd")
 
 [node name="DamageButton" type="Button" parent="."]
 custom_minimum_size = Vector2(0, 100)
@@ -174,6 +184,11 @@ offset_right = -547.096
 offset_bottom = -168.1
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("11_4raht")
+theme_override_fonts/mono_font = ExtResource("11_4raht")
+theme_override_fonts/italics_font = ExtResource("11_4raht")
+theme_override_fonts/bold_italics_font = ExtResource("11_4raht")
+theme_override_fonts/bold_font = ExtResource("11_4raht")
 theme_override_font_sizes/normal_font_size = 40
 text = "LOREM IBSUM"
 fit_content = true
@@ -181,8 +196,8 @@ scroll_active = false
 threaded = true
 
 [node name="Pelaaja" type="Sprite2D" parent="."]
-position = Vector2(376, 408)
-scale = Vector2(0.25, 0.25)
+position = Vector2(332, 390)
+scale = Vector2(0.295, 0.295)
 texture = ExtResource("20_c7j45")
 flip_h = true
 
@@ -201,6 +216,11 @@ offset_right = -280.0
 offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("11_4raht")
+theme_override_fonts/mono_font = ExtResource("11_4raht")
+theme_override_fonts/italics_font = ExtResource("11_4raht")
+theme_override_fonts/bold_italics_font = ExtResource("11_4raht")
+theme_override_fonts/bold_font = ExtResource("11_4raht")
 theme_override_font_sizes/normal_font_size = 25
 text = "reerererere"
 scroll_active = false

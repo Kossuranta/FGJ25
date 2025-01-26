@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c85lhnjdfks0o"]
+
+[ext_resource type="Script" path="res://CharacterScenes3D/NPC.cs" id="1_6qhkv"]
+[ext_resource type="PackedScene" uid="uid://dpdehds2xr8fo" path="res://Art/Characters3D/tuttava.glb" id="2_tsk05"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_an6i3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bioe3"]
+
+[node name="CharacterBody3D_Tuttu" type="CharacterBody3D"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+motion_mode = 1
+script = ExtResource("1_6qhkv")
+m_type = 6
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_an6i3")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(6.325, 0, 0, 0, 6.325, 0, 0, 0, 6.325, 0, 1.33333, 0)
+shape = SubResource("SphereShape3D_bioe3")
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="tuttava" parent="Node3D" instance=ExtResource("2_tsk05")]
+
+[connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]
