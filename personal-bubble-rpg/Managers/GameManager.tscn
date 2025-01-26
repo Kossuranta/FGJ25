@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cyern03ktx1ni"]
+[gd_scene load_steps=10 format=3 uid="uid://cyern03ktx1ni"]
 
 [ext_resource type="Script" path="res://Managers/GameManager.cs" id="1_0v5v5"]
 [ext_resource type="PackedScene" uid="uid://ofw2itmhoodl" path="res://KatuLevel.tscn" id="2_cw13t"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bcfjjbo10vcor" path="res://GameOver.tscn" id="6_sghb7"]
 [ext_resource type="PackedScene" uid="uid://da44r60etd57f" path="res://GameWin.tscn" id="7_j3ahs"]
 [ext_resource type="PackedScene" uid="uid://b6qc4n2tqp2ty" path="res://Art/CloudAnim/CloudAnimScene.tscn" id="8_olufw"]
+[ext_resource type="PackedScene" uid="uid://cyjqch56y7rtu" path="res://AudioPlayerScene.tscn" id="9_flxby"]
 
 [node name="Node_GameManager" type="Node"]
 script = ExtResource("1_0v5v5")
@@ -18,3 +19,4 @@ m_fightScenePrefab = ExtResource("5_c5g20")
 m_gameOverPrefab = ExtResource("6_sghb7")
 m_gameWinPrefab = ExtResource("7_j3ahs")
 m_cloudAnimPrefab = ExtResource("8_olufw")
+m_musicPrefab = ExtResource("9_flxby")
