@@ -124,11 +124,15 @@ public partial class Hud : MarginContainer
 		Player.Instance.CurrentItem = m_itemToPickUp.m_type;
 		m_itemToPickUp.QueueFree();
 		HidePickup();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void OnPickUpNo()
 	{
 		HidePickup();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void ShowFightDoor()
@@ -141,11 +145,15 @@ public partial class Hud : MarginContainer
 		GD.Print($"START COMBAT! Enemy: {CharacterType.OVI}");
 		GameManager.Instance.StartFight(CharacterType.OVI);
 		HideFightDoor();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void OnFightDoorNo()
 	{
 		HideFightDoor();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void ShowHitTrashcan()
@@ -169,11 +177,15 @@ public partial class Hud : MarginContainer
 		ClearItem();
 		Player.Instance.CurrentItem = ItemType.ES;
 		PickUpItem(ItemType.ES);
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 	
 	public void OnVendingBuyNo()
 	{
 		HideVendingBuy();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 	
 	public void ShowVendingBuy()
@@ -201,11 +213,15 @@ public partial class Hud : MarginContainer
 		}
 		ClearItem();
 		HideHitTrashcan();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void OnDontHitTrashcan()
 	{
 		HideHitTrashcan();
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void HideHitTrashcan()

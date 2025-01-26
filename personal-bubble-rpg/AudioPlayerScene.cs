@@ -3,6 +3,11 @@ using System;
 
 public partial class AudioPlayerScene : AudioStreamPlayer
 {
+    public static AudioPlayerScene Instance { get; private set; }
+    
+    [Export]
+    private AudioStreamPlayer m_buttonSound;
+    
     [Export]
     private AudioStream m_normal;
     
@@ -17,6 +22,7 @@ public partial class AudioPlayerScene : AudioStreamPlayer
 
     public override void _Ready()
     {
+        Instance = this;
         PlayNormal();
     }
 
@@ -42,5 +48,10 @@ public partial class AudioPlayerScene : AudioStreamPlayer
     {
         Stream = m_gameWin;
         Play();
+    }
+
+    public void PlayButtonSound()
+    {
+        m_buttonSound?.Play();
     }
 }

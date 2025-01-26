@@ -277,6 +277,8 @@ public partial class FightEncounter : MarginContainer
 					GD.Print("Default");
 					break;
 			}
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
 	public void Button2()
@@ -356,6 +358,8 @@ public partial class FightEncounter : MarginContainer
 			{
 				Player.Instance.m_healthSystem.ApplyDamage(1);
 			}
+		
+			AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 	public void Button3()
 	{
@@ -367,5 +371,7 @@ public partial class FightEncounter : MarginContainer
 		{
 			GameManager.Instance.EndFightPlayerLose(characterType);
 		}
+		
+		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 }
