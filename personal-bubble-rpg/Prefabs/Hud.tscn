@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://d3fdwwbmsg8pm"]
+[gd_scene load_steps=25 format=3 uid="uid://d3fdwwbmsg8pm"]
 
 [ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
 [ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
@@ -19,6 +19,7 @@
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 [ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
 [ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="17_f1im0"]
+[ext_resource type="PackedScene" uid="uid://blfg5mjc4ihsh" path="res://BatteryScene.tscn" id="20_r51i0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
@@ -42,7 +43,7 @@ font_size = 40
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_itemSlot1")]
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_trashTrashTalk", "m_roskisColaText", "m_itemSlot1")]
 z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +58,8 @@ script = ExtResource("1_dy3jj")
 m_pickUpPopup = NodePath("PanelContainer/VBoxContainer_PickUp")
 m_fightDoorPopup = NodePath("PanelContainer/VBoxContainer_FightDoor")
 m_hitTrashcanPopup = NodePath("PanelContainer/VBoxContainer_FightTrashcan")
+m_trashTrashTalk = NodePath("PanelContainer/VBoxContainer_TrashTrashTalk")
+m_roskisColaText = NodePath("PanelContainer/VBoxContainer_RoskisColaText")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer_ItemSlot/HBoxContainer/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_candy = ExtResource("3_ctbrg")
@@ -71,6 +74,9 @@ m_meds = ExtResource("11_2y7ss")
 m_photo = ExtResource("12_q0lt1")
 m_spoon = ExtResource("7_t1mbc")
 m_sword = ExtResource("8_gtsfg")
+
+[node name="Control_Battery" parent="." instance=ExtResource("20_r51i0")]
+layout_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
