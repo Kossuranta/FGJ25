@@ -17,6 +17,8 @@ public partial class Player : Character
 
 	public HealthSystem m_healthSystem;
 	public ItemType CurrentItem { get; set; }
+	public Roskis CurrentRoskis { get; set; }
+	public float MoveSpeedBoostTimer { get; set; }
 
 	public override void _Ready()
 	{
@@ -54,7 +56,13 @@ public partial class Player : Character
 		
 		Vector2 inputDir = Input.GetVector("turn_left", "turn_right", "move_forward", "move_back");
 		Vector3 moveDir = new(inputDir.X, 0, inputDir.Y);
-		Velocity = moveDir * m_moveSpeed;
+		float speed = m_moveSpeed;
+		if (MoveSpeedBoostTimer > 0)
+		{
+			MoveSpeedBoostTimer -= _delta;
+			speed *= 1.5f;
+		}
+		Velocity = moveDir * speed;
 		MoveAndCollide(Velocity * _delta);
 		MoveAndSlide();
 		

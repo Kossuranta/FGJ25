@@ -15,7 +15,15 @@ public partial class Item : Area3D
 		{
 			GD.Print($"OnTriggerEnter {m_type}");
 			if (m_autoPickup)
+			{
+				switch (m_type)
+				{
+					case ItemType.COLA:
+						Player.Instance.MoveSpeedBoostTimer = 5;
+						break;
+				}
 				QueueFree();
+			}
 			else
 				Hud.Instance.ShowPickup(this);
 		}
