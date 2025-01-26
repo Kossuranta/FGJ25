@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bakhem0ko0jep" path="res://Player/Player.tscn" id="2_nhnp7"]
 [ext_resource type="PackedScene" uid="uid://kcp8wwsluu6w" path="res://CharacterScenes3D/Feissari.tscn" id="5_daayn"]
 [ext_resource type="PackedScene" uid="uid://u36sbhfyx7j7" path="res://Art/Art Prefabs/talo_2.tscn" id="6_l5jqd"]
-[ext_resource type="PackedScene" uid="uid://bnite5c1td2bx" path="res://CharacterScenes3D/Lapsi.tscn" id="6_lj683"]
+[ext_resource type="PackedScene" uid="uid://knrotujhqrws" path="res://CharacterScenes3D/Lapsi.tscn" id="6_lj683"]
 [ext_resource type="PackedScene" uid="uid://i7bfkxropiec" path="res://Art/Art Prefabs/hospital.tscn" id="8_6j3rs"]
 [ext_resource type="PackedScene" uid="uid://b7logjiu18cse" path="res://Art/Art Prefabs/tree.tscn" id="8_g7gqb"]
 [ext_resource type="PackedScene" uid="uid://cdxdpnrepkhcj" path="res://Art/EnviroAssets3D/GrassPiece.glb" id="11_qsblj"]
@@ -219,9 +219,6 @@ transform = Transform3D(1.30494, 0, -0.739683, 0, 1.5, 0, 0.739683, 0, 1.30494, 
 
 [node name="CharacterBody3D_Varas" parent="." instance=ExtResource("25_fjdqx")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -43.1829, 0, -51.713)
-
-[node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
-transform = Transform3D(-1.00646, 0, -1.11223, 0, 1.5, 0, 1.11223, 0, -1.00646, 25.5311, -0.41424, -47.7982)
 
 [node name="Talot" type="Node3D" parent="."]
 
@@ -1802,6 +1799,9 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 19.7085, 0, -29.7918)
 
 [node name="aita28" parent="Stuff" instance=ExtResource("34_kq84n")]
 transform = Transform3D(-0.169651, 0, -1.99279, 0, 2, 0, 1.99279, 0, -0.169651, 20.2919, 0, -26.0916)
+
+[node name="CharacterBody3D_Lapsi" parent="Stuff" instance=ExtResource("6_lj683")]
+transform = Transform3D(1.40108, 0, 0.535694, 0, 1.5, 0, -0.535694, 0, 1.40108, 26.6178, -0.197418, -49.5503)
 
 [node name="vendingmachine" parent="." instance=ExtResource("35_1pq0s")]
 transform = Transform3D(-1.8, 0, -2.71792e-07, 0, 1.8, 0, 2.71792e-07, 0, -1.8, 3.54099, -0.197418, -40.729)
