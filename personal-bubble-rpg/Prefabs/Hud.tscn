@@ -19,7 +19,7 @@
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 [ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
 [ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="17_f1im0"]
-[ext_resource type="PackedScene" path="res://BatteryScene.tscn" id="20_r51i0"]
+[ext_resource type="PackedScene" uid="uid://blfg5mjc4ihsh" path="res://BatteryScene.tscn" id="20_r51i0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
@@ -43,7 +43,7 @@ font_size = 40
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_trashTrashTalk", "m_roskisColaText", "m_itemSlot1")]
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_trashTrashTalk", "m_roskisColaText", "m_vendingBuy", "m_vendingNoMoney", "m_itemSlot1")]
 z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,6 +60,8 @@ m_fightDoorPopup = NodePath("PanelContainer/VBoxContainer_FightDoor")
 m_hitTrashcanPopup = NodePath("PanelContainer/VBoxContainer_FightTrashcan")
 m_trashTrashTalk = NodePath("PanelContainer/VBoxContainer_TrashTrashTalk")
 m_roskisColaText = NodePath("PanelContainer/VBoxContainer_RoskisColaText")
+m_vendingBuy = NodePath("PanelContainer/VBoxContainer_BuyES")
+m_vendingNoMoney = NodePath("PanelContainer/VBoxContainer_NoMoney")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer_ItemSlot/HBoxContainer/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_candy = ExtResource("3_ctbrg")
@@ -392,6 +394,138 @@ label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VBoxContainer_BuyES" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_BuyES"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "Do you want to buy ES?"
+label_settings = ExtResource("11_kg6fc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yes"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "No"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer_NoMoney" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_NoMoney"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "You need a coin to buy ES!"
+label_settings = ExtResource("11_kg6fc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yes"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+visible = false
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "No"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
 
@@ -412,3 +546,7 @@ label_settings = SubResource("LabelSettings_7jt2e")
 [connection signal="pressed" from="PanelContainer/VBoxContainer_FightTrashcan/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnDontHitTrashcan"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnHitTrashcan"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnDontHitTrashcan"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnVendingBuyYes"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_BuyES/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnVendingBuyNo"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnHitTrashcan"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_NoMoney/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnDontHitTrashcan"]
