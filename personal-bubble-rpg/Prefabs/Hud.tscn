@@ -19,7 +19,7 @@
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 [ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
 [ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="17_f1im0"]
-[ext_resource type="PackedScene" uid="uid://blfg5mjc4ihsh" path="res://BatteryScene.tscn" id="20_r51i0"]
+[ext_resource type="PackedScene" path="res://BatteryScene.tscn" id="20_r51i0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
