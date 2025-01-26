@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://4e1kfpclu38n"]
+[gd_scene load_steps=5 format=3 uid="uid://cyk3vvv13n5xe"]
 
+[ext_resource type="Script" path="res://Art/Art Prefabs/Roskis.cs" id="1_ix5hh"]
 [ext_resource type="PackedScene" uid="uid://dpvgomc8o6he6" path="res://Art/EnviroAssets3D/Dumpster.glb" id="1_mx2q1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3x3j"]
 size = Vector3(1.5473, 1.94092, 1.95905)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vvjys"]
+size = Vector3(1.87781, 1.99194, 2.76654)
+
 [node name="isoroskisauki" type="Node3D"]
+script = ExtResource("1_ix5hh")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -15,3 +20,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0189823, 0, -0.113464)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.256195, 0.961182, -0.00479126)
 shape = SubResource("BoxShape3D_f3x3j")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.046814, 0.956665, 0.0687561)
+shape = SubResource("BoxShape3D_vvjys")
+
+[connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]
+[connection signal="body_exited" from="Area3D" to="." method="OnTriggerExit"]
