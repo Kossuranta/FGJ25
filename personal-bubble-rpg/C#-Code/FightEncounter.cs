@@ -351,6 +351,11 @@ public partial class FightEncounter : MarginContainer
 					GD.Print("Default");
 					break;
 			}
+
+			if (!m_fightAftermath)
+			{
+				Player.Instance.m_healthSystem.ApplyDamage(1);
+			}
 	}
 	public void Button3()
 	{
