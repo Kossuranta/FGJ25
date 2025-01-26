@@ -47,6 +47,9 @@ public partial class FightEncounter : MarginContainer
 	private bool m_fading;
 	private float m_fadeProgress;
 
+	[Export]
+	private MarginContainer m_fightContainer;
+
 	public void SetEnemy(CharacterType _character)
 	{
 		characterType = _character;
@@ -55,6 +58,9 @@ public partial class FightEncounter : MarginContainer
 	public void FightStart()
 	{
 		m_continueButton.Visible = false;
+		m_fightContainer.Visible = true;
+		m_talkOpt1.Visible = true;
+		m_talkOpt2.Visible = true;
 
 		if (characterType == CharacterType.NOT_SET)
 		{
@@ -179,7 +185,9 @@ public partial class FightEncounter : MarginContainer
 	{
 		m_talkOpt1.Visible = false;
 		m_talkOpt2.Visible = false;
+		m_fightContainer.Visible = false;
 		m_continueButton.Visible = true;
+
 		switch (characterType)
 			{
 				case CharacterType.ROSVO:
@@ -237,6 +245,7 @@ public partial class FightEncounter : MarginContainer
 	{
 		m_talkOpt1.Visible = false;
 		m_talkOpt2.Visible = false;
+		m_fightContainer.Visible = false;
 		m_continueButton.Visible = true;
 		switch (characterType)
 			{
