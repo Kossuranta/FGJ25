@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://c4k6pbq3wv2r1"
-path="res://.godot/imported/huuto.glb-98df23398d57441a3bbe76acf9be6d1b.scn"
+path="res://.godot/imported/huuto.glb-691ba89a2cb144faf2c71190cda4157a.scn"
 
 [deps]
 
-source_file="res://Art/UI/huuto.glb"
-dest_files=["res://.godot/imported/huuto.glb-98df23398d57441a3bbe76acf9be6d1b.scn"]
+source_file="res://Sounds/huuto.glb"
+dest_files=["res://.godot/imported/huuto.glb-691ba89a2cb144faf2c71190cda4157a.scn"]
 
 [params]
 
