@@ -326,8 +326,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = null;
 					break;
 				case CharacterType.DIILERI:
-					m_fightAftermath = false;
-					m_enemyText.Text = "You want drugs? ...You can't affor them.";
+					m_fightAftermath = true;
+					m_enemyText.Text = "You want drugs? I'll give you drugs.";
 					m_playerText.Text = null;
 					break;
 				case CharacterType.LAPSI:
