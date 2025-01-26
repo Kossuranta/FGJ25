@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=51 format=3 uid="uid://ofw2itmhoodl"]
 
 [ext_resource type="PackedScene" uid="uid://b8ba2hsfwb363" path="res://Art/Art Prefabs/talo_1.tscn" id="1_1gx34"]
 [ext_resource type="Texture2D" uid="uid://cla5wvfxsjw5h" path="res://Art/EnviroAssets3D/StreetCrossing3_StreetTrim.png" id="1_7sasx"]
@@ -40,6 +40,7 @@
 [ext_resource type="PackedScene" uid="uid://ckeml50xpma87" path="res://Art/Art Prefabs/vendingmachine.tscn" id="35_1pq0s"]
 [ext_resource type="PackedScene" uid="uid://ftghea45yrlw" path="res://Art/Art Prefabs/talo_3.tscn" id="35_pott6"]
 [ext_resource type="PackedScene" uid="uid://bvwhoxm1mhxc7" path="res://Art/EnviroAssets3D/GrassPath.glb" id="36_8jx3b"]
+[ext_resource type="PackedScene" uid="uid://bxb5p4brdllfq" path="res://Items/ItemCoin3D.tscn" id="39_jkktb"]
 [ext_resource type="PackedScene" path="res://Art/Art Prefabs/laatikkokasa.tscn" id="40_bq36t"]
 [ext_resource type="PackedScene" uid="uid://grtbltp8nbw0" path="res://Art/Art Prefabs/isoroskiskiinni.tscn" id="42_1nkb0"]
 
@@ -205,7 +206,7 @@ transform = Transform3D(0.217571, 0, -1.48414, 0, 1.5, 0, 1.48414, 0, 0.217571, 
 transform = Transform3D(0.803191, -0.0702382, -1.26489, -0.00767757, 1.4974, -0.0880233, 1.26681, 0.053608, 0.801437, 53.8298, 0.67051, -64.68)
 
 [node name="CharacterBody3D_Ex" parent="." instance=ExtResource("19_tysnc")]
-transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 60.0302, 0, -100.471)
+transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 63.1349, 0, -95.1263)
 
 [node name="CharacterBody3D_Laakari" parent="." instance=ExtResource("20_sdf3q")]
 transform = Transform3D(1.29981, 0, -0.748662, 0, 1.5, 0, 0.748662, 0, 1.29981, -30.7245, 0, -93.853)
@@ -217,7 +218,7 @@ transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.017, 0, -15.5384)
 transform = Transform3D(-1.31313, 0, -0.725037, 0, 1.5, 0, 0.725037, 0, -1.31313, 0.9688, 0, -70.3601)
 
 [node name="CharacterBody3D_Turisti" parent="." instance=ExtResource("23_f2fai")]
-transform = Transform3D(-0.52938, 0, 1.40348, 0, 1.5, 0, -1.40348, 0, -0.52938, 50.8565, 0, -23.1361)
+transform = Transform3D(1.38777, 0, -0.569281, 0, 1.5, 0, 0.569281, 0, 1.38777, 50.8565, 0, -23.1361)
 
 [node name="CharacterBody3D_Tuttu" parent="." instance=ExtResource("24_e2r8d")]
 transform = Transform3D(1.30494, 0, -0.739683, 0, 1.5, 0, 0.739683, 0, 1.30494, 12.2315, 0, -39.1766)
@@ -390,7 +391,7 @@ transform = Transform3D(0.727626, 0, 0, 0, 1, 0, 3.38827e-10, 0, 1.33877, -28.80
 transform = Transform3D(0.551075, 0, -0.874214, 0, 1, 0, 0.475138, 0, 1.01393, -26.8677, -0.197418, -20.78)
 
 [node name="Talo42" parent="Talot" instance=ExtResource("1_1gx34")]
-transform = Transform3D(0.0536953, 0, -1.33512, 0, 1, 0, 0.725642, 0, 0.0987949, -22.5396, -0.197418, -22.8194)
+transform = Transform3D(0.0322588, 0, -1.33745, 0, 1, 0, 0.726911, 0, 0.0593535, -22.3899, -0.197418, -22.6066)
 
 [node name="Talo21" parent="Talot" instance=ExtResource("1_1gx34")]
 transform = Transform3D(0.727626, 0, 0, 0, 1, 0, 3.38827e-10, 0, 1.33877, 41.337, 0.15544, 18.6723)
@@ -1634,6 +1635,45 @@ transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 15.1426, 0, 6.53792)
 [node name="PavementEdge23" parent="Stuff" instance=ExtResource("12_4ri8e")]
 transform = Transform3D(3.99978, 0.0418173, 0, -0.0418173, 3.99978, 0, 0, 0, 4, 1.06901, -0.00602219, 8.59354)
 
+[node name="PavementEdge33" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, 26.5016, -0.0219399, -31.4352)
+
+[node name="PavementEdge34" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, 20.5452, -0.0219399, -31.4352)
+
+[node name="PavementEdge35" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, 14.6845, -0.0219399, -31.4352)
+
+[node name="PavementEdge36" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, 9.04984, -0.0219399, -31.4352)
+
+[node name="PavementEdge38" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, 3.36237, -0.0219399, -31.4352)
+
+[node name="PavementEdge39" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -2.11654, -0.0219399, -31.4352)
+
+[node name="PavementEdge40" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -7.94332, -0.0219399, -31.4352)
+
+[node name="PavementEdge41" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -14.0057, -0.0219399, -31.4352)
+
+[node name="PavementEdge42" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -19.5275, -0.0219399, -31.4352)
+
+[node name="PavementEdge43" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -25.0839, -0.0219399, -31.4352)
+
+[node name="PavementEdge44" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -29.5357, -0.0219399, -31.4352)
+
+[node name="PavementEdge45" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -34.6636, -0.0219399, -31.4352)
+
+[node name="PavementEdge46" parent="Stuff" instance=ExtResource("12_4ri8e")]
+transform = Transform3D(-1.31127e-07, -1.37321e-09, 3, -0.0314154, 2.99984, 0, -2.99984, -0.0314154, -1.31134e-07, -39.782, -0.0219399, -31.4352)
+
 [node name="PavementEdge25" parent="Stuff" instance=ExtResource("12_4ri8e")]
 transform = Transform3D(3.99978, 0.0418173, 0, -0.0418173, 3.99978, 0, 0, 0, 4, 1.06901, -0.00602219, 0.707214)
 
@@ -1828,6 +1868,15 @@ transform = Transform3D(-0.169651, 0, -1.99279, 0, 2, 0, 1.99279, 0, -0.169651, 
 
 [node name="CharacterBody3D_Lapsi" parent="Stuff" instance=ExtResource("6_lj683")]
 transform = Transform3D(1.40108, 0, 0.535694, 0, 1.5, 0, -0.535694, 0, 1.40108, 26.6178, -0.197418, -49.5503)
+
+[node name="ItemCoin" parent="Stuff" instance=ExtResource("39_jkktb")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 46.8685, 0.0816068, -30.7756)
+
+[node name="ItemCoin2" parent="Stuff" instance=ExtResource("39_jkktb")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -16.4948, 0.0816068, -59.6875)
+
+[node name="ItemCoin3" parent="Stuff" instance=ExtResource("39_jkktb")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 48.1678, 0.0816068, -106.399)
 
 [node name="vendingmachine" parent="." instance=ExtResource("35_1pq0s")]
 transform = Transform3D(-1.8, 0, -2.71792e-07, 0, 1.8, 0, 2.71792e-07, 0, -1.8, 3.54099, -0.197418, -40.729)
