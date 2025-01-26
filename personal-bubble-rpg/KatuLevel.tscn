@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://ofw2itmhoodl"]
+[gd_scene load_steps=35 format=3 uid="uid://ofw2itmhoodl"]
 
 [ext_resource type="PackedScene" uid="uid://b8ba2hsfwb363" path="res://Art/Art Prefabs/talo_1.tscn" id="1_1gx34"]
 [ext_resource type="Texture2D" uid="uid://mvgnxirpypld" path="res://Art/EnviroAssets3D/PavementEdge_StreetTrim.png" id="1_2dm5p"]
@@ -13,9 +13,17 @@
 [ext_resource type="PackedScene" uid="uid://dpy5ydp82hilw" path="res://Art/EnviroAssets3D/PavementEdge2.glb" id="12_4ri8e"]
 [ext_resource type="PackedScene" uid="uid://cl8qppf865vjw" path="res://Art/EnviroAssets3D/StreetLines.glb" id="13_qguc8"]
 [ext_resource type="PackedScene" uid="uid://btoqnijfslucw" path="res://Art/EnviroAssets3D/PavementEdge.glb" id="14_qrg5l"]
+[ext_resource type="PackedScene" uid="uid://c7yh1o6vc2rp0" path="res://CharacterScenes3D/Diileri.tscn" id="18_m2frh"]
 [ext_resource type="PackedScene" uid="uid://dgshcm7ug4fmf" path="res://Art/Art Prefabs/home.tscn" id="18_xy5a1"]
 [ext_resource type="PackedScene" uid="uid://rievlmw62bnj" path="res://Art/EnviroAssets3D/Building3.glb" id="19_tmubb"]
+[ext_resource type="PackedScene" uid="uid://touq6m4oiq3n" path="res://CharacterScenes3D/Ex.tscn" id="19_tysnc"]
+[ext_resource type="PackedScene" uid="uid://bp327m4dn2pev" path="res://CharacterScenes3D/Koira.tscn" id="20_sdf3q"]
+[ext_resource type="PackedScene" uid="uid://1ls7q4xqqfrv" path="res://CharacterScenes3D/Laakari.tscn" id="21_k8ug2"]
+[ext_resource type="PackedScene" uid="uid://dk5acyd0lq8v3" path="res://CharacterScenes3D/Mummo.tscn" id="22_q4bi2"]
+[ext_resource type="PackedScene" uid="uid://ch7op6nl0sgna" path="res://CharacterScenes3D/Turisti.tscn" id="23_f2fai"]
 [ext_resource type="PackedScene" uid="uid://dt6fs2mp8t6u6" path="res://Art/EnviroAssets3D/vendingmachine.glb" id="23_vnhmw"]
+[ext_resource type="PackedScene" uid="uid://c85lhnjdfks0o" path="res://CharacterScenes3D/Tuttu.tscn" id="24_e2r8d"]
+[ext_resource type="PackedScene" uid="uid://sfv2h2qcr4bg" path="res://CharacterScenes3D/Varas.tscn" id="25_fjdqx"]
 [ext_resource type="PackedScene" uid="uid://cqm3hnw07jyvp" path="res://Art/EnviroAssets3D/PavementInnerCorner.glb" id="26_03trk"]
 [ext_resource type="PackedScene" uid="uid://c0aruy6f5ndmx" path="res://Art/EnviroAssets3D/PavementOuterCorner2.glb" id="27_x7lsx"]
 
@@ -48,6 +56,21 @@ albedo_texture = ExtResource("1_2dm5p")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nn5s1"]
 albedo_color = Color(0.525101, 0.525101, 0.525101, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xtf7g"]
+transparency = 1
+blend_mode = 3
+albedo_color = Color(0.92549, 0.92549, 0.972549, 0.223529)
+metallic_specular = 0.57
+roughness = 0.13
+rim_enabled = true
+clearcoat_enabled = true
+refraction_enabled = true
+disable_receive_shadows = true
+shadow_to_opacity = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_6c6kb"]
+material = SubResource("StandardMaterial3D_xtf7g")
 
 [node name="Node3D_KatuLevel" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.13978, 0.197418, 82.1189)
@@ -118,11 +141,12 @@ transform = Transform3D(0.861603, 0, 0.507583, 0, 1, 0, -0.507583, 0, 0.861603, 
 [node name="CharacterBody3D_Player" parent="." instance=ExtResource("2_nhnp7")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.15241, -0.197419, 10.8655)
 
-[node name="CharacterBody3D_Feissari" parent="." instance=ExtResource("5_daayn")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 17.5898, -0.197418, -35.0611)
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D_Player"]
+transform = Transform3D(4.6, 0, 0, 0, 4.6, 0, 0, 0, 4.6, 0, 1.07339, 0)
+mesh = SubResource("SphereMesh_6c6kb")
 
-[node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
-transform = Transform3D(-1.43757, 0, 0.428231, 0, 1.5, 0, -0.428231, 0, -1.43757, 5.03042, -0.197418, -4.7755)
+[node name="CharacterBody3D_Feissari" parent="." instance=ExtResource("5_daayn")]
+transform = Transform3D(-0.909753, 0, -1.19262, 0, 1.5, 0, 1.19262, 0, -0.909753, -40.2926, -0.197418, -44.5101)
 
 [node name="Node3D2" parent="." instance=ExtResource("6_l5jqd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.1608, -0.394836, -0.263092)
@@ -1059,7 +1083,7 @@ transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 18.823
 transform = Transform3D(-1.31134e-07, 0, 3, 0, 3, 0, -3, 0, -1.31134e-07, 24.8002, 0, -7.26799)
 
 [node name="vendingmachine" parent="." instance=ExtResource("23_vnhmw")]
-transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.99123, -0.197418, -32.7406)
+transform = Transform3D(-1.49773, 0, 0.0824512, 0, 1.5, 0, -0.0824512, 0, -1.49773, 1.99123, -0.197418, -40.3271)
 
 [node name="PavementEdge26" parent="." instance=ExtResource("12_4ri8e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.3498, -0.197418, -10.7291)
@@ -1238,5 +1262,32 @@ transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -
 
 [node name="Talo92" parent="kerrostalo6" instance=ExtResource("1_1gx34")]
 transform = Transform3D(1, 0, -3.76019e-10, 0, 1, 0, 4.65661e-10, 0, 0.807504, -40.8329, -0.197418, -119.547)
+
+[node name="CharacterBody3D_Diileri" parent="." instance=ExtResource("18_m2frh")]
+transform = Transform3D(0.730669, 0, 1.31001, 0, 1.5, 0, -1.31001, 0, 0.730669, 51.0662, -0.387797, -18.7631)
+
+[node name="CharacterBody3D_Ex" parent="." instance=ExtResource("19_tysnc")]
+transform = Transform3D(0.425169, 0, -1.43848, 0, 1.5, 0, 1.43848, 0, 0.425169, 70.5012, 0, -144.882)
+
+[node name="CharacterBody3D_Laakari" parent="." instance=ExtResource("20_sdf3q")]
+transform = Transform3D(1.15557, 0, 0.956378, 0, 1.5, 0, -0.956378, 0, 1.15557, -51.4424, 0, -151.038)
+
+[node name="CharacterBody3D_Laakari2" parent="." instance=ExtResource("21_k8ug2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 5.017, 0, -17.1143)
+
+[node name="CharacterBody3D_Mummo" parent="." instance=ExtResource("22_q4bi2")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -13.209, 0, -40.417)
+
+[node name="CharacterBody3D_Turisti" parent="." instance=ExtResource("23_f2fai")]
+transform = Transform3D(1.40692, 0, -0.520158, 0, 1.5, 0, 0.520158, 0, 1.40692, 29.903, 6.52255, -90.3034)
+
+[node name="CharacterBody3D_Tuttu" parent="." instance=ExtResource("24_e2r8d")]
+transform = Transform3D(0.528105, 0, -1.40396, 0, 1.5, 0, 1.40396, 0, 0.528105, 36.4365, 0, -22.7927)
+
+[node name="CharacterBody3D_Varas" parent="." instance=ExtResource("25_fjdqx")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 10.717, 0, -56.286)
+
+[node name="CharacterBody3D_Lapsi" parent="." instance=ExtResource("6_lj683")]
+transform = Transform3D(-1.32282, 0, -0.707211, 0, 1.5, 0, 0.707211, 0, -1.32282, -15.601, 0, -60.5142)
 
 [connection signal="area_entered" from="ItemCola" to="ItemCola" method="OnBodyEntered"]
