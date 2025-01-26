@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://kcp8wwsluu6w"]
+[gd_scene load_steps=8 format=3 uid="uid://kcp8wwsluu6w"]
 
 [ext_resource type="Script" path="res://CharacterScenes3D/NPC.cs" id="1_tlqt2"]
+[ext_resource type="PackedScene" uid="uid://df67uykso74v4" path="res://Items/ItemKarkki3D.tscn" id="2_0ruvu"]
 [ext_resource type="PackedScene" uid="uid://c4k6pbq3wv2r1" path="res://Sounds/huuto.glb" id="3_rcbpg"]
 [ext_resource type="PackedScene" uid="uid://c1pmnx03pg8no" path="res://Art/Characters3D/feissari.glb" id="3_vxnvb"]
 [ext_resource type="AudioStream" uid="uid://b04tpl71e8fvn" path="res://Sounds/Sound_StartBattle1.mp3" id="4_a0ia7"]
@@ -13,6 +14,7 @@
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 motion_mode = 1
 script = ExtResource("1_tlqt2")
+m_itemToDrop = ExtResource("2_0ruvu")
 m_playerSeenAudio = NodePath("SoundStartBattle1")
 m_playerSeenModel = NodePath("huuto")
 m_type = 5

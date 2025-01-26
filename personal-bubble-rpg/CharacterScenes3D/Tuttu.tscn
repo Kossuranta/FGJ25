@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c85lhnjdfks0o"]
+[gd_scene load_steps=7 format=3 uid="uid://cjjosr01tqinx"]
 
 [ext_resource type="Script" path="res://CharacterScenes3D/NPC.cs" id="1_6qhkv"]
 [ext_resource type="PackedScene" uid="uid://dpdehds2xr8fo" path="res://Art/Characters3D/tuttava.glb" id="2_tsk05"]
