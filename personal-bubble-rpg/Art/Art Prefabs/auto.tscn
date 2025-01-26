@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://b28agxqyikf7t"]
+
+[ext_resource type="PackedScene" uid="uid://cr251sex5toj4" path="res://Art/EnviroAssets3D/Car.glb" id="1_vy041"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xrfl4"]
+size = Vector3(2.39697, 2.29535, 5.53467)
+
+[node name="auto" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Car3" parent="StaticBody3D" instance=ExtResource("1_vy041")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00424385, 0, -0.0180771)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.34601e-05, 1.10416, 0.029042)
+shape = SubResource("BoxShape3D_xrfl4")
