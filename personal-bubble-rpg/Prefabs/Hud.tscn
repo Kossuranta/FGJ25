@@ -83,7 +83,6 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
 
 [node name="VBoxContainer_ItemSlot" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
 alignment = 2
 
@@ -130,7 +129,6 @@ label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
 [node name="VBoxContainer_PickUp" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
 alignment = 1
 
@@ -198,7 +196,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightDoor" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
 alignment = 1
 
@@ -264,7 +261,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightTrashcan" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
 alignment = 1
 
@@ -355,7 +351,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
-text = "It looks wobbly"
+text = "My go to shortcut is blocked! Where could I get more strength to push through?"
 label_settings = ExtResource("11_kg6fc")
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -397,7 +393,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
-visible = false
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_RoskisColaText"]
