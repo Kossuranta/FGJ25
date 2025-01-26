@@ -36,5 +36,31 @@ public partial class NPC : Character
         GD.Print($"START COMBAT! Enemy: {m_type}");
         GameManager.Instance.StartFight(m_type);
         m_fightCompleted = true;
+        GameManager.Instance.CombatEnded += OnFightCompleted;
+    }
+
+    public void OnFightCompleted(bool _win)
+    {
+        GameManager.Instance.CombatEnded -= OnFightCompleted;
+        
+        GD.Print($"OnFightCompleted(win:{_win})");
+        if (_win)
+        {
+            if (m_itemToDrop != null)
+            {
+                GD.Print("Spawn reward item");
+                Item item = (Item)m_itemToDrop.Instantiate();
+                GameManager.Instance.AddChild(item);
+                Vector3 pos = GlobalPosition;
+                pos.Y = 0.5f;
+                item.GlobalPosition = pos;
+            }
+            else
+            {
+                GD.Print("No reward item set!");
+            }
+        }
+        
+        QueueFree();
     }
 }
