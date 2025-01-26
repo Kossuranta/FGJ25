@@ -26,3 +26,4 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.606443, 0)
 shape = SubResource("SphereShape3D_0bhdg")
 
 [connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]
+[connection signal="body_exited" from="Area3D" to="." method="OnTriggerExit"]
