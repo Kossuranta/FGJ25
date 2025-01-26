@@ -28,6 +28,9 @@ public partial class GameManager : Node
 	[Export]
 	private PackedScene m_cloudAnimPrefab;
 
+	[Export]
+	private PackedScene m_musicPrefab;
+
 	public static Node3D MainLevel { get; private set; }
 	public static Camera3D Camera { get; private set; }
 
@@ -36,6 +39,7 @@ public partial class GameManager : Node
 	private GameOver m_gameOver;
 	private GameOver m_gameWin;
 	private CloudAnimScene m_cloudAnimScene;
+	private AudioStreamPlayer m_audioStreamPlayer;
 	
 	public int RunCounter { get; private set; }
 
@@ -86,6 +90,7 @@ public partial class GameManager : Node
 		InitCamera();
 		InitGameOver();
 		InitFightScene();
+		InitMusic();
 
 		if (_instant)
 		{
@@ -180,6 +185,15 @@ public partial class GameManager : Node
 		{
 			m_gameWin = (GameOver) m_gameOverPrefab.Instantiate();
 			AddChild(m_gameWin);
+		}
+	}
+
+	private void InitMusic()
+	{
+		if (m_audioStreamPlayer == null)
+		{
+			m_audioStreamPlayer = (AudioStreamPlayer) m_musicPrefab.Instantiate();
+			AddChild(m_audioStreamPlayer);
 		}
 	}
 }
