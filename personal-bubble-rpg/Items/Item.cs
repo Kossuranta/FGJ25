@@ -19,7 +19,7 @@ public partial class Item : Area3D
 				switch (m_type)
 				{
 					case ItemType.COLA:
-						Player.Instance.MoveSpeedBoostTimer = 5;
+						Player.Instance.m_healthSystem.ApplyDamage(-1);
 						Hud.Instance.OnRoskisColaPickup();
 						break;
 				}
