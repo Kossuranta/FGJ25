@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bcfjjbo10vcor"]
 
-[ext_resource type="LabelSettings" path="res://LabelSettings/GameOverLabel.tres" id="1_i13gl"]
+[ext_resource type="LabelSettings" uid="uid://0ov33b1bws2w" path="res://LabelSettings/GameOverLabel.tres" id="1_i13gl"]
 [ext_resource type="Texture2D" uid="uid://khdum5yemwek" path="res://Art/Logo_Death.png" id="1_n00gj"]
 [ext_resource type="Script" path="res://GameOver.cs" id="1_vjhn1"]
 [ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="3_oi4ae"]
@@ -24,7 +24,7 @@ theme_override_constants/margin_right = -4
 theme_override_constants/margin_bottom = -4
 script = ExtResource("1_vjhn1")
 m_fadeOutCounter = NodePath("Panel/MarginContainer/VBoxContainer/HBoxContainer2/Label2")
-m_delay = 3.0
+m_delay = 7.0
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2

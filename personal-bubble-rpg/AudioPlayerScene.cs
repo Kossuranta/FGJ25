@@ -12,6 +12,9 @@ public partial class AudioPlayerScene : AudioStreamPlayer
     [Export]
     private AudioStream m_gameOver;
 
+    [Export]
+    private AudioStream m_gameWin;
+
     public override void _Ready()
     {
         PlayNormal();
@@ -32,6 +35,12 @@ public partial class AudioPlayerScene : AudioStreamPlayer
     public void PlayGameOver()
     {
         Stream = m_gameOver;
+        Play();
+    }
+    
+    public void PlayGameWin()
+    {
+        Stream = m_gameWin;
         Play();
     }
 }

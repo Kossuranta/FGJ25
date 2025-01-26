@@ -65,6 +65,7 @@ public partial class GameManager : Node
 
 	public void GameWin()
 	{
+		m_music.PlayGameWin();
 		GameWinState = true;
 		m_fightScene?.QueueFree();
 		m_fightScene = null;
@@ -143,7 +144,14 @@ public partial class GameManager : Node
 	public void EndFightPlayerWin(CharacterType _enemy)
 	{
 		FightEnded();
+		
 		// Spawn reward
+		switch (_enemy)
+		{
+			case CharacterType.OVI:
+				GameWin();
+				break;
+		}
 	}
 
 	private void FightEnded()
