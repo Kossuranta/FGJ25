@@ -208,7 +208,7 @@ public partial class GameManager : Node
 		
 		if (m_gameWin == null)
 		{
-			m_gameWin = (GameOver) m_gameOverPrefab.Instantiate();
+			m_gameWin = (GameOver) m_gameWinPrefab.Instantiate();
 			AddChild(m_gameWin);
 		}
 	}
