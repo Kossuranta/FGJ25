@@ -46,6 +46,7 @@ public partial class FightEncounter : MarginContainer
 
 	private bool m_fading;
 	private float m_fadeProgress;
+	private bool m_childForceDamage;
 
 	[Export]
 	private MarginContainer m_fightContainer;
@@ -57,6 +58,7 @@ public partial class FightEncounter : MarginContainer
 
 	public void FightStart()
 	{
+		m_childForceDamage = false;
 		m_continueButton.Visible = false;
 		m_fightContainer.Visible = true;
 		m_talkOpt1.Visible = true;
@@ -176,6 +178,7 @@ public partial class FightEncounter : MarginContainer
 						m_continueButton.Visible = true;
 						m_fightContainer.Visible = false;
 						m_fightAftermath = false;
+						m_childForceDamage = true;
 					}
 					m_enemySprite.Texture = m_kakara;
 					m_playerText.Text = "[ Why are kids always staring? Oh no, our eyes met... ]";
@@ -385,6 +388,12 @@ public partial class FightEncounter : MarginContainer
 		else
 		{
 			GameManager.Instance.EndFightPlayerLose(characterType);
+			if (m_childForceDamage)
+			{
+				m_childForceDamage = false;
+				Player.Instance.m_healthSystem.ApplyDamage(1);
+			}
+			
 		}
 		
 		AudioPlayerScene.Instance?.PlayButtonSound();

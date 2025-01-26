@@ -33,10 +33,6 @@ public partial class Player : Character
 		if (_health <= 0)
 			GameManager.Instance.GameOver();
 	}
-
-	public override void _Process(double _delta)
-	{
-	}
 	
 	public override void _PhysicsProcess(double _delta)
 	{

@@ -13,12 +13,15 @@ public partial class NPC : Character
     private Node3D m_playerSeenModel;
 
     private bool m_fightCompleted;
+    private Vector3 m_position;
 
     public override void _Ready()
     {
         base._Ready();
         if (m_playerSeenModel != null)
             m_playerSeenModel.Visible = false;
+
+        m_position = GlobalPosition;
     }
 
     public void OnTriggerEnter(Node _node)
@@ -50,8 +53,8 @@ public partial class NPC : Character
             {
                 GD.Print("Spawn reward item");
                 Item item = (Item)m_itemToDrop.Instantiate();
-                GameManager.Instance.AddChild(item);
-                Vector3 pos = GlobalPosition;
+                GameManager.MainLevel.AddChild(item);
+                Vector3 pos = m_position;
                 pos.Y = 0.5f;
                 item.GlobalPosition = pos;
             }
@@ -60,7 +63,8 @@ public partial class NPC : Character
                 GD.Print("No reward item set!");
             }
         }
-        
-        QueueFree();
+
+        if (IsInstanceValid(this))
+            QueueFree();
     }
 }
