@@ -34,7 +34,7 @@ bg_color = Color(0.929412, 0.509804, 0.478431, 1)
 expand_margin_left = 110.0
 expand_margin_right = 110.0
 
-[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite")]
+[node name="Control" type="MarginContainer" node_paths=PackedStringArray("m_playerText", "m_enemyText", "m_enemySprite", "m_talkOpt1", "m_talkOpt2")]
 z_index = 1000
 anchors_preset = 15
 anchor_right = 1.0
@@ -57,6 +57,8 @@ m_diileri = ExtResource("9_wv17r")
 m_kakara = ExtResource("10_vpbaj")
 m_koira = ExtResource("11_502h6")
 m_ovi = ExtResource("12_0fu6m")
+m_talkOpt1 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1")
+m_talkOpt2 = NodePath("MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -84,7 +86,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 2
 
-[node name="Button" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TalkOption1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -93,28 +95,12 @@ theme_override_fonts/font = ExtResource("11_4raht")
 text = "Talk Opt.1"
 autowrap_mode = 3
 
-[node name="Button2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
+[node name="TalkOption2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
 custom_minimum_size = Vector2(230, 100)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_fonts/font = ExtResource("11_4raht")
-text = "Item Opt 1."
-autowrap_mode = 3
-
-[node name="Button3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(230, 100)
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_fonts/font = ExtResource("11_4raht")
-text = "Item Opt. 2"
-autowrap_mode = 3
-
-[node name="Button4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/GridContainer"]
-custom_minimum_size = Vector2(230, 100)
-layout_mode = 2
-size_flags_horizontal = 8
-theme_override_fonts/font = ExtResource("11_4raht")
-text = "Flee!"
+text = "Talk Opt 2."
 autowrap_mode = 3
 
 [node name="UiBatteryBackground" type="Sprite2D" parent="."]
@@ -228,4 +214,6 @@ text = "reerererere"
 scroll_active = false
 threaded = true
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption1" to="." method="OnTalkOpt1Pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/GridContainer/TalkOption2" to="." method="OnTalkOption2Pressed"]
 [connection signal="pressed" from="DamageButton" to="DamageButton" method="OnPressed"]

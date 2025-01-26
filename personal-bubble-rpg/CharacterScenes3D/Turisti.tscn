@@ -1,16 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://ch7op6nl0sgna"]
+[gd_scene load_steps=7 format=3 uid="uid://ch7op6nl0sgna"]
 
 [ext_resource type="Script" path="res://CharacterScenes3D/NPC.cs" id="1_37hu5"]
 [ext_resource type="PackedScene" uid="uid://bu35xxfhkb5uj" path="res://Art/Characters3D/turisti.glb" id="2_hfsvt"]
+[ext_resource type="AudioStream" uid="uid://c3wty1fdvmq8u" path="res://Sounds/Sound_StartBattle2.mp3" id="3_t3sv1"]
+[ext_resource type="PackedScene" uid="uid://c4k6pbq3wv2r1" path="res://Sounds/huuto.glb" id="4_vwa6e"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_an6i3"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_bioe3"]
 
-[node name="CharacterBody3D_Turisti" type="CharacterBody3D"]
+[node name="CharacterBody3D_Turisti" type="CharacterBody3D" node_paths=PackedStringArray("m_playerSeenAudio", "m_playerSeenModel")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 motion_mode = 1
 script = ExtResource("1_37hu5")
+m_playerSeenAudio = NodePath("SoundStartBattle2")
+m_playerSeenModel = NodePath("huuto")
 m_type = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -26,5 +30,11 @@ shape = SubResource("SphereShape3D_bioe3")
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="turisti" parent="Node3D" instance=ExtResource("2_hfsvt")]
+
+[node name="SoundStartBattle2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t3sv1")
+
+[node name="huuto" parent="." instance=ExtResource("4_vwa6e")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 2.2, 0)
 
 [connection signal="body_entered" from="Area3D" to="." method="OnTriggerEnter"]

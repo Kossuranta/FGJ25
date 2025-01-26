@@ -1,3 +1,4 @@
+using System;
 using Godot;
 
 public partial class GameManager : Node
@@ -23,9 +24,6 @@ public partial class GameManager : Node
 	private PackedScene m_gameWinPrefab;
 
 	[Export]
-	private PackedScene m_playerSeenPrefab;
-
-	[Export]
 	private PackedScene m_cloudAnimPrefab;
 
 	[Export]
@@ -47,6 +45,8 @@ public partial class GameManager : Node
 	public bool GameRunning => m_gameRunning && !GameWinState && !InFightScene;
 	public bool GameWinState { get; private set; }
 	public bool InFightScene { get; private set; }
+
+	public Action<bool> CombatEnded;
 
 	public override void _Ready()
 	{
@@ -139,6 +139,7 @@ public partial class GameManager : Node
 	public void EndFightPlayerLose(CharacterType _enemy)
 	{
 		FightEnded();
+		CombatEnded?.Invoke(false);
 	}
 
 	public void EndFightPlayerWin(CharacterType _enemy)
@@ -152,6 +153,8 @@ public partial class GameManager : Node
 				GameWin();
 				break;
 		}
+		
+		CombatEnded?.Invoke(true);
 	}
 
 	private void FightEnded()
