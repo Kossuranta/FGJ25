@@ -23,6 +23,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_7jt2e"]
+font = ExtResource("17_f1im0")
+font_size = 40
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_awshi"]
 texture = ExtResource("1_b0ftl")
 
@@ -36,12 +42,6 @@ corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
-
-[sub_resource type="LabelSettings" id="LabelSettings_7jt2e"]
-font = ExtResource("17_f1im0")
-font_size = 40
-outline_size = 12
-outline_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_trashTrashTalk", "m_roskisColaText", "m_vendingBuy", "m_vendingNoMoney", "m_itemSlot1")]
 z_index = 100
@@ -83,6 +83,18 @@ layout_mode = 2
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
+
+[node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_RoskisColaText"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_RoskisColaText/HBoxContainer"]
+layout_mode = 2
+text = "You picked up Trash-Cola™!"
+label_settings = SubResource("LabelSettings_7jt2e")
 
 [node name="VBoxContainer_ItemSlot" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
@@ -525,18 +537,6 @@ text = "No"
 label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_RoskisColaText"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_RoskisColaText/HBoxContainer"]
-layout_mode = 2
-text = "You picked up Trash-Cola™!"
-label_settings = SubResource("LabelSettings_7jt2e")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]
