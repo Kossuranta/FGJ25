@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1mscbwkp6wd3"]
+
+[ext_resource type="PackedScene" uid="uid://ca0euj4k7u18x" path="res://Art/EnviroAssets3D/Bush.glb" id="1_1lw7g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ly2k2"]
+size = Vector3(1, 0.915466, 1.07141)
+
+[node name="kukkapensas" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="Bush3" parent="StaticBody3D" instance=ExtResource("1_1lw7g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0361532, 0.274642, -0.0197506)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0361532, 0.448623, -0.0275021)
+shape = SubResource("BoxShape3D_ly2k2")

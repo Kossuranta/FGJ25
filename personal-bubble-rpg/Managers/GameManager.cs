@@ -152,9 +152,7 @@ public partial class GameManager : Node
 			case CharacterType.OVI:
 				GameWin();
 				break;
-			case CharacterType.KOIRA:
-				Player.Instance.m_healthSystem.ApplyDamage(-1);
-				break;
+
 		}
 		
 		CombatEnded?.Invoke(true);
