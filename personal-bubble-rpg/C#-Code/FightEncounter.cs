@@ -67,6 +67,17 @@ public partial class FightEncounter : MarginContainer
 			if (Player.Instance.CurrentItem != ItemType.AVAIN)
 				m_talkOpt1.Visible = false;
 		}
+		if (characterType == CharacterType.LAPSI)
+		{
+			if (Player.Instance.CurrentItem != ItemType.ES)
+			{
+				m_talkOpt1.Visible = false;
+			}
+			else if (Player.Instance.CurrentItem != ItemType.CANDY)
+			{
+				m_talkOpt2.Visible = false;
+			}
+		}
 
 		if (characterType == CharacterType.NOT_SET)
 		{
@@ -160,6 +171,12 @@ public partial class FightEncounter : MarginContainer
 					break;
 				case CharacterType.LAPSI:
 					// spawns a brat
+					if (!m_talkOpt1.Visible && !m_talkOpt2.Visible)
+					{
+						m_continueButton.Visible = true;
+						m_fightContainer.Visible = false;
+						m_fightAftermath = false;
+					}
 					m_enemySprite.Texture = m_kakara;
 					m_playerText.Text = "[ Why are kids always staring? Oh no, our eyes met... ]";
 					m_enemyText.Text = "Hey, whatcha starin' at? I'll call the cops.";
