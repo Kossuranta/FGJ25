@@ -62,6 +62,12 @@ public partial class FightEncounter : MarginContainer
 		m_talkOpt1.Visible = true;
 		m_talkOpt2.Visible = true;
 
+		if (characterType == CharacterType.OVI)
+		{
+			if (Player.Instance.CurrentItem != ItemType.AVAIN)
+				m_talkOpt1.Visible = false;
+		}
+
 		if (characterType == CharacterType.NOT_SET)
 		{
 			GD.Print("CharacterType not set");
