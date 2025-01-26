@@ -158,7 +158,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ Why are kids always staring? Oh no, our eyes met... ]";
 					m_enemyText.Text = "Hey, whatcha starin' at? I'll call the cops.";
 					GD.Print("Kakara");
-					m_talkOpt1.Text = "I'm sorry.";
+					m_talkOpt1.Text = "[ Offer Energy Drink ]";
+					m_talkOpt2.Text = "[ Offer candy ]";
 					break;
 				case CharacterType.KOIRA:
 					// spawns a dog
@@ -166,6 +167,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ It's a dog! ... I wonder if it's friendly? ]";
 					m_enemyText.Text = "Woof! [ You feel a strange sense of calm... ]";
 					GD.Print("Koira");
+					m_talkOpt1.Text = "[ Pet the dog ]";
+					m_talkOpt2.Text = "[ Offer a bone ]";
 					break;
 				case CharacterType.OVI:
 					// spawns a door
@@ -173,6 +176,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "This is it, the final challenge... Please, let me go home!";
 					m_enemyText.Text = "[ ... ]";
 					GD.Print("Ovi");
+					m_talkOpt1.Text = "[ Use a key ]";
+					m_talkOpt2.Text = "[ Kick the door ]";
 					break;
 				default:
 					GD.Print("Default");
@@ -216,7 +221,9 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = null;
 					break;
 				case CharacterType.TURISTI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "You've succesfully fled the scene.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TERAPEUTTI:
 					m_fightAftermath = true;
@@ -224,16 +231,24 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = null;
 					break;
 				case CharacterType.DIILERI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "Cops ask questions. Are you a cop?";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.LAPSI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Yooo, is this the new Caramel Ass flavoured ES?? Sweet!";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.KOIRA:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "Woof woof [ You feel better. ]";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.OVI:
-					GameManager.Instance.EndFightPlayerWin(characterType);
+					m_fightAftermath = true;
+					m_enemyText.Text = "You used the key. *CLACK!*";
+					m_playerText.Text = null;
 					break;
 				default:
 					GD.Print("Default");
@@ -250,22 +265,37 @@ public partial class FightEncounter : MarginContainer
 		switch (characterType)
 			{
 				case CharacterType.ROSVO:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "Good. Now, SCRAM!";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.MUMMO:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "What?";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.EX:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "Oh okay... Be careful.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.FEISSARI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "Our current pricing starts at 39.99£ a month, "
+										+ "but just for this week, we have a super-special-mega "
+										+ "offer of 34.99£ by the hour!";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TUTTU:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "..We did not go to the same college? "
+										+ "Wait, you do not remember me at all, do you!?";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TURISTI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "キャーーー！ [ Tourist runs away ]";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.TERAPEUTTI:
 					m_fightAftermath = false;
@@ -273,17 +303,27 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = null;
 					break;
 				case CharacterType.DIILERI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "You want drugs? ...You can't affor them.";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.LAPSI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
+					m_fightAftermath = false;
+					m_enemyText.Text = "What the FUCK are you offering me? "
+										+ "You think kids still eat candy? "
+										+ "That's skibidi gross, dude. ";
+					m_playerText.Text = null;
 					break;
 				case CharacterType.KOIRA:
-					GameManager.Instance.EndFightPlayerLose(characterType);
-					break;
+					m_fightAftermath = true;
+					m_enemyText.Text = "WOOF! [ You feel better ]";
+					m_playerText.Text = null;
+					break; 
 				case CharacterType.OVI:
-					GameManager.Instance.EndFightPlayerLose(characterType);
-					break;
+					m_fightAftermath = false;
+					m_enemyText.Text = "You hurt your foot. The door stays closed.";
+					m_playerText.Text = null;
+					break; 
 				default:
 					GD.Print("Default");
 					break;
