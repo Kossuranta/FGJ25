@@ -73,7 +73,7 @@ public partial class FightEncounter : MarginContainer
 			{
 				m_talkOpt1.Visible = false;
 			}
-			else if (Player.Instance.CurrentItem != ItemType.CANDY)
+			if (Player.Instance.CurrentItem != ItemType.CANDY)
 			{
 				m_talkOpt2.Visible = false;
 			}
@@ -355,6 +355,11 @@ public partial class FightEncounter : MarginContainer
 			if (!m_fightAftermath)
 			{
 				Player.Instance.m_healthSystem.ApplyDamage(1);
+			}
+
+			if (characterType == CharacterType.KOIRA)
+			{
+				Player.Instance.m_healthSystem.ApplyDamage(-1);
 			}
 	}
 	public void Button3()
