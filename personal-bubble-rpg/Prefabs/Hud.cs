@@ -19,6 +19,12 @@ public partial class Hud : MarginContainer
 
 	[Export]
 	private VBoxContainer m_roskisColaText;
+	
+	[Export]
+	private VBoxContainer m_vendingBuy;
+	
+	[Export]
+	private VBoxContainer m_vendingNoMoney;
 
 	[Export]
 	private Sprite2D m_itemSlot1;
@@ -74,6 +80,7 @@ public partial class Hud : MarginContainer
 		HideHitTrashcan();
 		HideTrashTrashTalk();
 		m_roskisColaText.Visible = false;
+		HideVendingBuy();
 		ClearItem();
 	}
 
@@ -156,6 +163,35 @@ public partial class Hud : MarginContainer
 		m_trashTrashTalk.Visible = false;
 	}
 
+	public void OnVendingBuyYes()
+	{
+		HideVendingBuy();
+		ClearItem();
+		Player.Instance.CurrentItem = ItemType.ES;
+		PickUpItem(ItemType.ES);
+	}
+	
+	public void OnVendingBuyNo()
+	{
+		HideVendingBuy();
+	}
+	
+	public void ShowVendingBuy()
+	{
+		m_vendingBuy.Visible = true;
+	}
+	
+	public void ShowVendingBuyNoMoney()
+	{
+		m_vendingNoMoney.Visible = true;
+	}
+
+	public void HideVendingBuy()
+	{
+		m_vendingBuy.Visible = false;
+		m_vendingNoMoney.Visible = false;
+	}
+
 	public void OnHitTrashcan()
 	{
 		if (Player.Instance.CurrentRoskis != null)
@@ -179,6 +215,7 @@ public partial class Hud : MarginContainer
 
 	public void ClearItem()
 	{
+		Player.Instance.CurrentItem = ItemType.NOT_SET;
 		m_itemSlot1.Texture = null;
 	}
 
