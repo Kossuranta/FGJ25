@@ -216,6 +216,44 @@ public partial class FightEncounter : MarginContainer
 
 	public void Button2()
 	{
-		
+		switch (characterType)
+			{
+				case CharacterType.ROSVO:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.MUMMO:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.EX:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.FEISSARI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.TUTTU:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.TURISTI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.TERAPEUTTI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.DIILERI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.LAPSI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.KOIRA:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				case CharacterType.OVI:
+					GameManager.Instance.EndFightPlayerLose(characterType);
+					break;
+				default:
+					GD.Print("Default");
+					break;
+			}
 	}
 }
