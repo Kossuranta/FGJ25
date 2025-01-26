@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c4k6pbq3wv2r1"
-path="res://.godot/imported/huuto.glb-98df23398d57441a3bbe76acf9be6d1b.scn"
+uid="uid://dpvgomc8o6he6"
+path="res://.godot/imported/Dumpster.glb-fbad72def57b200cdef6d5a3e549427c.scn"
 
 [deps]
 
-source_file="res://Art/UI/huuto.glb"
-dest_files=["res://.godot/imported/huuto.glb-98df23398d57441a3bbe76acf9be6d1b.scn"]
+source_file="res://Art/EnviroAssets3D/Dumpster.glb"
+dest_files=["res://.godot/imported/Dumpster.glb-fbad72def57b200cdef6d5a3e549427c.scn"]
 
 [params]
 

@@ -10,7 +10,7 @@ public partial class GameOver : MarginContainer
     private Label m_fadeOutCounter;
 
     [Export]
-    private float m_delay = 5f;
+    private float m_delay = 8f;
 
     private bool m_targetState;
     private float m_current;

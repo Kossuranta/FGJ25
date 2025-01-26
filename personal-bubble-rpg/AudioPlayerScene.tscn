@@ -1,8 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cyjqch56y7rtu"]
+[gd_scene load_steps=6 format=3 uid="uid://cyjqch56y7rtu"]
 
 [ext_resource type="AudioStream" uid="uid://dhwvqv50svd8i" path="res://Sounds/Sound_MainMusic1.mp3" id="1_ufpqr"]
+[ext_resource type="Script" path="res://AudioPlayerScene.cs" id="2_iewmt"]
+[ext_resource type="AudioStream" uid="uid://djmy176p02wcn" path="res://Sounds/Sound_BattleMusic4.mp3" id="3_3t647"]
+[ext_resource type="AudioStream" uid="uid://bsvivu2nq72e" path="res://Sounds/Sound_Faint1.mp3" id="4_gvsls"]
+[ext_resource type="AudioStream" uid="uid://cgsq587ywewjo" path="res://Sounds/Sound_Win1.mp3" id="5_hmgb3"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer"]
 stream = ExtResource("1_ufpqr")
-autoplay = true
-stream_paused = true
+script = ExtResource("2_iewmt")
+m_normal = ExtResource("1_ufpqr")
+m_combat = ExtResource("3_3t647")
+m_gameOver = ExtResource("4_gvsls")
+m_gameWin = ExtResource("5_hmgb3")

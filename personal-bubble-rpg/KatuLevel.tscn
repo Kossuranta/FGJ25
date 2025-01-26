@@ -106,6 +106,15 @@ material = SubResource("StandardMaterial3D_nn5s1")
 [node name="ItemCola" parent="." instance=ExtResource("1_nk81i")]
 transform = Transform3D(0.861603, 0, 0.507583, 0, 1, 0, -0.507583, 0, 0.861603, -20.6817, 0.11615, -21.0429)
 
+[node name="bordergrassarea" type="Node3D" parent="."]
+transform = Transform3D(-150, 0, 6.03983e-06, 0, 80, 0, -2.26494e-05, 0, -40, 160.725, -0.292118, -236.699)
+
+[node name="GrassPiece22" parent="bordergrassarea" instance=ExtResource("11_qsblj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="Node3D42" parent="bordergrassarea" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(-0.00851033, 0, -0.00525116, 0, 0.01875, 0, 0.0196918, 0, -0.0319137, 1.2349, 0.00434874, -1.64264)
+
 [node name="Homeyerd" type="Node3D" parent="."]
 transform = Transform3D(-2.5, 0, -3.77489e-07, 0, 2.5, 0, 3.77489e-07, 0, -2.5, 26.3168, 0.412409, -144.943)
 
@@ -1061,6 +1070,9 @@ transform = Transform3D(0.506976, 0, 1.93468, 0, 2, 0, -1.93468, 0, 0.506976, -2
 
 [node name="Node3D36" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -19.4369, 0.111561, -4.59989)
+
+[node name="Node3D42" parent="Talot" instance=ExtResource("8_g7gqb")]
+transform = Transform3D(1.66491, 0, -1.10818, 0, 2, 0, 1.10818, 0, 1.66491, -19.9806, 0.111561, -174.338)
 
 [node name="Node3D33" parent="Talot" instance=ExtResource("8_g7gqb")]
 transform = Transform3D(1.50267, 0, 1.31985, 0, 2, 0, -1.31985, 0, 1.50267, 22.424, 0, -4.91)

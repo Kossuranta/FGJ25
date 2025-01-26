@@ -12,6 +12,9 @@ public partial class Player : Character
 	[Export]
 	private int m_maxHealth = 3;
 
+	[Export]
+	private AudioStreamPlayer m_footSteps;
+
 	public HealthSystem m_healthSystem;
 	public ItemType CurrentItem { get; set; }
 
@@ -44,6 +47,8 @@ public partial class Player : Character
 		if (!GameManager.Instance.GameRunning)
 		{
 			Velocity = Vector3.Zero;
+			if (m_footSteps.Playing)
+				m_footSteps.Stop();
 			return;
 		}
 		
@@ -52,5 +57,16 @@ public partial class Player : Character
 		Velocity = moveDir * m_moveSpeed;
 		MoveAndCollide(Velocity * _delta);
 		MoveAndSlide();
+		
+		if (Velocity.Length() > 0)
+		{
+			if (!m_footSteps.Playing)
+				m_footSteps.Play();
+		}
+		else
+		{
+			if (m_footSteps.Playing)
+				m_footSteps.Stop();
+		}
 	}
 }
