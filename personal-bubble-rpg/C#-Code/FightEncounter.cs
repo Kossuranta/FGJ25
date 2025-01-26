@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
 public partial class FightEncounter : MarginContainer
@@ -35,6 +36,11 @@ public partial class FightEncounter : MarginContainer
 	[Export]
 	private Texture2D m_ovi;
 
+	[Export]
+	private Button m_talkOpt1;
+	[Export]
+	private Button m_talkOpt2;
+
 	private bool m_fading;
 	private float m_fadeProgress;
 
@@ -61,6 +67,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ I... I'm being robbed? For real?! ]";
 					m_enemyText.Text = "Hey, gimme all your money! NOW!";
 					GD.Print("Rosvo");
+					m_talkOpt1.Text = "[ Fight back ]";
+					m_talkOpt2.Text = "[ Give him your wallet ]";
 					break;
 				case CharacterType.MUMMO:
 					// spawns a granny
@@ -70,6 +78,8 @@ public partial class FightEncounter : MarginContainer
 					m_enemyText.Text = "My goodness, if it isnt my favourite neighbor! "
 										+ "How's that school of yours coming along? Have a boyfriend yet?";
 					GD.Print("Mummo");
+					m_talkOpt1.Text = "How are you Mrs. Mummo?";
+					m_talkOpt2.Text = "[ Laugh awkwardly ]";
 					break;
 				case CharacterType.EX:
 					// spawns an ex
@@ -78,16 +88,19 @@ public partial class FightEncounter : MarginContainer
 										+ "But she might still have my spare key... ]";
 					m_enemyText.Text = "Hm, it's you. What do you want? ";
 					GD.Print("Ex");
+					m_talkOpt1.Text = "Ask about spare key";
+					m_talkOpt2.Text = "Flee";
 					break;
 				case CharacterType.FEISSARI:
 					// spawns a yuppie
 					m_enemySprite.Texture = m_feissari;
 					m_playerText.Text = "[ Just my luck, it's some salesperson. I hope they're not too pushy.... ]";
-					Thread.Sleep(1000);
 					m_enemyText.Text = "Hey, yes, you there, you! "
 										+ "Would you have a moment to talk about your network provider? " 
 										+ "Everything okay with it?";
 					GD.Print("Feissari");
+					m_talkOpt1.Text = "[ Point at headphones ]";
+					m_talkOpt2.Text = "Buy whatever he's selling.";
 					break;
 				case CharacterType.TUTTU:
 					// spawns a friend
@@ -96,6 +109,8 @@ public partial class FightEncounter : MarginContainer
 									+ "So why are they waving at me?? ]";
 					m_enemyText.Text = "Hey, haven't seen you in the longest time! How are you?";
 					GD.Print("Tuttu");
+					m_talkOpt1.Text = "Not much, how about you?";
+					m_talkOpt2.Text = "Yeah, haha, college was crazy.";
 					break;
 				case CharacterType.TURISTI:
 					// spawns a tourist
@@ -103,6 +118,8 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ It¨s a tourist... I was never good at languages... ]";
 					m_enemyText.Text = "ヤッホー！私の社品をとれるの？";
 					GD.Print("Turisti");
+					m_talkOpt1.Text = "Me no English.";
+					m_talkOpt2.Text = "Scream.";
 					break;
 				case CharacterType.TERAPEUTTI:
 					// spawns a therapist
@@ -112,6 +129,8 @@ public partial class FightEncounter : MarginContainer
 					m_enemyText.Text = "It's time for you to leave the hospital for now. "
 										+ "It's getting late, so I hope you get home safely.";
 					GD.Print("Terapeutti");
+					m_talkOpt1.Text = "Who are you?";
+					m_talkOpt2.Text = "Suck it, I'm going home.";
 					break;
 				case CharacterType.DIILERI:
 					// spawns a dealer
@@ -119,6 +138,9 @@ public partial class FightEncounter : MarginContainer
 					m_playerText.Text = "[ Eek! What does this guy want?! ]";
 					m_enemyText.Text = "Are you looking for something...? You just might've come to the right place...";
 					GD.Print("Diileri");
+					m_talkOpt1.Text = "Who are you?";
+					m_talkOpt2.Text = "Buy drugs.";
+					Button1();
 					break;
 				case CharacterType.LAPSI:
 					// spawns a brat
@@ -146,5 +168,15 @@ public partial class FightEncounter : MarginContainer
 					break;
 			}
 		}
+	}
+
+	public void Button1()
+	{
+
+	}
+
+	public void Button2()
+	{
+		
 	}
 }
