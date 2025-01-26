@@ -69,7 +69,6 @@ offset_left = 664.0
 offset_top = 520.0
 offset_right = 1136.0
 offset_bottom = 632.0
-disabled = true
 text = "Continue"
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

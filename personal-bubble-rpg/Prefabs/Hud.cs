@@ -10,6 +10,9 @@ public partial class Hud : MarginContainer
 	
 	[Export]
 	private VBoxContainer m_fightDoorPopup;
+	
+	[Export]
+	private VBoxContainer m_hitTrashcanPopup;
 
 	[Export]
 	private Sprite2D m_itemSlot1;
@@ -61,6 +64,7 @@ public partial class Hud : MarginContainer
 		Instance = this;
 		HidePickup();
 		HideFightDoor();
+		HideHitTrashcan();
 		ClearItem();
 	}
 
@@ -109,6 +113,32 @@ public partial class Hud : MarginContainer
 	public void OnFightDoorNo()
 	{
 		HideFightDoor();
+	}
+
+	public void ShowHitTrashcan()
+	{
+		m_hitTrashcanPopup.Visible = true;
+	}
+
+	public void OnHitTrashcan()
+	{
+		if (Player.Instance.CurrentRoskis != null)
+		{
+			Player.Instance.CurrentRoskis.OnHit();
+			Player.Instance.CurrentRoskis = null;
+		}
+		ClearItem();
+		HideHitTrashcan();
+	}
+
+	public void OnDontHitTrashcan()
+	{
+		HideHitTrashcan();
+	}
+
+	public void HideHitTrashcan()
+	{
+		m_hitTrashcanPopup.Visible = false;
 	}
 
 	public void ClearItem()
