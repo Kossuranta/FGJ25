@@ -39,7 +39,7 @@ public partial class GameManager : Node
 	private GameOver m_gameOver;
 	private GameOver m_gameWin;
 	private CloudAnimScene m_cloudAnimScene;
-	private AudioStreamPlayer m_audioStreamPlayer;
+	private AudioPlayerScene m_music;
 	
 	public int RunCounter { get; private set; }
 
@@ -56,6 +56,7 @@ public partial class GameManager : Node
 
 	public void GameOver()
 	{
+		m_music.PlayGameOver();
 		m_fightScene?.QueueFree();
 		m_fightScene = null;
 		m_gameRunning = false;
@@ -74,6 +75,7 @@ public partial class GameManager : Node
 	public void RestartGame()
 	{
 		StartGame(false);
+		m_music.PlayNormal();
 	}
 	
 	private void StartGame(bool _instant)
@@ -111,6 +113,7 @@ public partial class GameManager : Node
 
 	public void StartFight(CharacterType _enemy)
 	{
+		m_music.PlayCombat();
 		m_cloudAnimScene.Visible = true;
 		m_cloudAnimScene.FadeIn();
 		m_cloudAnimScene.FadeInCompleted += CloudFadeInCompleted;
@@ -132,12 +135,22 @@ public partial class GameManager : Node
 		m_cloudAnimScene.Visible = false;
 	}
 
-	public void EndFight(CharacterType _enemy)
+	public void EndFightPlayerLose(CharacterType _enemy)
 	{
+		FightEnded();
+	}
+
+	public void EndFightPlayerWin(CharacterType _enemy)
+	{
+		FightEnded();
+		// Spawn reward
+	}
+
+	private void FightEnded()
+	{
+		m_music.PlayNormal();
 		InFightScene = false;
 		m_fightScene.Visible = false;
-		
-		// Spawn reward
 	}
 
 	private void InitFightScene()
@@ -190,10 +203,10 @@ public partial class GameManager : Node
 
 	private void InitMusic()
 	{
-		if (m_audioStreamPlayer == null)
+		if (m_music == null)
 		{
-			m_audioStreamPlayer = (AudioStreamPlayer) m_musicPrefab.Instantiate();
-			AddChild(m_audioStreamPlayer);
+			m_music = (AudioPlayerScene) m_musicPrefab.Instantiate();
+			AddChild(m_music);
 		}
 	}
 }
