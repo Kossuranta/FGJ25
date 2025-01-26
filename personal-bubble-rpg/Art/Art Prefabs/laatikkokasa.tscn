@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqs4h0tywacw2"]
+[gd_scene load_steps=3 format=3 uid="uid://biny78jsy2j4s"]
 
-[ext_resource type="PackedScene" uid="uid://toal5dmq5y0b" path="res://Art/EnviroAssets3D/Boxes.glb" id="1_d035k"]
+[ext_resource type="PackedScene" uid="uid://bs6p8p1p5ed87" path="res://Art/EnviroAssets3D/Boxes.glb" id="1_d035k"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7ctc"]
 size = Vector3(1, 2.55902, 2.6604)
@@ -9,7 +9,7 @@ size = Vector3(1, 2.55902, 2.6604)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
-[node name="Boxes3" parent="StaticBody3D" instance=ExtResource("1_d035k")]
+[node name="Boxes" parent="StaticBody3D" instance=ExtResource("1_d035k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.414995, 0, 0.672809)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]

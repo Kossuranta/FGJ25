@@ -145,10 +145,10 @@ public partial class FightEncounter : MarginContainer
 				case CharacterType.TURISTI:
 					// spawns a tourist
 					m_enemySprite.Texture = m_turisti;
-					m_playerText.Text = "[ It¨s a tourist... I was never good at languages... ]";
+					m_playerText.Text = "[ It's a tourist... I was never good at languages... ]";
 					m_enemyText.Text = "ヤッホー！私の社品をとれるの？";
 					GD.Print("Turisti");
-					m_talkOpt1.Text = "Me no English.";
+					m_talkOpt1.Text = "Me speak no chinese.";
 					m_talkOpt2.Text = "Scream.";
 					break;
 				case CharacterType.TERAPEUTTI:
@@ -248,7 +248,7 @@ public partial class FightEncounter : MarginContainer
 					break;
 				case CharacterType.TURISTI:
 					m_fightAftermath = true;
-					m_enemyText.Text = "You've succesfully fled the scene.";
+					m_enemyText.Text = "あなたはとてもかわいいです";
 					m_playerText.Text = null;
 					break;
 				case CharacterType.TERAPEUTTI:
@@ -265,6 +265,7 @@ public partial class FightEncounter : MarginContainer
 					m_fightAftermath = true;
 					m_enemyText.Text = "Yooo, is this the new Caramel Ass flavoured ES?? Sweet!";
 					m_playerText.Text = null;
+					Hud.Instance.ClearItem();
 					break;
 				case CharacterType.KOIRA:
 					m_fightAftermath = true;
@@ -280,16 +281,6 @@ public partial class FightEncounter : MarginContainer
 					GD.Print("Default");
 					break;
 			}
-		
-		if (!m_fightAftermath)
-		{
-			Player.Instance.m_healthSystem.ApplyDamage(1);
-		}
-		
-		if (characterType == CharacterType.KOIRA)
-		{
-			Player.Instance.m_healthSystem.ApplyDamage(-1);
-		}
 		
 		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
@@ -351,6 +342,7 @@ public partial class FightEncounter : MarginContainer
 										+ "You think kids still eat candy? "
 										+ "That's skibidi gross, dude. ";
 					m_playerText.Text = null;
+					Hud.Instance.ClearItem();
 					break;
 				case CharacterType.KOIRA:
 					m_fightAftermath = true;
