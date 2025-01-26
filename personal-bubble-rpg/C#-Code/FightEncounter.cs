@@ -278,6 +278,16 @@ public partial class FightEncounter : MarginContainer
 					break;
 			}
 		
+		if (!m_fightAftermath)
+		{
+			Player.Instance.m_healthSystem.ApplyDamage(1);
+		}
+		
+		if (characterType == CharacterType.KOIRA)
+		{
+			Player.Instance.m_healthSystem.ApplyDamage(-1);
+		}
+		
 		AudioPlayerScene.Instance?.PlayButtonSound();
 	}
 
