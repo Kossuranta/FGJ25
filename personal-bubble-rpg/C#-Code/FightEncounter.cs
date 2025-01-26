@@ -262,6 +262,7 @@ public partial class FightEncounter : MarginContainer
 					m_fightAftermath = true;
 					m_enemyText.Text = "Yooo, is this the new Caramel Ass flavoured ES?? Sweet!";
 					m_playerText.Text = null;
+					Hud.Instance.ClearItem();
 					break;
 				case CharacterType.KOIRA:
 					m_fightAftermath = true;
@@ -338,6 +339,7 @@ public partial class FightEncounter : MarginContainer
 										+ "You think kids still eat candy? "
 										+ "That's skibidi gross, dude. ";
 					m_playerText.Text = null;
+					Hud.Instance.ClearItem();
 					break;
 				case CharacterType.KOIRA:
 					m_fightAftermath = true;
