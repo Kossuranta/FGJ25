@@ -13,6 +13,12 @@ public partial class Hud : MarginContainer
 	
 	[Export]
 	private VBoxContainer m_hitTrashcanPopup;
+	
+	[Export]
+	private VBoxContainer m_trashTrashTalk;
+
+	[Export]
+	private VBoxContainer m_roskisColaText;
 
 	[Export]
 	private Sprite2D m_itemSlot1;
@@ -57,6 +63,7 @@ public partial class Hud : MarginContainer
 	private Texture2D m_sword;
 
 	private Item m_itemToPickUp;
+	private float m_pickupTimer;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -65,9 +72,28 @@ public partial class Hud : MarginContainer
 		HidePickup();
 		HideFightDoor();
 		HideHitTrashcan();
+		HideTrashTrashTalk();
+		m_roskisColaText.Visible = false;
 		ClearItem();
 	}
 
+	public void OnRoskisColaPickup()
+	{
+		m_roskisColaText.Visible = true;
+		m_pickupTimer = 5f;
+	}
+
+	public override void _Process(double _delta)
+	{
+		float delta = (float) _delta;
+		if (m_pickupTimer > 0)
+		{
+			m_pickupTimer -= delta;
+			if (m_pickupTimer <= 0)
+				m_roskisColaText.Visible = false;
+		}
+	}
+	
 	public void ShowPickup(Item _item)
 	{
 		m_itemToPickUp = _item;
@@ -118,6 +144,16 @@ public partial class Hud : MarginContainer
 	public void ShowHitTrashcan()
 	{
 		m_hitTrashcanPopup.Visible = true;
+	}
+
+	public void ShowTrashTrashTalk()
+	{
+		m_trashTrashTalk.Visible = true;
+	}
+
+	public void HideTrashTrashTalk()
+	{
+		m_trashTrashTalk.Visible = false;
 	}
 
 	public void OnHitTrashcan()

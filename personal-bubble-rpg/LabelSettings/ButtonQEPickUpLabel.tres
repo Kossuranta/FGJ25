@@ -1,6 +1,9 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://ca55t4y10akld"]
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://ca55t4y10akld"]
+
+[ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="1_n5sjo"]
 
 [resource]
+font = ExtResource("1_n5sjo")
 font_size = 40
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)

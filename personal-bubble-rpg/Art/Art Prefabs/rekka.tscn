@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://br24thp2nxcr0"]
+
+[ext_resource type="PackedScene" uid="uid://cuioauoy44cd7" path="res://Art/EnviroAssets3D/Truck.glb" id="1_vj2yj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fwtko"]
+size = Vector3(3.35059, 3.86426, 9.47119)
+
+[node name="rekka" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020709, 0, 0.0914358)
+
+[node name="Truck3" parent="StaticBody3D" instance=ExtResource("1_vj2yj")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0131836, 1.95459, -0.192139)
+shape = SubResource("BoxShape3D_fwtko")

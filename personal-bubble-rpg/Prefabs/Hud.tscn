@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://d3fdwwbmsg8pm"]
+[gd_scene load_steps=24 format=3 uid="uid://d3fdwwbmsg8pm"]
 
 [ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
 [ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
@@ -18,6 +18,7 @@
 [ext_resource type="LabelSettings" uid="uid://ca55t4y10akld" path="res://LabelSettings/ButtonQEPickUpLabel.tres" id="11_h5pem"]
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 [ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
+[ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="17_f1im0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
@@ -34,6 +35,12 @@ corner_radius_top_left = 32
 corner_radius_top_right = 32
 corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_7jt2e"]
+font = ExtResource("17_f1im0")
+font_size = 40
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_itemSlot1")]
 z_index = 100
@@ -70,6 +77,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
 
 [node name="VBoxContainer_ItemSlot" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 2
 
@@ -90,7 +98,6 @@ offset = Vector2(32, 32)
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
-text = "Q"
 label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
@@ -117,6 +124,7 @@ label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
 [node name="VBoxContainer_PickUp" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -142,6 +150,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_f1im0")
 text = "Pick up a new item?"
 label_settings = ExtResource("11_kg6fc")
 horizontal_alignment = 1
@@ -182,6 +192,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightDoor" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -247,6 +258,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightTrashcan" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -311,9 +323,91 @@ label_settings = ExtResource("11_h5pem")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="VBoxContainer_TrashTrashTalk" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_TrashTrashTalk"]
+layout_mode = 2
+alignment = 1
+
+[node name="PanelContainer_Popup" type="PanelContainer" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iviak")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+text = "It looks wobbly"
+label_settings = ExtResource("11_kg6fc")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Yes"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button2" type="Button" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2"]
+visible = false
+custom_minimum_size = Vector2(96, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "No"
+label_settings = ExtResource("11_h5pem")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_RoskisColaText"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer_RoskisColaText/HBoxContainer"]
+layout_mode = 2
+text = "You picked up Trash-Cola™!"
+label_settings = SubResource("LabelSettings_7jt2e")
+
 [connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnPickUpNo"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnFightDoorYes"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_FightDoor/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnFightDoorNo"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_FightTrashcan/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnHitTrashcan"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer_FightTrashcan/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnDontHitTrashcan"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnHitTrashcan"]
+[connection signal="pressed" from="PanelContainer/VBoxContainer_TrashTrashTalk/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="OnDontHitTrashcan"]

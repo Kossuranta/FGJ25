@@ -20,6 +20,7 @@ public partial class Item : Area3D
 				{
 					case ItemType.COLA:
 						Player.Instance.MoveSpeedBoostTimer = 5;
+						Hud.Instance.OnRoskisColaPickup();
 						break;
 				}
 				QueueFree();
