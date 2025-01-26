@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://d3fdwwbmsg8pm"]
+[gd_scene load_steps=24 format=3 uid="uid://d3fdwwbmsg8pm"]
 
 [ext_resource type="Texture2D" uid="uid://dmpk08p5kisiq" path="res://Art/UI/UI_Itemslot.png" id="1_b0ftl"]
 [ext_resource type="Script" path="res://Prefabs/Hud.cs" id="1_dy3jj"]
@@ -18,6 +18,7 @@
 [ext_resource type="LabelSettings" uid="uid://ca55t4y10akld" path="res://LabelSettings/ButtonQEPickUpLabel.tres" id="11_h5pem"]
 [ext_resource type="LabelSettings" uid="uid://bnomr5onplity" path="res://LabelSettings/PopUpLabel.tres" id="11_kg6fc"]
 [ext_resource type="Texture2D" uid="uid://biywb35l5gsl8" path="res://Art/Items/Item_photo.png" id="12_q0lt1"]
+[ext_resource type="FontFile" uid="uid://d24iyfay5562j" path="res://Delius-Regular.ttf" id="17_f1im0"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wi02o"]
 
@@ -36,11 +37,12 @@ corner_radius_bottom_right = 32
 corner_radius_bottom_left = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jt2e"]
+font = ExtResource("17_f1im0")
 font_size = 40
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
 
-[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_trashTrashTalk", "m_roskisColaText", "m_itemSlot1")]
+[node name="HUD" type="MarginContainer" node_paths=PackedStringArray("m_pickUpPopup", "m_fightDoorPopup", "m_hitTrashcanPopup", "m_itemSlot1")]
 z_index = 100
 anchors_preset = 15
 anchor_right = 1.0
@@ -55,8 +57,6 @@ script = ExtResource("1_dy3jj")
 m_pickUpPopup = NodePath("PanelContainer/VBoxContainer_PickUp")
 m_fightDoorPopup = NodePath("PanelContainer/VBoxContainer_FightDoor")
 m_hitTrashcanPopup = NodePath("PanelContainer/VBoxContainer_FightTrashcan")
-m_trashTrashTalk = NodePath("PanelContainer/VBoxContainer_TrashTrashTalk")
-m_roskisColaText = NodePath("PanelContainer/VBoxContainer_RoskisColaText")
 m_itemSlot1 = NodePath("PanelContainer/VBoxContainer_ItemSlot/HBoxContainer/Panel/Sprite2D_Item")
 m_bone = ExtResource("2_ogfon")
 m_candy = ExtResource("3_ctbrg")
@@ -77,6 +77,7 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_wi02o")
 
 [node name="VBoxContainer_ItemSlot" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 2
 
@@ -97,7 +98,6 @@ offset = Vector2(32, 32)
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_ItemSlot/HBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
-text = "Q"
 label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
@@ -124,6 +124,7 @@ label_settings = ExtResource("10_5hw51")
 vertical_alignment = 1
 
 [node name="VBoxContainer_PickUp" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -149,6 +150,8 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 96)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("17_f1im0")
 text = "Pick up a new item?"
 label_settings = ExtResource("11_kg6fc")
 horizontal_alignment = 1
@@ -189,6 +192,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightDoor" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -254,6 +258,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_FightTrashcan" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 alignment = 1
 
@@ -386,6 +391,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="VBoxContainer_RoskisColaText" type="VBoxContainer" parent="PanelContainer"]
+visible = false
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer_RoskisColaText"]
@@ -394,7 +400,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="PanelContainer/VBoxContainer_RoskisColaText/HBoxContainer"]
 layout_mode = 2
-text = "You picked up Roskis-Cola!"
+text = "You picked up Trash-Cola™!"
 label_settings = SubResource("LabelSettings_7jt2e")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer_PickUp/HBoxContainer/PanelContainer_Popup/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="OnPickUpYes"]
