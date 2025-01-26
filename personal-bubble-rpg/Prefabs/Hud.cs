@@ -13,6 +13,9 @@ public partial class Hud : MarginContainer
 	
 	[Export]
 	private VBoxContainer m_hitTrashcanPopup;
+	
+	[Export]
+	private VBoxContainer m_trashTrashTalk;
 
 	[Export]
 	private Sprite2D m_itemSlot1;
@@ -65,6 +68,7 @@ public partial class Hud : MarginContainer
 		HidePickup();
 		HideFightDoor();
 		HideHitTrashcan();
+		HideTrashTrashTalk();
 		ClearItem();
 	}
 
@@ -118,6 +122,16 @@ public partial class Hud : MarginContainer
 	public void ShowHitTrashcan()
 	{
 		m_hitTrashcanPopup.Visible = true;
+	}
+
+	public void ShowTrashTrashTalk()
+	{
+		m_trashTrashTalk.Visible = true;
+	}
+
+	public void HideTrashTrashTalk()
+	{
+		m_trashTrashTalk.Visible = false;
 	}
 
 	public void OnHitTrashcan()
